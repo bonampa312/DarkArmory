@@ -1,0 +1,571 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */; };
+		3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */; };
+		3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0082073F7CD00278A74 /* AppDelegate.swift */; };
+		3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */; };
+		3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00C2073F7CD00278A74 /* Main.storyboard */; };
+		3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00F2073F7CD00278A74 /* Assets.xcassets */; };
+		3C75F0132073F7CD00278A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */; };
+		3C75F01C2073FC6800278A74 /* OptimusPrinceps.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F01B2073FC5E00278A74 /* OptimusPrinceps.ttf */; };
+		3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */; };
+		3C75F02020744C5800278A74 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F01F20744C5800278A74 /* UICustomView.swift */; };
+		3C75F02220744FE300278A74 /* TODOTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F02120744FE300278A74 /* TODOTravelViewController.swift */; };
+		3C75F027207522C100278A74 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F026207522C100278A74 /* UICustomButton.swift */; };
+		3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */; };
+		3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */; };
+		3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0AB9207EB032004D816C /* CalculateSouls.swift */; };
+		3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */; };
+		3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */; };
+		3C8C0AC7207FA453004D816C /* DarkArmoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3C8C0AC9207FA454004D816C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C75EFFD2073F7CD00278A74 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C75F0042073F7CD00278A74;
+			remoteInfo = DarkArmory;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWithGif.swift; sourceTree = "<group>"; };
+		3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bonfireAnimated.gif; sourceTree = "<group>"; };
+		3C75F0052073F7CD00278A74 /* DarkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C75F0082073F7CD00278A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOYouDiedViewController.swift; sourceTree = "<group>"; };
+		3C75F00D2073F7CD00278A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3C75F00F2073F7CD00278A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C75F0122073F7CD00278A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3C75F0142073F7CD00278A74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C75F01B2073FC5E00278A74 /* OptimusPrinceps.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = OptimusPrinceps.ttf; sourceTree = "<group>"; };
+		3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsCalculatorViewController.swift; sourceTree = "<group>"; };
+		3C75F01F20744C5800278A74 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
+		3C75F02120744FE300278A74 /* TODOTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOTravelViewController.swift; sourceTree = "<group>"; };
+		3C75F026207522C100278A74 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
+		3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsCalculatorPresenter.swift; sourceTree = "<group>"; };
+		3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsSeriesGame.swift; sourceTree = "<group>"; };
+		3C8C0AB9207EB032004D816C /* CalculateSouls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSouls.swift; sourceTree = "<group>"; };
+		3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLordranAndLothric.swift; sourceTree = "<group>"; };
+		3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsDrangleic.swift; sourceTree = "<group>"; };
+		3C8C0AC4207FA453004D816C /* DarkArmoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkArmoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryTests.swift; sourceTree = "<group>"; };
+		3C8C0AC8207FA454004D816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C75F0022073F7CD00278A74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8C0AC1207FA453004D816C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C75EFFC2073F7CD00278A74 = {
+			isa = PBXGroup;
+			children = (
+				3C75F0072073F7CD00278A74 /* DarkArmory */,
+				3C8C0AC5207FA453004D816C /* DarkArmoryTests */,
+				3C75F0062073F7CD00278A74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3C75F0062073F7CD00278A74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3C75F0052073F7CD00278A74 /* DarkArmory.app */,
+				3C8C0AC4207FA453004D816C /* DarkArmoryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C75F0072073F7CD00278A74 /* DarkArmory */ = {
+			isa = PBXGroup;
+			children = (
+				3C8C0AB7207EAF8A004D816C /* Core */,
+				3C84F3EB2080FE8C001F3C32 /* Presenters */,
+				3C84F3F1208110D5001F3C32 /* Views */,
+				3C75F0082073F7CD00278A74 /* AppDelegate.swift */,
+				3C75F0142073F7CD00278A74 /* Info.plist */,
+				3C75F01A2073FC2D00278A74 /* FontAssets */,
+			);
+			path = DarkArmory;
+			sourceTree = "<group>";
+		};
+		3C75F01A2073FC2D00278A74 /* FontAssets */ = {
+			isa = PBXGroup;
+			children = (
+				3C75F01B2073FC5E00278A74 /* OptimusPrinceps.ttf */,
+			);
+			path = FontAssets;
+			sourceTree = "<group>";
+		};
+		3C75F023207521D500278A74 /* CustomUIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3C75F01F20744C5800278A74 /* UICustomView.swift */,
+				3C75F026207522C100278A74 /* UICustomButton.swift */,
+				3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */,
+			);
+			path = CustomUIComponents;
+			sourceTree = "<group>";
+		};
+		3C84F3EB2080FE8C001F3C32 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		3C84F3EE20810361001F3C32 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		3C84F3F1208110D5001F3C32 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3C84F3F320813CEA001F3C32 /* Storyboards */,
+				3C84F3F220813A6E001F3C32 /* Assets */,
+				3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */,
+				3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */,
+				3C75F02120744FE300278A74 /* TODOTravelViewController.swift */,
+				3C75F023207521D500278A74 /* CustomUIComponents */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3C84F3F220813A6E001F3C32 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				3C75F00F2073F7CD00278A74 /* Assets.xcassets */,
+				3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		3C84F3F320813CEA001F3C32 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3C75F00C2073F7CD00278A74 /* Main.storyboard */,
+				3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3C8C0AB7207EAF8A004D816C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				3C84F3EE20810361001F3C32 /* Entities */,
+				3C8C0AB8207EB014004D816C /* UseCases */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		3C8C0AB8207EB014004D816C /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3C8C0ABB207EB094004D816C /* Implementation */,
+				3C8C0AB9207EB032004D816C /* CalculateSouls.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3C8C0ABB207EB094004D816C /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */,
+				3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		3C8C0AC5207FA453004D816C /* DarkArmoryTests */ = {
+			isa = PBXGroup;
+			children = (
+				3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */,
+				3C8C0AC8207FA454004D816C /* Info.plist */,
+			);
+			path = DarkArmoryTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3C75F0042073F7CD00278A74 /* DarkArmory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C75F0172073F7CD00278A74 /* Build configuration list for PBXNativeTarget "DarkArmory" */;
+			buildPhases = (
+				3C75F0012073F7CD00278A74 /* Sources */,
+				3C75F0022073F7CD00278A74 /* Frameworks */,
+				3C75F0032073F7CD00278A74 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DarkArmory;
+			productName = DarkArmory;
+			productReference = 3C75F0052073F7CD00278A74 /* DarkArmory.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3C8C0AC3207FA453004D816C /* DarkArmoryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C8C0ACB207FA454004D816C /* Build configuration list for PBXNativeTarget "DarkArmoryTests" */;
+			buildPhases = (
+				3C8C0AC0207FA453004D816C /* Sources */,
+				3C8C0AC1207FA453004D816C /* Frameworks */,
+				3C8C0AC2207FA453004D816C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3C8C0ACA207FA454004D816C /* PBXTargetDependency */,
+			);
+			name = DarkArmoryTests;
+			productName = DarkArmoryTests;
+			productReference = 3C8C0AC4207FA453004D816C /* DarkArmoryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3C75EFFD2073F7CD00278A74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Santiago Romero Restrepo";
+				TargetAttributes = {
+					3C75F0042073F7CD00278A74 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3C8C0AC3207FA453004D816C = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3C75F0042073F7CD00278A74;
+					};
+				};
+			};
+			buildConfigurationList = 3C75F0002073F7CD00278A74 /* Build configuration list for PBXProject "DarkArmory" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3C75EFFC2073F7CD00278A74;
+			productRefGroup = 3C75F0062073F7CD00278A74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C75F0042073F7CD00278A74 /* DarkArmory */,
+				3C8C0AC3207FA453004D816C /* DarkArmoryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3C75F0032073F7CD00278A74 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C75F01C2073FC6800278A74 /* OptimusPrinceps.ttf in Resources */,
+				3C75F0132073F7CD00278A74 /* LaunchScreen.storyboard in Resources */,
+				3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */,
+				3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */,
+				3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8C0AC2207FA453004D816C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C75F0012073F7CD00278A74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
+				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
+				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
+				3C75F02020744C5800278A74 /* UICustomView.swift in Sources */,
+				3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */,
+				3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */,
+				3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */,
+				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
+				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift in Sources */,
+				3C75F02220744FE300278A74 /* TODOTravelViewController.swift in Sources */,
+				3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */,
+				3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C8C0AC0207FA453004D816C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C8C0AC7207FA453004D816C /* DarkArmoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3C8C0ACA207FA454004D816C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C75F0042073F7CD00278A74 /* DarkArmory */;
+			targetProxy = 3C8C0AC9207FA454004D816C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3C75F00C2073F7CD00278A74 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C75F00D2073F7CD00278A74 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3C75F0122073F7CD00278A74 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3C75F0152073F7CD00278A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3C75F0162073F7CD00278A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3C75F0182073F7CD00278A74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarkArmory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3C75F0192073F7CD00278A74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarkArmory/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmory;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3C8C0ACC207FA454004D816C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarkArmoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarkArmory.app/DarkArmory";
+			};
+			name = Debug;
+		};
+		3C8C0ACD207FA454004D816C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DarkArmoryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmoryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarkArmory.app/DarkArmory";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3C75F0002073F7CD00278A74 /* Build configuration list for PBXProject "DarkArmory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C75F0152073F7CD00278A74 /* Debug */,
+				3C75F0162073F7CD00278A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C75F0172073F7CD00278A74 /* Build configuration list for PBXNativeTarget "DarkArmory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C75F0182073F7CD00278A74 /* Debug */,
+				3C75F0192073F7CD00278A74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3C8C0ACB207FA454004D816C /* Build configuration list for PBXNativeTarget "DarkArmoryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C8C0ACC207FA454004D816C /* Debug */,
+				3C8C0ACD207FA454004D816C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3C75EFFD2073F7CD00278A74 /* Project object */;
+}
