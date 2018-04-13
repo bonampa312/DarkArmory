@@ -10,6 +10,6 @@ import Foundation
 
 enum SoulsSeriesGame : String {
     case DarkSouls1 = "Dark Souls"
-    case DarkSouls2 = "Dark Souls 2"
-    case DarkSouls3 = "Dark Souls 3"
+    case DarkSouls2 = "Dark Souls II"
+    case DarkSouls3 = "Dark Souls III"
 }

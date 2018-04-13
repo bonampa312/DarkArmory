@@ -29,7 +29,7 @@ class TODOTravelViewController: UIViewController {
             UIView.animate(withDuration: 0.3, animations: {
                 self.buttonBackground.transform = CGAffineTransform(scaleX: 10, y: 10)
             }) { (true) in
-                self.menuBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.4910370291)
+                self.menuBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
                 self.buttonBackground.alpha = 0
                 self.showFullMenu()
             }
@@ -78,14 +78,14 @@ class TODOTravelViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let firelinkController = segue.destination as! SoulsCalculatorViewController
+        let soulCalculatorController = segue.destination as! SoulsCalculatorViewController
         switch segue.identifier! {
         case "ds1FirelinkTravel":
-            firelinkController.placeName = "Primal firelink shrine"
+            soulCalculatorController.game = .DarkSouls1
         case "ds2FirelinkTravel":
-            firelinkController.placeName = "Majula"
+            soulCalculatorController.game = .DarkSouls2
         case "ds3FirelinkTravel":
-            firelinkController.placeName = "New firelink shrine"
+            soulCalculatorController.game = .DarkSouls3
         default:
             return
         }

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SoulsCalculatorView : class {
-    func onUpdateSouls (soulsAmount : String)
+    func onUpdateSouls ()
     func showErrorEmptyFields ()
 }
 
@@ -17,12 +17,13 @@ final class SoulsCalculatorPresenter {
     unowned fileprivate var view : SoulsCalculatorView
     var gameFromSeries : SoulsSeriesGame
     var soulsCalculator : CalculateSouls
-    var totalSouls : Int?
+    var totalSouls : String
     
     
     init(view : SoulsCalculatorView, game : SoulsSeriesGame) {
         self.view = view
         self.gameFromSeries = game
+        self.totalSouls = ""
         switch gameFromSeries {
             case .DarkSouls1, .DarkSouls3 :
                 soulsCalculator = CalculateSoulsLordranAndLothric()
@@ -31,16 +32,16 @@ final class SoulsCalculatorPresenter {
         }
     }
     
-    func calculateTotalSouls (startLevel : String, targetLevel : String) {
-        if let current = Int(startLevel), let target = Int(targetLevel) {
+    func calculateTotalSouls (startLevel : String?, targetLevel : String?) {
+        if let current = Int(startLevel!), let target = Int(targetLevel!) {
             var soulsTillTarget : Double = 0
             if current < target {
                 for soulsForLevel in current+1...target {
                     soulsTillTarget += self.soulsCalculator.calculateSoulsForLevel(level: soulsForLevel)
                 }
             }
-            let soulsAmountFormatted = Int(soulsTillTarget.rounded()).withCommas()
-            self.view.onUpdateSouls(soulsAmount: soulsAmountFormatted)
+            self.totalSouls = Int(soulsTillTarget.rounded()).withCommas()
+            self.view.onUpdateSouls()
         } else {
             self.view.showErrorEmptyFields()
         }
