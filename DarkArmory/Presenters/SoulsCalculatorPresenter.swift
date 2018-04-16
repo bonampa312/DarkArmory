@@ -11,6 +11,7 @@ import UIKit
 protocol SoulsCalculatorView : class {
     func onUpdateSouls ()
     func showErrorEmptyFields ()
+    func showErrorOutOfRangeLevels()
 }
 
 final class SoulsCalculatorPresenter {
@@ -25,23 +26,23 @@ final class SoulsCalculatorPresenter {
         self.gameFromSeries = game
         self.totalSouls = ""
         switch gameFromSeries {
-            case .DarkSouls1, .DarkSouls3 :
-                soulsCalculator = CalculateSoulsLordranAndLothric()
-            case .DarkSouls2 :
-                soulsCalculator = CalculateSoulsDrangleic()
+        case .DarkSouls1 :
+            soulsCalculator = CalculateSoulsLordran()
+        case .DarkSouls2 :
+            soulsCalculator = CalculateSoulsDrangleic()
+        case .DarkSouls3 :
+            soulsCalculator = CalculateSoulsLothric()
         }
     }
     
     func calculateTotalSouls (startLevel : String?, targetLevel : String?) {
         if let current = Int(startLevel!), let target = Int(targetLevel!) {
-            var soulsTillTarget : Double = 0
-            if current < target {
-                for soulsForLevel in current+1...target {
-                    soulsTillTarget += self.soulsCalculator.calculateSoulsForLevel(level: soulsForLevel)
-                }
+            self.totalSouls = self.soulsCalculator.calculateSoulsForRange(current: current, target: target).withCommas()
+            if self.totalSouls == "0" && current != target {
+                self.view.showErrorOutOfRangeLevels()
+            } else {
+                self.view.onUpdateSouls()
             }
-            self.totalSouls = Int(soulsTillTarget.rounded()).withCommas()
-            self.view.onUpdateSouls()
         } else {
             self.view.showErrorEmptyFields()
         }

@@ -11,5 +11,5 @@ import Foundation
 protocol CalculateSouls {
     
     func calculateSoulsForLevel (level x : Int) -> Double
-    
+    func calculateSoulsForRange (current : Int, target : Int) -> Int
 }

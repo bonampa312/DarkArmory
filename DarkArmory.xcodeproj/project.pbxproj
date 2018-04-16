@@ -23,9 +23,10 @@
 		3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */; };
 		3C84F3F520816F24001F3C32 /* CustomInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3F420816F24001F3C32 /* CustomInteger.swift */; };
 		3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0AB9207EB032004D816C /* CalculateSouls.swift */; };
-		3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */; };
+		3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordran.swift */; };
 		3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */; };
 		3C8C0AC7207FA453004D816C /* DarkArmoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */; };
+		3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,11 +58,12 @@
 		3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsSeriesGame.swift; sourceTree = "<group>"; };
 		3C84F3F420816F24001F3C32 /* CustomInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteger.swift; sourceTree = "<group>"; };
 		3C8C0AB9207EB032004D816C /* CalculateSouls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSouls.swift; sourceTree = "<group>"; };
-		3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLordranAndLothric.swift; sourceTree = "<group>"; };
+		3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLordran.swift; sourceTree = "<group>"; };
 		3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsDrangleic.swift; sourceTree = "<group>"; };
 		3C8C0AC4207FA453004D816C /* DarkArmoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkArmoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryTests.swift; sourceTree = "<group>"; };
 		3C8C0AC8207FA454004D816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLothric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,8 +202,9 @@
 		3C8C0ABB207EB094004D816C /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift */,
+				3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordran.swift */,
 				3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */,
+				3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -325,10 +328,11 @@
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
 				3C75F02020744C5800278A74 /* UICustomView.swift in Sources */,
 				3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */,
+				3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */,
 				3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */,
 				3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */,
 				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
-				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordranAndLothric.swift in Sources */,
+				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */,
 				3C75F02220744FE300278A74 /* TODOTravelViewController.swift in Sources */,
 				3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */,
 				3C84F3F520816F24001F3C32 /* CustomInteger.swift in Sources */,

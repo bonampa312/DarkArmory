@@ -212,8 +212,12 @@ extension SoulsCalculatorViewController : SoulsCalculatorView {
     }
     
     func showErrorEmptyFields() {
-        self.messageTitle.text = "A range is needed to level"
+        self.messageTitle.text = "Fill the range to level!"
         self.soulsAmountLabel.text = ""
     }
     
+    func showErrorOutOfRangeLevels () {
+        self.messageTitle.text = "You can't achieve that levels!"
+        self.soulsAmountLabel.text = ""
+    }
 }

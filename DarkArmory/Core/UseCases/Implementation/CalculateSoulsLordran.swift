@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CalculateSoulsLordranAndLothric : CalculateSouls {
+class CalculateSoulsLordran : CalculateSouls {
     
     func calculateSoulsForLevel(level x: Int) -> Double {
         
@@ -20,6 +20,17 @@ class CalculateSoulsLordranAndLothric : CalculateSouls {
         let scnd = 3.06*pow(Double(x),2)
         let thrd = 105.6*Double(x)
         return (first + scnd + thrd - 895)
+    }
+    
+    func calculateSoulsForRange (current : Int, target : Int) -> Int {
+        var soulsTillTarget : Double = 0
+        if current < target && current > 0 && target < 714 {
+            for soulsForLevel in current+1...target {
+                soulsTillTarget += self.calculateSoulsForLevel(level: soulsForLevel)
+            }
+        }
+        let totalSouls = Int(soulsTillTarget.rounded())
+        return totalSouls
     }
     
 }
