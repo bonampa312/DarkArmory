@@ -13,9 +13,9 @@ class TODOTravelViewController: UIViewController {
     @IBOutlet weak var menuBar: UIView!
     @IBOutlet weak var buttonBackground: UICustomView!
     @IBOutlet weak var showMenuButton: UIButton!
-    @IBOutlet weak var ds1FirelinkButton: UICustomButton!
-    @IBOutlet weak var ds2FirelinkButton: UICustomButton!
-    @IBOutlet weak var ds3FirelinkButton: UICustomButton!
+    @IBOutlet weak var ds1FirelinkButton: UIStackView!
+    @IBOutlet weak var ds2FirelinkButton: UIStackView!
+    @IBOutlet weak var ds3FirelinkButton: UIStackView!
     
     let π = CGFloat.pi
     

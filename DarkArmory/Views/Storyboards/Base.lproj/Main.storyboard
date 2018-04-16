@@ -485,69 +485,120 @@
                                             <action selector="toggleMenu:" destination="SKW-aS-Ve9" eventType="touchUpInside" id="wC8-ht-odj"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Qvl-2d-noS">
-                                        <rect key="frame" x="67.5" y="86" width="240" height="64"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Qvl-2d-noS">
+                                        <rect key="frame" x="59" y="59.5" width="258" height="90.5"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-VI-UAX" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="64" height="64"/>
+                                            <stackView opaque="NO" alpha="0.0" contentMode="scaleAspectFit" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="j01-Jd-vNB">
+                                                <rect key="frame" x="0.0" y="0.0" width="70" height="90.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lordran" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6T-Ea-naf">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="18.5"/>
+                                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-VI-UAX" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20.5" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="8SK-VI-UAX" secondAttribute="height" multiplier="1:1" id="8gI-jC-Dy9"/>
+                                                            <constraint firstAttribute="height" constant="70" id="d9a-SS-CaZ"/>
+                                                        </constraints>
+                                                        <state key="normal" image="DS1Firelink"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds1FirelinkTravel" id="u7h-i5-v8K"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="8SK-VI-UAX" secondAttribute="height" multiplier="1:1" id="8gI-jC-Dy9"/>
-                                                    <constraint firstAttribute="height" constant="64" id="d9a-SS-CaZ"/>
+                                                    <constraint firstAttribute="trailing" secondItem="q6T-Ea-naf" secondAttribute="trailing" id="EEQ-HD-9hB"/>
+                                                    <constraint firstItem="q6T-Ea-naf" firstAttribute="leading" secondItem="j01-Jd-vNB" secondAttribute="leading" id="gLr-Hn-PaU"/>
                                                 </constraints>
-                                                <state key="normal" image="DS1Firelink"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="32"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds1FirelinkTravel" id="u7h-i5-v8K"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-f2-6ie" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                                <rect key="frame" x="88" y="0.0" width="64" height="64"/>
+                                            </stackView>
+                                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="23R-Xr-dgn">
+                                                <rect key="frame" x="94" y="0.0" width="70" height="90.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drangleic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63D-mD-ex2">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIa-f2-6ie" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20.5" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="70" id="GXG-eV-70U"/>
+                                                            <constraint firstAttribute="width" secondItem="xIa-f2-6ie" secondAttribute="height" multiplier="1:1" id="QZw-R5-k85"/>
+                                                        </constraints>
+                                                        <state key="normal" backgroundImage="majula"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds2FirelinkTravel" id="Sx1-UO-X3P"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="64" id="GXG-eV-70U"/>
-                                                    <constraint firstAttribute="width" secondItem="xIa-f2-6ie" secondAttribute="height" multiplier="1:1" id="QZw-R5-k85"/>
+                                                    <constraint firstAttribute="trailing" secondItem="63D-mD-ex2" secondAttribute="trailing" id="3gx-c7-yiY"/>
+                                                    <constraint firstItem="63D-mD-ex2" firstAttribute="leading" secondItem="23R-Xr-dgn" secondAttribute="leading" id="BQs-fj-TwM"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="majula"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="32"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds2FirelinkTravel" id="Sx1-UO-X3P"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-qc-quu" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                                <rect key="frame" x="176" y="0.0" width="64" height="64"/>
+                                            </stackView>
+                                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rns-4B-3jX">
+                                                <rect key="frame" x="188" y="0.0" width="70" height="90.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lothric" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IML-Hl-p3f">
+                                                        <rect key="frame" x="0.0" y="0.0" width="70" height="20.5"/>
+                                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qRp-qc-quu" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="20.5" width="70" height="70"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qRp-qc-quu" secondAttribute="height" multiplier="1:1" id="Gfi-Hn-M7b"/>
+                                                            <constraint firstAttribute="width" constant="70" id="nrE-Za-Ui7"/>
+                                                        </constraints>
+                                                        <state key="normal" image="ds3Firelink"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="2"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="35"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds3FirelinkTravel" id="mx0-Ec-jfY"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="qRp-qc-quu" secondAttribute="height" multiplier="1:1" id="Gfi-Hn-M7b"/>
-                                                    <constraint firstAttribute="width" constant="64" id="nrE-Za-Ui7"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IML-Hl-p3f" secondAttribute="trailing" id="kuo-SG-2oS"/>
+                                                    <constraint firstItem="IML-Hl-p3f" firstAttribute="leading" secondItem="rns-4B-3jX" secondAttribute="leading" id="tMs-Ia-0HJ"/>
                                                 </constraints>
-                                                <state key="normal" image="ds3Firelink"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="2"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="32"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds3FirelinkTravel" id="mx0-Ec-jfY"/>
-                                                </connections>
-                                            </button>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </stackView>
@@ -583,9 +634,9 @@
                     </view>
                     <connections>
                         <outlet property="buttonBackground" destination="cEp-0D-Ehk" id="A0g-eg-lD4"/>
-                        <outlet property="ds1FirelinkButton" destination="8SK-VI-UAX" id="y4s-h4-Ptg"/>
-                        <outlet property="ds2FirelinkButton" destination="xIa-f2-6ie" id="Euz-7s-ENj"/>
-                        <outlet property="ds3FirelinkButton" destination="qRp-qc-quu" id="ARp-Z5-5n6"/>
+                        <outlet property="ds1FirelinkButton" destination="j01-Jd-vNB" id="tgF-NO-W9e"/>
+                        <outlet property="ds2FirelinkButton" destination="23R-Xr-dgn" id="sDX-wj-YQZ"/>
+                        <outlet property="ds3FirelinkButton" destination="rns-4B-3jX" id="OmP-U4-ZrD"/>
                         <outlet property="menuBar" destination="KUG-YC-6Zj" id="WvM-G9-oxC"/>
                         <outlet property="showMenuButton" destination="FK0-qM-Gng" id="2ut-1V-FBz"/>
                     </connections>
@@ -607,7 +658,7 @@
         <image name="sword" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mx0-Ec-jfY"/>
+        <segue reference="u7h-i5-v8K"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
