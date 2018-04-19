@@ -8,8 +8,14 @@
 
 import UIKit
 
-class TODOTravelViewController: UIViewController {
+class SelectGameViewController: UIViewController {
+    
+    //MARK: - Class variables
+    
+    private let π = CGFloat.pi
 
+    //MARK: - Select Game view outlets
+    
     @IBOutlet weak var menuBar: UIView!
     @IBOutlet weak var buttonBackground: UICustomView!
     @IBOutlet weak var showMenuButton: UIButton!
@@ -17,13 +23,15 @@ class TODOTravelViewController: UIViewController {
     @IBOutlet weak var ds2FirelinkButton: UIStackView!
     @IBOutlet weak var ds3FirelinkButton: UIStackView!
     
-    let π = CGFloat.pi
+    //MARK: - View lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
 
+    //MARK: - Buttons actions functions
+    
     @IBAction func toggleMenu(_ sender: UIButton) {
         if self.buttonBackground.transform == .identity {
             UIView.animate(withDuration: 0.3, animations: {
@@ -41,6 +49,29 @@ class TODOTravelViewController: UIViewController {
             }
         }
     }
+    
+    //MARK: - Prepare for segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let soulCalculatorController = segue.destination as! SoulsCalculatorViewController
+        switch segue.identifier! {
+        case "ds1FirelinkTravel":
+            soulCalculatorController.game = .DarkSouls1
+        case "ds2FirelinkTravel":
+            soulCalculatorController.game = .DarkSouls2
+        case "ds3FirelinkTravel":
+            soulCalculatorController.game = .DarkSouls3
+        default:
+            return
+        }
+    }
+    
+}
+
+
+//MARK: - Animations methods
+
+extension SelectGameViewController {
     
     func showFullMenu () {
         UIView.animate(withDuration: 0.3, animations: {
@@ -74,20 +105,6 @@ class TODOTravelViewController: UIViewController {
             self.ds1FirelinkButton.alpha = newAlpha
             self.ds2FirelinkButton.alpha = newAlpha
             self.ds3FirelinkButton.alpha = newAlpha
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let soulCalculatorController = segue.destination as! SoulsCalculatorViewController
-        switch segue.identifier! {
-        case "ds1FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls1
-        case "ds2FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls2
-        case "ds3FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls3
-        default:
-            return
         }
     }
     

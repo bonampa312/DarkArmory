@@ -446,10 +446,10 @@
             </objects>
             <point key="canvasLocation" x="777" y="883"/>
         </scene>
-        <!--Travel View Controller-->
+        <!--Select Game View Controller-->
         <scene sceneID="3d0-dN-am0">
             <objects>
-                <viewController id="SKW-aS-Ve9" customClass="TODOTravelViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="SKW-aS-Ve9" customClass="SelectGameViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kN4-zP-UKD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
