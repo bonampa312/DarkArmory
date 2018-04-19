@@ -121,7 +121,7 @@
                                         </constraints>
                                         <state key="normal" image="skull"/>
                                         <connections>
-                                            <segue destination="SKW-aS-Ve9" kind="show" id="KWE-r7-lgJ"/>
+                                            <action selector="enemiesButtonTapped:" destination="Ptp-EX-ooQ" eventType="touchUpInside" id="2WB-7v-FGC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -183,12 +183,28 @@
                                     <action selector="solaireTapped:" destination="Ptp-EX-ooQ" eventType="touchUpInside" id="BtT-nt-UBn"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-TK-j7c">
-                                <rect key="frame" x="187.5" y="80" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Jnk-Ff-Ss1">
+                                <rect key="frame" x="129" y="80" width="117.5" height="42.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5Z-TK-j7c">
+                                        <rect key="frame" x="0.0" y="0.0" width="83.5" height="42.5"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Koy-8K-AUE">
+                                        <rect key="frame" x="87.5" y="0.0" width="30" height="42.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="⚙︎"/>
+                                        <connections>
+                                            <segue destination="SKW-aS-Ve9" kind="show" id="QOz-SE-rWC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Koy-8K-AUE" firstAttribute="height" secondItem="m5Z-TK-j7c" secondAttribute="height" id="tRy-T8-S9h"/>
+                                </constraints>
+                            </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO8-uq-iJJ" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
                                 <rect key="frame" x="-62.5" y="191.5" width="500" height="184.5"/>
                                 <subviews>
@@ -389,9 +405,9 @@
                         <constraints>
                             <constraint firstItem="TdQ-8k-FX5" firstAttribute="centerX" secondItem="kOO-Cl-Ouj" secondAttribute="centerX" id="4b8-jM-mLf"/>
                             <constraint firstItem="pxn-6D-ve4" firstAttribute="leading" secondItem="599-A8-ka5" secondAttribute="trailing" constant="32" id="61G-V4-n3r"/>
-                            <constraint firstItem="m5Z-TK-j7c" firstAttribute="centerX" secondItem="kOO-Cl-Ouj" secondAttribute="centerX" id="7UM-tq-3em"/>
                             <constraint firstItem="TdQ-8k-FX5" firstAttribute="top" secondItem="Pwy-OO-Keb" secondAttribute="bottom" constant="36" id="B1U-up-pv4"/>
                             <constraint firstItem="kOO-Cl-Ouj" firstAttribute="bottom" secondItem="TdQ-8k-FX5" secondAttribute="bottom" constant="16" id="FUC-90-3eD"/>
+                            <constraint firstItem="Jnk-Ff-Ss1" firstAttribute="centerX" secondItem="kOO-Cl-Ouj" secondAttribute="centerX" id="Mly-QO-u7v"/>
                             <constraint firstItem="4GO-v4-kIX" firstAttribute="leading" secondItem="kOO-Cl-Ouj" secondAttribute="leading" id="Mra-ff-P4O"/>
                             <constraint firstItem="Pwy-OO-Keb" firstAttribute="centerX" secondItem="TdQ-8k-FX5" secondAttribute="centerX" id="Pdz-Yq-jPb"/>
                             <constraint firstItem="ZO8-uq-iJJ" firstAttribute="centerX" secondItem="kOO-Cl-Ouj" secondAttribute="centerX" id="T8x-Tt-h6k"/>
@@ -400,7 +416,7 @@
                             <constraint firstItem="ZO8-uq-iJJ" firstAttribute="leading" secondItem="kOO-Cl-Ouj" secondAttribute="leading" priority="750" constant="50" id="WHQ-ZS-Kdd"/>
                             <constraint firstItem="4GO-v4-kIX" firstAttribute="top" secondItem="kOO-Cl-Ouj" secondAttribute="top" constant="-20" id="XN6-0l-cMJ"/>
                             <constraint firstItem="kOO-Cl-Ouj" firstAttribute="bottom" secondItem="4GO-v4-kIX" secondAttribute="bottom" id="bBY-2g-pxq"/>
-                            <constraint firstItem="m5Z-TK-j7c" firstAttribute="top" secondItem="kOO-Cl-Ouj" secondAttribute="top" constant="60" id="gKU-NV-IaH"/>
+                            <constraint firstItem="Jnk-Ff-Ss1" firstAttribute="top" secondItem="kOO-Cl-Ouj" secondAttribute="top" constant="60" id="gMv-pI-55c"/>
                             <constraint firstItem="9BX-SH-QYI" firstAttribute="leading" secondItem="Pwy-OO-Keb" secondAttribute="trailing" constant="32" id="nlM-JG-dLu"/>
                             <constraint firstItem="TdQ-8k-FX5" firstAttribute="top" secondItem="599-A8-ka5" secondAttribute="bottom" id="ol7-Hk-49R"/>
                             <constraint firstItem="TdQ-8k-FX5" firstAttribute="top" secondItem="9BX-SH-QYI" secondAttribute="bottom" id="pRu-bn-UQr"/>

@@ -121,6 +121,10 @@ class SoulsCalculatorViewController: UIViewController {
         toggleAlphaFor(view : objectsButton)
     }
     
+    @IBAction func enemiesButtonTapped(_ sender: UIButton) {
+        toggleAlphaFor(view : enemiesButton)
+    }
+    
     @IBAction func toggleSoulsCalculator(_ sender: UIButton) {
         toggleAlphaFor(view : soulLevel)
         soulsCalculatorView.alpha = soulsCalculatorView.alpha == 1 ? 0 : 1
