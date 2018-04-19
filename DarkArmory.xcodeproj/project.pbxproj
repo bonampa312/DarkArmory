@@ -19,6 +19,7 @@
 		3C75F02020744C5800278A74 /* UICustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F01F20744C5800278A74 /* UICustomView.swift */; };
 		3C75F02220744FE300278A74 /* TODOTravelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F02120744FE300278A74 /* TODOTravelViewController.swift */; };
 		3C75F027207522C100278A74 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F026207522C100278A74 /* UICustomButton.swift */; };
+		3C7B856F2088FB6B00A3AC65 /* UICustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */; };
 		3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */; };
 		3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */; };
 		3C84F3F520816F24001F3C32 /* CustomInteger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3F420816F24001F3C32 /* CustomInteger.swift */; };
@@ -54,6 +55,7 @@
 		3C75F01F20744C5800278A74 /* UICustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomView.swift; sourceTree = "<group>"; };
 		3C75F02120744FE300278A74 /* TODOTravelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOTravelViewController.swift; sourceTree = "<group>"; };
 		3C75F026207522C100278A74 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
+		3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomViewController.swift; sourceTree = "<group>"; };
 		3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsCalculatorPresenter.swift; sourceTree = "<group>"; };
 		3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsSeriesGame.swift; sourceTree = "<group>"; };
 		3C84F3F420816F24001F3C32 /* CustomInteger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInteger.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				3C75F01F20744C5800278A74 /* UICustomView.swift */,
 				3C75F026207522C100278A74 /* UICustomButton.swift */,
 				3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */,
+				3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */,
 			);
 			path = CustomUIComponents;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
+				3C7B856F2088FB6B00A3AC65 /* UICustomViewController.swift in Sources */,
 				3C75F02020744C5800278A74 /* UICustomView.swift in Sources */,
 				3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */,
 				3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */,

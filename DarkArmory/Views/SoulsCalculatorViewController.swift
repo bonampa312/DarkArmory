@@ -42,6 +42,8 @@ class SoulsCalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.hideKeyboardWhenTappedAround()
+        
         presenter = SoulsCalculatorPresenter(view: self, game: game)
         
         soulsAmountStack.isHidden = true
@@ -133,6 +135,7 @@ class SoulsCalculatorViewController: UIViewController {
     }
     
     @IBAction func calculateSouls(_ sender: UIButton) {
+        view.endEditing(true)
         toggleCalculateButton(hide : true)
     }
     
@@ -190,7 +193,7 @@ class SoulsCalculatorViewController: UIViewController {
 extension SoulsCalculatorViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resignFirstResponder()
+        self.view.endEditing(true)
         return true
     }
     

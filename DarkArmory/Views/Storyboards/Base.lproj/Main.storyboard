@@ -220,7 +220,7 @@
                                                                         <rect key="frame" x="0.0" y="17" width="102" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" keyboardAppearance="alert"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="Ptp-EX-ooQ" id="fbc-jX-YVG"/>
                                                                         </connections>
@@ -244,7 +244,7 @@
                                                                         <rect key="frame" x="0.0" y="17" width="102" height="30"/>
                                                                         <nil key="textColor"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" keyboardAppearance="alert"/>
                                                                         <connections>
                                                                             <outlet property="delegate" destination="Ptp-EX-ooQ" id="TnC-3q-0b5"/>
                                                                         </connections>
