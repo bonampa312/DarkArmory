@@ -31,18 +31,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU DIED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-jx-pQ7">
-                                <rect key="frame" x="66.5" y="90" width="242.5" height="53.5"/>
-                                <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="50"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YEAH, AGAIN..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tF1-UB-IkS">
-                                <rect key="frame" x="118.5" y="333" width="138.5" height="21.5"/>
-                                <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erW-ia-Oyg">
                                 <rect key="frame" x="170.5" y="599" width="34" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -52,41 +40,119 @@
                                     <segue destination="Ptp-EX-ooQ" kind="show" id="Vyd-lp-hpo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ok, let's try another place..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oz-6U-a2Y">
-                                <rect key="frame" x="83.5" y="573" width="208.5" height="18.5"/>
-                                <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0O4-5J-ZlS">
+                                <rect key="frame" x="164" y="244.5" width="46" height="198"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-JU-pAc" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="-25" y="-4" width="96" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
+                                        <state key="normal" title="Weapons"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-YD-uj5" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="-20" y="38" width="87" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
+                                        <state key="normal" title="Armors"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-qp-rjp" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="-7" y="80" width="60" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
+                                        <state key="normal" title="Rings"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-3z-Vpc" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="-5" y="122" width="56" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
+                                        <state key="normal" title="Spells"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uq-98-NVx" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="-2" y="164" width="50" height="38"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
+                                        <state key="normal" title="Misc"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9B-KC-yBa" secondAttribute="trailing" id="1Yb-eU-OMp"/>
-                            <constraint firstItem="tF1-UB-IkS" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="7gW-Bs-YQs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0O4-5J-ZlS" secondAttribute="trailing" constant="165" id="2do-6h-DtD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gif-OX-DIu" secondAttribute="bottom" id="AY7-YK-Bkh"/>
-                            <constraint firstItem="tF1-UB-IkS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="J8Y-gZ-5ti"/>
                             <constraint firstItem="erW-ia-Oyg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="MnW-aX-igY"/>
                             <constraint firstItem="gif-OX-DIu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NPE-rI-oLr"/>
                             <constraint firstItem="gif-OX-DIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Oip-4F-Beg"/>
-                            <constraint firstItem="6Oz-6U-a2Y" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QHi-uT-NjW"/>
                             <constraint firstItem="H9B-KC-yBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QMv-Al-4tU"/>
                             <constraint firstItem="H9B-KC-yBa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="QVL-qg-KSX"/>
-                            <constraint firstItem="erW-ia-Oyg" firstAttribute="top" secondItem="6Oz-6U-a2Y" secondAttribute="bottom" constant="8" id="TTj-5S-SPr"/>
+                            <constraint firstItem="0O4-5J-ZlS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XeW-t2-z9k"/>
+                            <constraint firstItem="0O4-5J-ZlS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="ZMw-10-2Jf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H9B-KC-yBa" secondAttribute="bottom" id="bAO-7L-BPh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="erW-ia-Oyg" secondAttribute="bottom" constant="20" id="bUz-m3-j3E"/>
-                            <constraint firstItem="CnH-jx-pQ7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fYR-Fy-nxl"/>
-                            <constraint firstItem="CnH-jx-pQ7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="i0J-tF-zIG"/>
                             <constraint firstItem="gif-OX-DIu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vPB-p6-ii9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="againSubtitle" destination="tF1-UB-IkS" id="OO5-Tk-gN4"/>
                         <outlet property="backgroundFaraam" destination="H9B-KC-yBa" id="Jao-tQ-TOh"/>
                         <outlet property="backgroundFilter" destination="gif-OX-DIu" id="Z27-7A-vGZ"/>
                         <outlet property="fireButton" destination="erW-ia-Oyg" id="Wf6-uE-N5i"/>
-                        <outlet property="goToBonfireLabel" destination="6Oz-6U-a2Y" id="e89-Cc-bTz"/>
-                        <outlet property="youDiedTitle" destination="CnH-jx-pQ7" id="cNq-el-tpL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -674,7 +740,7 @@
         <image name="sword" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u7h-i5-v8K"/>
+        <segue reference="Vyd-lp-hpo"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
