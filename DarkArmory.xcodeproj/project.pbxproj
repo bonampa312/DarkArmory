@@ -12,6 +12,8 @@
 		3C4E1506208E8FF600875272 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */; };
 		3C4E150E208F95C800875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
 		3C4E150F208F95C800875272 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3C4E1512208FA85300875272 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1511208FA85300875272 /* ItemsListViewController.swift */; };
+		3C4E1517208FB7EA00875272 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1516208FB7EA00875272 /* ItemType.swift */; };
 		3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0082073F7CD00278A74 /* AppDelegate.swift */; };
 		3C75F00B2073F7CD00278A74 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */; };
 		3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00C2073F7CD00278A74 /* Main.storyboard */; };
@@ -62,6 +64,8 @@
 		3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bonfireAnimated.gif; sourceTree = "<group>"; };
 		3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = SOURCE_ROOT; };
 		3C4E1505208E8FF600875272 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
+		3C4E1511208FA85300875272 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
+		3C4E1516208FB7EA00875272 /* ItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		3C75F0052073F7CD00278A74 /* DarkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C75F0082073F7CD00278A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 			children = (
 				3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */,
 				3C84F3F420816F24001F3C32 /* CustomInteger.swift */,
+				3C4E1516208FB7EA00875272 /* ItemType.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -185,9 +190,10 @@
 		3C84F3F1208110D5001F3C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */,
 				3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */,
 				3C75F02120744FE300278A74 /* SelectGameViewController.swift */,
+				3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */,
+				3C4E1511208FA85300875272 /* ItemsListViewController.swift */,
 				3C84F3F220813A6E001F3C32 /* Assets */,
 				3C84F3F320813CEA001F3C32 /* Storyboards */,
 				3C75F023207521D500278A74 /* CustomUIComponents */,
@@ -360,9 +366,11 @@
 			files = (
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
+				3C4E1517208FB7EA00875272 /* ItemType.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
 				3C7B856F2088FB6B00A3AC65 /* UICustomViewController.swift in Sources */,
 				3C75F02020744C5800278A74 /* UICustomView.swift in Sources */,
+				3C4E1512208FA85300875272 /* ItemsListViewController.swift in Sources */,
 				3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */,
 				3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */,
 				3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */,

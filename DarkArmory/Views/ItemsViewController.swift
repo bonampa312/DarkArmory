@@ -18,7 +18,11 @@ class ItemsViewController: UIViewController {
     //MARK: - View elements outlets
     
     @IBOutlet weak var fireButton: UIStackView!
-    @IBOutlet var itemTypeButtons: [UICustomButton]!
+    @IBOutlet weak var weaponsButton: UICustomButton!
+    @IBOutlet weak var armorsButton: UICustomButton!
+    @IBOutlet weak var ringsButton: UICustomButton!
+    @IBOutlet weak var spellsButton: UICustomButton!
+    @IBOutlet weak var miscButton: UICustomButton!
     
     //MARK: - View lifecycle methods
     
@@ -30,19 +34,70 @@ class ItemsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.animateBgImage()
+        
     }
 
     //MARK: - UI methods
     
-    func configureUI () {
+    private func configureUI () {
         backgroundFaraam.alpha = 0
         backgroundFilter.alpha = 0
         fireButton.alpha = 0
-        for button in itemTypeButtons {
-            button.alpha = 0
-        }
+        
+        weaponsButton.setTitle(ItemType.Weapons.rawValue, for: UIControlState.normal)
+        weaponsButton.alpha = 0
+        armorsButton.setTitle(ItemType.Armors.rawValue, for: UIControlState.normal)
+        armorsButton.alpha = 0
+        spellsButton.setTitle(ItemType.Spells.rawValue, for: UIControlState.normal)
+        spellsButton.alpha = 0
+        ringsButton.setTitle(ItemType.Rings.rawValue, for: UIControlState.normal)
+        ringsButton.alpha = 0
+        miscButton.setTitle(ItemType.Misc.rawValue, for: UIControlState.normal)
+        miscButton.alpha = 0
+        
     }
 
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier! {
+        case "itemsListSegue":
+            let itemList = segue.destination as! ItemsListViewController
+            guard let button = sender as? UIButton else { return }
+            switch button {
+            case weaponsButton:
+                itemList.itemsType = .Weapons
+            case armorsButton:
+                itemList.itemsType = .Armors
+            case ringsButton:
+                itemList.itemsType = .Rings
+            case spellsButton:
+                itemList.itemsType = .Spells
+            case miscButton:
+                itemList.itemsType = .Misc
+            default:
+                itemList.itemsType = .Weapons
+            }
+        case "bonfireSegue":
+            _ = segue.destination as! SoulsCalculatorViewController
+        default:
+            return
+        }
+        
+    }
+    
+    @IBAction func shotItemsList(_ sender: UIButton) {
+        performSegue(withIdentifier: "itemsListSegue", sender: sender)
+    }
+    
+    @IBAction func goToBonfire(_ sender: UIButton) {
+        performSegue(withIdentifier: "bonfireSegue", sender: sender)
+    }
+    
+    @IBAction func unwindList(for unwindSegue: UIStoryboardSegue) {
+        // No code here :D
+    }
+    
 }
 
 //MARK: - Animations methods
@@ -67,13 +122,19 @@ extension ItemsViewController {
     }
     
     func animateItemsTypeButton() {
-        for button in itemTypeButtons {
-            button.transform = CGAffineTransform(scaleX: 0, y: 0)
-            button.alpha = 1
-            UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
-                button.transform = .identity
-            })
-        }
+        self.animateButton(button: weaponsButton)
+        self.animateButton(button: armorsButton)
+        self.animateButton(button: ringsButton)
+        self.animateButton(button: spellsButton)
+        self.animateButton(button: miscButton)
+    }
+    
+    func animateButton(button : UIButton) {
+        button.transform = CGAffineTransform(scaleX: 0, y: 0)
+        button.alpha = 1
+        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+            button.transform = .identity
+        })
     }
     
     func animateReturnButton() {
