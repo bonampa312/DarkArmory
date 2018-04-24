@@ -1,5 +1,5 @@
 //
-//  TravelViewController.swift
+//  SelectGameViewController.swift
 //  DarkArmory
 //
 //  Created by Santiago Romero Restrepo on 4/3/18.
@@ -10,10 +10,6 @@ import UIKit
 
 class SelectGameViewController: UIViewController {
     
-    //MARK: - Class variables
-    
-    private let π = CGFloat.pi
-
     //MARK: - Select Game view outlets
     
     @IBOutlet weak var menuBar: UIView!
@@ -27,26 +23,15 @@ class SelectGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
+    
     //MARK: - Buttons actions functions
     
     @IBAction func toggleMenu(_ sender: UIButton) {
         if self.buttonBackground.transform == .identity {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.buttonBackground.transform = CGAffineTransform(scaleX: 10, y: 10)
-            }) { (true) in
-                self.menuBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
-                self.buttonBackground.alpha = 0
-                self.showFullMenu()
-            }
+            self.expandMenuButton()
         } else {
-            UIView.animate(withDuration: 0.3, animations: {
-                self.toggleVisiblePlacesButtons()
-            }) { (true) in
-                self.hideFullMenu()
-            }
+            self.collapseMenuButton()
         }
     }
     
@@ -73,9 +58,27 @@ class SelectGameViewController: UIViewController {
 
 extension SelectGameViewController {
     
+    func expandMenuButton () {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.buttonBackground.transform = CGAffineTransform(scaleX: 10, y: 10)
+        }) { (true) in
+            self.menuBar.backgroundColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5)
+            self.buttonBackground.alpha = 0
+            self.showFullMenu()
+        }
+    }
+    
+    func collapseMenuButton () {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.toggleVisiblePlacesButtons()
+        }) { (true) in
+            self.hideFullMenu()
+        }
+    }
+    
     func showFullMenu () {
         UIView.animate(withDuration: 0.3, animations: {
-            self.showMenuButton.transform = CGAffineTransform(rotationAngle: self.π)
+            self.showMenuButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
             self.menuBar.transform = CGAffineTransform(translationX: 0, y: -98)
         }) { (true) in
             self.toggleVisiblePlacesButtons()
@@ -87,7 +90,7 @@ extension SelectGameViewController {
             self.showMenuButton.transform = .identity
             self.menuBar.transform = .identity
         }) { (true) in
-            self.menuBar.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+            self.menuBar.backgroundColor =  #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
             self.buttonBackground.alpha = 1
             self.showMenuButtonOriginal()
         }
@@ -109,3 +112,4 @@ extension SelectGameViewController {
     }
     
 }
+
