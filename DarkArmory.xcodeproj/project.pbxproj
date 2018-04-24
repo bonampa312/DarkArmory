@@ -13,7 +13,7 @@
 		3C4E150E208F95C800875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
 		3C4E150F208F95C800875272 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0082073F7CD00278A74 /* AppDelegate.swift */; };
-		3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */; };
+		3C75F00B2073F7CD00278A74 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */; };
 		3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00C2073F7CD00278A74 /* Main.storyboard */; };
 		3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00F2073F7CD00278A74 /* Assets.xcassets */; };
 		3C75F0132073F7CD00278A74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */; };
@@ -64,7 +64,7 @@
 		3C4E1505208E8FF600875272 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		3C75F0052073F7CD00278A74 /* DarkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C75F0082073F7CD00278A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOYouDiedViewController.swift; sourceTree = "<group>"; };
+		3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		3C75F00D2073F7CD00278A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C75F00F2073F7CD00278A74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C75F0122073F7CD00278A74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 		3C84F3F1208110D5001F3C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */,
+				3C75F00A2073F7CD00278A74 /* ItemsViewController.swift */,
 				3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */,
 				3C75F02120744FE300278A74 /* SelectGameViewController.swift */,
 				3C84F3F220813A6E001F3C32 /* Assets */,
@@ -366,7 +366,7 @@
 				3C75F01E207421D500278A74 /* SoulsCalculatorViewController.swift in Sources */,
 				3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */,
 				3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */,
-				3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */,
+				3C75F00B2073F7CD00278A74 /* ItemsViewController.swift in Sources */,
 				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
 				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */,
 				3C75F02220744FE300278A74 /* SelectGameViewController.swift in Sources */,
