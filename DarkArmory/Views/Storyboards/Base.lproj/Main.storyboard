@@ -261,7 +261,7 @@
                                         <state key="normal" image="sword"/>
                                         <connections>
                                             <action selector="objectsButtonTapped:" destination="Ptp-EX-ooQ" eventType="touchUpInside" id="br7-kR-kgu"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="zlN-4x-1lf"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="itemsListSegue" id="zlN-4x-1lf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -291,7 +291,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <state key="normal" title="⚙︎"/>
                                         <connections>
-                                            <segue destination="SKW-aS-Ve9" kind="show" id="QOz-SE-rWC"/>
+                                            <segue destination="SKW-aS-Ve9" kind="show" identifier="selectGameSegue" id="QOz-SE-rWC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -685,7 +685,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds1FirelinkTravel" id="u7h-i5-v8K"/>
+                                                            <segue destination="Rtd-OP-OVk" kind="unwind" identifier="ds1FirelinkTravel" unwindAction="unwindToSoulsCalculatorFor:" id="xTc-B0-EHy"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -722,7 +722,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds2FirelinkTravel" id="Sx1-UO-X3P"/>
+                                                            <segue destination="Rtd-OP-OVk" kind="unwind" identifier="ds2FirelinkTravel" unwindAction="unwindToSoulsCalculatorFor:" id="y3b-Dr-cWG"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -759,7 +759,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
-                                                            <segue destination="Ptp-EX-ooQ" kind="show" identifier="ds3FirelinkTravel" id="mx0-Ec-jfY"/>
+                                                            <segue destination="Rtd-OP-OVk" kind="unwind" identifier="ds3FirelinkTravel" unwindAction="unwindToSoulsCalculatorFor:" id="CGh-sX-YG8"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -811,6 +811,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8D-FK-nY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Rtd-OP-OVk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="636" y="47"/>
         </scene>
@@ -826,8 +827,5 @@
         <image name="soul" width="64" height="64"/>
         <image name="sword" width="64" height="64"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Sx1-UO-X3P"/>
-    </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

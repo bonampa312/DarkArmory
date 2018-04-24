@@ -16,7 +16,18 @@ protocol SoulsCalculatorView : class {
 
 final class SoulsCalculatorPresenter {
     unowned fileprivate var view : SoulsCalculatorView
-    var gameFromSeries : SoulsSeriesGame
+    var gameFromSeries : SoulsSeriesGame {
+        didSet {
+            switch gameFromSeries {
+            case .DarkSouls1 :
+                soulsCalculator = CalculateSoulsLordran()
+            case .DarkSouls2 :
+                soulsCalculator = CalculateSoulsDrangleic()
+            case .DarkSouls3 :
+                soulsCalculator = CalculateSoulsLothric()
+            }
+        }
+    }
     var soulsCalculator : CalculateSouls
     var totalSouls : String
     
@@ -25,14 +36,8 @@ final class SoulsCalculatorPresenter {
         self.view = view
         self.gameFromSeries = game
         self.totalSouls = ""
-        switch gameFromSeries {
-        case .DarkSouls1 :
-            soulsCalculator = CalculateSoulsLordran()
-        case .DarkSouls2 :
-            soulsCalculator = CalculateSoulsDrangleic()
-        case .DarkSouls3 :
-            soulsCalculator = CalculateSoulsLothric()
-        }
+        soulsCalculator = CalculateSoulsLordran()
+        gameFromSeries = game
     }
     
     func calculateTotalSouls (startLevel : String?, targetLevel : String?) {
