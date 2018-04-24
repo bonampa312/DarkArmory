@@ -82,7 +82,7 @@ class ItemsViewController: UIViewController {
             default:
                 itemList.itemsType = .Weapons
             }
-        case "bonfireSegue":
+        case "returnToBonfireSegue":
             _ = segue.destination as! SoulsCalculatorViewController
         default:
             return
@@ -94,12 +94,12 @@ class ItemsViewController: UIViewController {
         performSegue(withIdentifier: "itemsListSegue", sender: sender)
     }
     
-    @IBAction func goToBonfire(_ sender: UIButton) {
-        performSegue(withIdentifier: "bonfireSegue", sender: sender)
+    @IBAction func returnToBonfire(_ sender: UIButton) {
+        performSegue(withIdentifier: "returnToBonfireSegue", sender: sender)
     }
     
     @IBAction func unwindList(for unwindSegue: UIStoryboardSegue) {
-        // No code here :D
+        self.configureUI()
     }
     
 }
