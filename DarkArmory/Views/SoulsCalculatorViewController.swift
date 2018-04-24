@@ -1,5 +1,5 @@
 //
-//  FirelinkShrineViewController.swift
+//  SoulsCalculatorViewController.swift
 //  DarkArmory
 //
 //  Created by Santiago Romero Restrepo on 4/3/18.
@@ -48,14 +48,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         soulsAmountStack.isHidden = true
         
-        solaireMenu.alpha = 1
-        soulLevel.alpha = 0
-        enemiesButton.alpha = 0
-        objectsButton.alpha = 0
-        
-        soulsCalculatorView.alpha = 0
-        
-        currentGameNameLabel.text = game.rawValue
+        self.configureUI()
         
     }
     
@@ -77,6 +70,19 @@ class SoulsCalculatorViewController: UIViewController {
         enemiesButton.frame = solaireMenu.frame
         objectsButton.frame = solaireMenu.frame
         
+    }
+    
+    //MARK: - UI methods
+    
+    private func configureUI () {
+        solaireMenu.alpha = 1
+        soulLevel.alpha = 0
+        enemiesButton.alpha = 0
+        objectsButton.alpha = 0
+        
+        soulsCalculatorView.alpha = 0
+        
+        currentGameNameLabel.text = game.rawValue
     }
     
     //MARK: - Buttons actions functions
