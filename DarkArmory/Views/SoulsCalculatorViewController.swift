@@ -46,8 +46,6 @@ class SoulsCalculatorViewController: UIViewController {
         
         presenter = SoulsCalculatorPresenter(view: self, game: game)
         
-        soulsAmountStack.isHidden = true
-        
         self.configureUI()
         
     }
@@ -75,6 +73,9 @@ class SoulsCalculatorViewController: UIViewController {
     //MARK: - UI methods
     
     private func configureUI () {
+        
+        soulsAmountStack.isHidden = true
+        
         solaireMenu.alpha = 1
         soulLevel.alpha = 0
         enemiesButton.alpha = 0
@@ -125,6 +126,26 @@ class SoulsCalculatorViewController: UIViewController {
         toggleCalculateButton(hide: false)
     }
     
+    //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.exitCalculator()
+        switch segue.identifier! {
+        case "selectGameSegue":
+            _ = segue.destination as! SelectGameViewController
+        case "itemsListSegue":
+            let itemsListController = segue.destination as! ItemsViewController
+            itemsListController.gameSeries = game
+        default:
+            return
+        }
+    }
+    
+    @IBAction func unwindToSoulsCalculator(for unwindSegue: UIStoryboardSegue) {
+        configureUI()
+        currentGameNameLabel.text = game.rawValue
+        presenter.gameFromSeries = game
+    }
 }
 
 

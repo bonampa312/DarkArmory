@@ -10,6 +10,10 @@ import UIKit
 
 class ItemsViewController: UIViewController {
     
+    //MARK: - Class variables
+    
+    var gameSeries : SoulsSeriesGame = .DarkSouls1
+    
     //MARK: - View background outlets
     
     @IBOutlet weak var backgroundFaraam: UIImageView!
