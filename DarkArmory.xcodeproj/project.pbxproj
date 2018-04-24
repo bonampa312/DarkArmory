@@ -10,7 +10,8 @@
 		3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */; };
 		3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */; };
 		3C4E1506208E8FF600875272 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */; };
-		3C4E1507208E8FF600875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
+		3C4E150B208F91F100875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
+		3C4E150C208F91F100875272 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0082073F7CD00278A74 /* AppDelegate.swift */; };
 		3C75F00B2073F7CD00278A74 /* TODOYouDiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* TODOYouDiedViewController.swift */; };
 		3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00C2073F7CD00278A74 /* Main.storyboard */; };
@@ -41,6 +42,20 @@
 			remoteInfo = DarkArmory;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3C4E150D208F91F100875272 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3C4E150C208F91F100875272 /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWithGif.swift; sourceTree = "<group>"; };
@@ -77,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4E1507208E8FF600875272 /* Alamofire.framework in Frameworks */,
+				3C4E150B208F91F100875272 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +261,7 @@
 				3C75F0012073F7CD00278A74 /* Sources */,
 				3C75F0022073F7CD00278A74 /* Frameworks */,
 				3C75F0032073F7CD00278A74 /* Resources */,
+				3C4E150D208F91F100875272 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
