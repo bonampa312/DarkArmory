@@ -52,11 +52,7 @@ class SoulsCalculatorViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let bonfireAnimatedImage = UIImage.gifImageWithName(name: "bonfireAnimated")
-        let bonfireAnimatedImageView = UIImageView(image: bonfireAnimatedImage)
-        bonfireAnimatedImageView.frame = CGRect(x: 0, y: 0, width: bonfireBackground.frame.width, height: bonfireBackground.frame.height)
-        
-        bonfireBackground.addSubview(bonfireAnimatedImageView)
+        self.addGifBackground()
         
         buttonsOriginalCenters = [
             "teleport" : soulLevel.frame,
@@ -70,9 +66,21 @@ class SoulsCalculatorViewController: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        soulLevel.frame = solaireMenu.frame
+        enemiesButton.frame = solaireMenu.frame
+        objectsButton.frame = solaireMenu.frame
+        
+        solaireMenu.alpha = 1
+        
+    }
+    
     //MARK: - UI methods
     
     private func configureUI () {
+        
+        self.hideOptionsButtons()
         
         soulsAmountStack.isHidden = true
         
@@ -84,17 +92,30 @@ class SoulsCalculatorViewController: UIViewController {
         soulsCalculatorView.alpha = 0
         
         currentGameNameLabel.text = game.rawValue
+        
+    }
+    
+    private func addGifBackground() {
+        
+        let bonfireAnimatedImage = UIImage.gifImageWithName(name: "bonfireAnimated")
+        let bonfireAnimatedImageView = UIImageView(image: bonfireAnimatedImage)
+        bonfireAnimatedImageView.frame = CGRect(x: 0, y: 0, width: bonfireBackground.frame.width, height: bonfireBackground.frame.height)
+        
+        bonfireBackground.addSubview(bonfireAnimatedImageView)
+        
     }
     
     //MARK: - Buttons actions functions
     
     @IBAction func solaireTapped(_ sender: UIButton) {
+        
         if solaireMenu.alpha == 1 {
             self.showOptionsButtons()
         } else {
             self.hideOptionsButtons()
         }
         toggleAlphaFor(view: sender)
+        
     }
     
     @IBAction func objectsButtonTapped(_ sender: UIButton) {
@@ -106,16 +127,20 @@ class SoulsCalculatorViewController: UIViewController {
     }
     
     @IBAction func toggleSoulsCalculator(_ sender: UIButton) {
+        
         if soulsCalculatorView.alpha == 1 {
             exitCalculator()
         } else {
             showCalculator()
         }
+        
     }
     
     @IBAction func calculateSouls(_ sender: UIButton) {
+        
         view.endEditing(true)
         toggleCalculateButton(hide : true)
+        
     }
     
     @IBAction func exitCalculator(_ sender: UIButton) {
@@ -129,6 +154,7 @@ class SoulsCalculatorViewController: UIViewController {
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         self.exitCalculator()
         switch segue.identifier! {
         case "selectGameSegue":
@@ -139,12 +165,15 @@ class SoulsCalculatorViewController: UIViewController {
         default:
             return
         }
+        
     }
     
     @IBAction func unwindToSoulsCalculator(for unwindSegue: UIStoryboardSegue) {
+        
         configureUI()
         currentGameNameLabel.text = game.rawValue
         presenter.gameFromSeries = game
+        
     }
 }
 
@@ -154,56 +183,64 @@ class SoulsCalculatorViewController: UIViewController {
 extension SoulsCalculatorViewController {
     
     func showOptionsButtons () {
+        
+        self.soulLevel.frame = self.solaireMenu.frame
+        self.enemiesButton.frame = self.solaireMenu.frame
+        self.objectsButton.frame = self.solaireMenu.frame
+        
         UIView.animate(withDuration: 0.4, animations: {
             
             self.bonfireBackground.alpha = 0.3
-            
             self.soulLevel.alpha = 1
             self.enemiesButton.alpha = 1
             self.objectsButton.alpha = 1
-            
             self.soulLevel.frame = self.buttonsOriginalCenters["teleport"]!
             self.objectsButton.frame = self.buttonsOriginalCenters["slayMonster"]!
             self.enemiesButton.frame = self.buttonsOriginalCenters["diedInCombat"]!
         })
+        
     }
     
     func hideOptionsButtons () {
+        
         UIView.animate(withDuration: 0.4, animations: {
             
             self.bonfireBackground.alpha = 0.6
-            
             self.soulLevel.alpha = 0
             self.enemiesButton.alpha = 0
             self.objectsButton.alpha = 0
-            
             self.soulLevel.frame = self.solaireMenu.frame
             self.enemiesButton.frame = self.solaireMenu.frame
             self.objectsButton.frame = self.solaireMenu.frame
-            
             if self.soulsCalculatorView.alpha == 1 {
                 self.soulsCalculatorView.alpha = 0
             }
             
         })
+        
     }
     
     func toggleAlphaFor(view : UIView){
+        
         UIView.animate(withDuration: 0.1) {
             view.alpha = view.alpha == 1 ? 0.6 : 1
         }
+        
     }
     
     func exitCalculator () {
+        
         toggleAlphaFor(view: self.soulLevel)
         resetSoulsCalculation()
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0, options: .curveEaseIn, animations: {
             self.soulsCalculatorView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
             self.soulsCalculatorView.alpha = 0
         })
+        
     }
     
     func showCalculator () {
+        
         toggleAlphaFor(view : soulLevel)
         soulsCalculatorView.alpha = 1
         toggleCalculateButton(hide: false)
@@ -211,9 +248,11 @@ extension SoulsCalculatorViewController {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
             self.soulsCalculatorView.transform = .identity
         })
+        
     }
     
     func resetSoulsCalculation () {
+        
         messageTitle.text = "Get dissapointed"
         soulsAmountLabel.text = ""
         currentLevelLabel.text = ""
@@ -221,6 +260,7 @@ extension SoulsCalculatorViewController {
         UIView.transition(from: soulsAmountStack, to: calculateButton, duration: 0.2, options: [.showHideTransitionViews, .transitionCrossDissolve]) { (true) in
             self.soulsAmountStack.isHidden = true
         }
+        
     }
     
     func toggleCalculateButton (hide : Bool) {
@@ -244,7 +284,9 @@ extension SoulsCalculatorViewController {
         UIView.transition(from: fromView, to: toView, duration: 0.5, options: [.showHideTransitionViews, .transitionCrossDissolve]) { (true) in
             fromView.isHidden = true
         }
+        
     }
+    
 }
 
 
@@ -253,15 +295,19 @@ extension SoulsCalculatorViewController {
 extension SoulsCalculatorViewController : UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         self.view.endEditing(true)
         return true
+        
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
         let aSet = NSCharacterSet(charactersIn:"0123456789").inverted
         let compSepByCharInSet = string.components(separatedBy: aSet)
         let numberFiltered = compSepByCharInSet.joined(separator: "")
         return string == numberFiltered
+        
     }
 }
 
@@ -271,18 +317,24 @@ extension SoulsCalculatorViewController : UITextFieldDelegate {
 extension SoulsCalculatorViewController : SoulsCalculatorView {
     
     func onUpdateSouls() {
+        
         self.messageTitle.text = "Ok, you need..."
         self.soulsAmountLabel.text = "\(self.presenter.totalSouls) souls!"
+        
     }
     
     func showErrorEmptyFields() {
+        
         self.messageTitle.text = "Hollow levels!"
         self.soulsAmountLabel.text = ""
+        
     }
     
     func showErrorOutOfRangeLevels () {
+        
         self.messageTitle.text = "You can't achieve that levels!"
         self.soulsAmountLabel.text = ""
+        
     }
 }
 
