@@ -38,14 +38,14 @@ class SelectGameViewController: UIViewController {
     //MARK: - Prepare for segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let soulCalculatorController = segue.destination as! SoulsCalculatorViewController
+        _ = segue.destination as! SoulsCalculatorViewController
         switch segue.identifier! {
         case "ds1FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls1
+            SoulsGameSingleton.setGame(game: .DarkSouls1)
         case "ds2FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls2
+            SoulsGameSingleton.setGame(game: .DarkSouls2)
         case "ds3FirelinkTravel":
-            soulCalculatorController.game = .DarkSouls3
+            SoulsGameSingleton.setGame(game: .DarkSouls3)
         default:
             return
         }

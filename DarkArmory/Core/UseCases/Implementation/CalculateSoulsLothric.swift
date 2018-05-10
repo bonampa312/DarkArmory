@@ -11,7 +11,7 @@ import Foundation
 
 import Foundation
 
-class CalculateSoulsLothric : CalculateSouls {
+class CalculateSoulsLothric : UseCaseImplementation, CalculateSouls {
     
     func calculateSoulsForLevel(level x: Int) -> Double {
         

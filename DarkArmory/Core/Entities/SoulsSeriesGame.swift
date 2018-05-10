@@ -13,3 +13,4 @@ enum SoulsSeriesGame : String {
     case DarkSouls2 = "Dark Souls II"
     case DarkSouls3 = "Dark Souls III"
 }
+

@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CalculateSoulsLordran : CalculateSouls {
+class CalculateSoulsLordran : UseCaseImplementation, CalculateSouls {
     
     func calculateSoulsForLevel(level x: Int) -> Double {
         

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ItemType : String {
+enum GameElementType : String {
     case Armors
     case Weapons
     case Rings

@@ -10,7 +10,7 @@ import UIKit
 
 class ItemsListViewController: UIViewController {
 
-    var itemsType : ItemType = .Weapons
+    var itemsType : GameElementType = .Weapons
     
     @IBOutlet weak var listTitleLabel: UILabel!
     

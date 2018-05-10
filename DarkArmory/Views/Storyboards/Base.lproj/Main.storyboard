@@ -783,6 +783,11 @@
                                     <constraint firstItem="cEp-0D-Ehk" firstAttribute="top" secondItem="KUG-YC-6Zj" secondAttribute="top" constant="8" id="u23-NY-M6i"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4a-YX-lge">
+                                <rect key="frame" x="224" y="-16" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>

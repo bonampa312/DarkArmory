@@ -14,7 +14,6 @@ class SoulsCalculatorViewController: UIViewController {
     
     var presenter : SoulsCalculatorPresenter!
     var placeName : String!
-    var game : SoulsSeriesGame = .DarkSouls1
     var buttonsOriginalCenters : [String : CGRect]!
     
     //MARK: - Main view outlets
@@ -43,6 +42,8 @@ class SoulsCalculatorViewController: UIViewController {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
+        
+        let game = SoulsGameSingleton.getGlobalGame()
         
         presenter = SoulsCalculatorPresenter(view: self, game: game)
         
@@ -91,7 +92,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         soulsCalculatorView.alpha = 0
         
-        currentGameNameLabel.text = game.rawValue
+        currentGameNameLabel.text = SoulsGameSingleton.getGlobalGame().rawValue
         
     }
     
@@ -161,7 +162,7 @@ class SoulsCalculatorViewController: UIViewController {
             _ = segue.destination as! SelectGameViewController
         case "itemsListSegue":
             let itemsListController = segue.destination as! ItemsViewController
-            itemsListController.gameSeries = game
+            itemsListController.gameSeries = SoulsGameSingleton.getGlobalGame()
         default:
             return
         }
@@ -171,8 +172,8 @@ class SoulsCalculatorViewController: UIViewController {
     @IBAction func unwindToSoulsCalculator(for unwindSegue: UIStoryboardSegue) {
         
         configureUI()
-        currentGameNameLabel.text = game.rawValue
-        presenter.gameFromSeries = game
+        
+        presenter.gameFromSeries = SoulsGameSingleton.getGlobalGame()
         
     }
 }

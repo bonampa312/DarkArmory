@@ -48,15 +48,15 @@ class ItemsViewController: UIViewController {
         backgroundFilter.alpha = 0
         fireButton.alpha = 0
         
-        weaponsButton.setTitle(ItemType.Weapons.rawValue, for: UIControlState.normal)
+        weaponsButton.setTitle(GameElementType.Weapons.rawValue, for: UIControlState.normal)
         weaponsButton.alpha = 0
-        armorsButton.setTitle(ItemType.Armors.rawValue, for: UIControlState.normal)
+        armorsButton.setTitle(GameElementType.Armors.rawValue, for: UIControlState.normal)
         armorsButton.alpha = 0
-        spellsButton.setTitle(ItemType.Spells.rawValue, for: UIControlState.normal)
+        spellsButton.setTitle(GameElementType.Spells.rawValue, for: UIControlState.normal)
         spellsButton.alpha = 0
-        ringsButton.setTitle(ItemType.Rings.rawValue, for: UIControlState.normal)
+        ringsButton.setTitle(GameElementType.Rings.rawValue, for: UIControlState.normal)
         ringsButton.alpha = 0
-        miscButton.setTitle(ItemType.Misc.rawValue, for: UIControlState.normal)
+        miscButton.setTitle(GameElementType.Misc.rawValue, for: UIControlState.normal)
         miscButton.alpha = 0
         
     }
