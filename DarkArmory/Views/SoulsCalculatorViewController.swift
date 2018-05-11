@@ -45,7 +45,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         let game = SoulsGameSingleton.getGlobalGame()
         
-        presenter = SoulsCalculatorPresenter(view: self, game: game)
+        presenter = SoulsCalculatorPresenter(view: self, game: game, locator: UseCaseLocator())
         
         self.configureUI()
         

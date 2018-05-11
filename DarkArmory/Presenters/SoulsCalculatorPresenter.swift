@@ -15,29 +15,27 @@ protocol SoulsCalculatorView : class {
 }
 
 final class SoulsCalculatorPresenter {
+    
+    // MARK: - View that implements presenter
     unowned fileprivate var view : SoulsCalculatorView
-    var gameFromSeries : SoulsSeriesGame {
-        didSet {
-            switch gameFromSeries {
-            case .DarkSouls1 :
-                soulsCalculator = CalculateSoulsLordran()
-            case .DarkSouls2 :
-                soulsCalculator = CalculateSoulsDrangleic()
-            case .DarkSouls3 :
-                soulsCalculator = CalculateSoulsLothric()
-            }
-        }
-    }
+    
     var soulsCalculator : CalculateSouls
+    var locator : UseCaseLocatorProtocol
     var totalSouls : String
     
+    var gameFromSeries : SoulsSeriesGame {
+        didSet {
+            guard let soulsCalculatorLocator = self.locator.getUseCase(ofType: CalculateSouls.self) else { return }
+            self.soulsCalculator = soulsCalculatorLocator
+        }
+    }
     
-    init(view : SoulsCalculatorView, game : SoulsSeriesGame) {
+    init(view : SoulsCalculatorView, game : SoulsSeriesGame, locator : UseCaseLocatorProtocol) {
         self.view = view
+        self.soulsCalculator = CalculateSoulsLordran()
         self.gameFromSeries = game
         self.totalSouls = ""
-        soulsCalculator = CalculateSoulsLordran()
-        gameFromSeries = game
+        self.locator = locator
     }
     
     func calculateTotalSouls (startLevel : String?, targetLevel : String?) {
