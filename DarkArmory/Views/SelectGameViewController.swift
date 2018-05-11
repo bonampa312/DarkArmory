@@ -18,11 +18,13 @@ class SelectGameViewController: UIViewController {
     @IBOutlet weak var ds1FirelinkButton: UIStackView!
     @IBOutlet weak var ds2FirelinkButton: UIStackView!
     @IBOutlet weak var ds3FirelinkButton: UIStackView!
+    @IBOutlet weak var currentGameTitle: UILabel!
     
     //MARK: - View lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentGameTitle.text = SoulsGameSingleton.getGlobalGame().rawValue
     }
     
     //MARK: - Buttons actions functions

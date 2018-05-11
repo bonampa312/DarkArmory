@@ -27,6 +27,7 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var ringsButton: UICustomButton!
     @IBOutlet weak var spellsButton: UICustomButton!
     @IBOutlet weak var miscButton: UICustomButton!
+    @IBOutlet weak var currentGameTitle: UILabel!
     
     //MARK: - View lifecycle methods
     
@@ -44,6 +45,8 @@ class ItemsViewController: UIViewController {
     //MARK: - UI methods
     
     private func configureUI () {
+        currentGameTitle.text = SoulsGameSingleton.getGlobalGame().rawValue
+        
         backgroundFaraam.alpha = 0
         backgroundFilter.alpha = 0
         fireButton.alpha = 0
@@ -84,6 +87,8 @@ class ItemsViewController: UIViewController {
             }
         case "returnToBonfireSegue":
             _ = segue.destination as! SoulsCalculatorViewController
+        case "changeGameSegue":
+            _ = segue.destination as! SelectGameViewController
         default:
             return
         }
