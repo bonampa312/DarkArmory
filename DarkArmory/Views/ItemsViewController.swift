@@ -8,29 +8,27 @@
 
 import UIKit
 
+enum ListType {
+    case Objects
+    case Enemies
+}
+
 class ItemsViewController: UIViewController {
     
     //MARK: - Class variables
-    
     var gameSeries : SoulsSeriesGame = .DarkSouls1
+    var itemsType : ListType = .Objects
+    var buttonsList : [UIButton] = []
     
     //MARK: - View background outlets
-    
     @IBOutlet weak var backgroundFaraam: UIImageView!
     @IBOutlet weak var backgroundFilter: UIImageView!
     
     //MARK: - View elements outlets
-    
     @IBOutlet weak var fireButton: UIStackView!
-    @IBOutlet weak var weaponsButton: UICustomButton!
-    @IBOutlet weak var armorsButton: UICustomButton!
-    @IBOutlet weak var ringsButton: UICustomButton!
-    @IBOutlet weak var spellsButton: UICustomButton!
-    @IBOutlet weak var miscButton: UICustomButton!
     @IBOutlet weak var currentGameTitle: UILabel!
     
     //MARK: - View lifecycle methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
@@ -39,51 +37,103 @@ class ItemsViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         self.animateBgImage()
-        
     }
 
     //MARK: - UI methods
-    
     private func configureUI () {
         currentGameTitle.text = SoulsGameSingleton.getGlobalGame().rawValue
-        
         backgroundFaraam.alpha = 0
         backgroundFilter.alpha = 0
         fireButton.alpha = 0
         
-        weaponsButton.setTitle(GameElementType.Weapons.rawValue, for: UIControlState.normal)
-        weaponsButton.alpha = 0
-        armorsButton.setTitle(GameElementType.Armors.rawValue, for: UIControlState.normal)
-        armorsButton.alpha = 0
-        spellsButton.setTitle(GameElementType.Spells.rawValue, for: UIControlState.normal)
-        spellsButton.alpha = 0
-        ringsButton.setTitle(GameElementType.Rings.rawValue, for: UIControlState.normal)
-        ringsButton.alpha = 0
-        miscButton.setTitle(GameElementType.Misc.rawValue, for: UIControlState.normal)
-        miscButton.alpha = 0
-        
+        if buttonsList.isEmpty {
+            createButtonsStackView()
+        }
     }
 
-    //MARK: - Navigation
+    private func createButtonsStackView() {
+        // Array with buttons
+        switch itemsType {
+        case .Enemies:
+            for characterType in GameCharacter.allTypes {
+                buttonsList.append(createOptionsButton(title: characterType.rawValue))
+            }
+        case .Objects:
+            for objectType in GameObjects.allTypes {
+                buttonsList.append(createOptionsButton(title: objectType.rawValue))
+            }
+        }
+        
+        //Stack View
+        let buttonsStackView = UIStackView(arrangedSubviews: buttonsList)
+        buttonsStackView.axis = UILayoutConstraintAxis.vertical
+        buttonsStackView.distribution = UIStackViewDistribution.fill
+        buttonsStackView.alignment = UIStackViewAlignment.fill
+        buttonsStackView.spacing = 12.0
+        
+        buttonsStackView.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(buttonsStackView)
+        
+        //Constraints
+        let viewSize = self.view.frame.size
+        buttonsStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        buttonsStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        buttonsStackView.widthAnchor.constraint(equalToConstant: (viewSize.width-32.0) ).isActive = true
+        
+        self.view.layoutIfNeeded()
+    }
     
+    private func createOptionsButton(title : String) -> UIButton {
+        let button = UICustomButton()
+        button.widthAnchor.constraint(equalToConstant: 0)
+        button.borderColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        button.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        button.borderWidth = 1.0
+        button.cornerRadius = 12.0
+        button.titleLabel?.font = UIFont(name: "OptimusPrinceps", size: 24.0)
+        button.setTitle(title, for: .normal)
+        button.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
+        button.alpha = 0
+        button.addTarget(self, action: #selector(self.showItemsList(sender:)), for: .touchUpInside)
+        return button
+    }
+    
+    //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier! {
         case "itemsListSegue":
             let itemList = segue.destination as! ItemsListViewController
-            guard let button = sender as? UIButton else { return }
-            switch button {
-            case weaponsButton:
-                itemList.itemsType = .Weapons
-            case armorsButton:
-                itemList.itemsType = .Armors
-            case ringsButton:
-                itemList.itemsType = .Rings
-            case spellsButton:
-                itemList.itemsType = .Spells
-            case miscButton:
-                itemList.itemsType = .Misc
+            guard let button = sender as? UIButton,
+                let buttonTitle = button.titleLabel?.text else { return }
+            switch buttonTitle {
+            case GameObjects.Weapons.rawValue:
+                itemList.objectsType = .Weapons
+                itemList.listType = .Objects
+            case GameObjects.Armors.rawValue:
+                itemList.objectsType = .Armors
+                itemList.listType = .Objects
+            case GameObjects.Rings.rawValue:
+                itemList.objectsType = .Rings
+                itemList.listType = .Objects
+            case GameObjects.Spells.rawValue:
+                itemList.objectsType = .Spells
+                itemList.listType = .Objects
+            case GameObjects.Misc.rawValue:
+                itemList.objectsType = .Misc
+                itemList.listType = .Objects
+            case GameCharacter.RegularEnemy.rawValue:
+                itemList.enemiesType = .RegularEnemy
+                itemList.listType = .Enemies
+            case GameCharacter.BossEnemy.rawValue:
+                itemList.enemiesType = .BossEnemy
+                itemList.listType = .Enemies
+            case GameCharacter.Friendly.rawValue:
+                itemList.enemiesType = .Friendly
+                itemList.listType = .Enemies
             default:
-                itemList.itemsType = .Weapons
+                itemList.objectsType = .Weapons
+                itemList.listType = .Objects
             }
         case "returnToBonfireSegue":
             _ = segue.destination as! SoulsCalculatorViewController
@@ -92,10 +142,9 @@ class ItemsViewController: UIViewController {
         default:
             return
         }
-        
     }
     
-    @IBAction func shotItemsList(_ sender: UIButton) {
+    @objc func showItemsList(sender: UIButton) {
         performSegue(withIdentifier: "itemsListSegue", sender: sender)
     }
     
@@ -104,13 +153,15 @@ class ItemsViewController: UIViewController {
     }
     
     @IBAction func unwindList(for unwindSegue: UIStoryboardSegue) {
+        for button in buttonsList {
+            button.alpha = 0
+        }
         self.configureUI()
     }
     
 }
 
 //MARK: - Animations methods
-
 extension ItemsViewController {
     
     func animateBgImage () {
@@ -131,11 +182,9 @@ extension ItemsViewController {
     }
     
     func animateItemsTypeButton() {
-        self.animateButton(button: weaponsButton)
-        self.animateButton(button: armorsButton)
-        self.animateButton(button: ringsButton)
-        self.animateButton(button: spellsButton)
-        self.animateButton(button: miscButton)
+        for button in buttonsList {
+            self.animateButton(button: button)
+        }
     }
     
     func animateButton(button : UIButton) {

@@ -20,8 +20,8 @@ class SoulsCalculatorViewController: UIViewController {
     
     @IBOutlet weak var solaireMenu: UIButton!
     @IBOutlet weak var soulLevel: UIStackView!
-    @IBOutlet weak var objectsButton: UIStackView!
-    @IBOutlet weak var enemiesButton: UIStackView!
+    @IBOutlet weak var objectsButtonView: UIStackView!
+    @IBOutlet weak var enemiesButtonView: UIStackView!
     @IBOutlet weak var currentGameNameLabel: UILabel!
     @IBOutlet weak var bonfireBackground: UIImageView!
     
@@ -57,21 +57,21 @@ class SoulsCalculatorViewController: UIViewController {
         
         buttonsOriginalCenters = [
             "teleport" : soulLevel.frame,
-            "slayMonster" : objectsButton.frame,
-            "diedInCombat" : enemiesButton.frame
+            "slayMonster" : objectsButtonView.frame,
+            "diedInCombat" : enemiesButtonView.frame
         ]
         
         soulLevel.frame = solaireMenu.frame
-        enemiesButton.frame = solaireMenu.frame
-        objectsButton.frame = solaireMenu.frame
+        enemiesButtonView.frame = solaireMenu.frame
+        objectsButtonView.frame = solaireMenu.frame
         
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         
         soulLevel.frame = solaireMenu.frame
-        enemiesButton.frame = solaireMenu.frame
-        objectsButton.frame = solaireMenu.frame
+        enemiesButtonView.frame = solaireMenu.frame
+        objectsButtonView.frame = solaireMenu.frame
         
         solaireMenu.alpha = 1
         
@@ -87,8 +87,8 @@ class SoulsCalculatorViewController: UIViewController {
         
         solaireMenu.alpha = 1
         soulLevel.alpha = 0
-        enemiesButton.alpha = 0
-        objectsButton.alpha = 0
+        enemiesButtonView.alpha = 0
+        objectsButtonView.alpha = 0
         
         soulsCalculatorView.alpha = 0
         
@@ -120,11 +120,13 @@ class SoulsCalculatorViewController: UIViewController {
     }
     
     @IBAction func objectsButtonTapped(_ sender: UIButton) {
-        toggleAlphaFor(view : objectsButton)
+        toggleAlphaFor(view : objectsButtonView)
+        performSegue(withIdentifier: "itemsListSegue", sender: objectsButtonView)
     }
     
     @IBAction func enemiesButtonTapped(_ sender: UIButton) {
-        toggleAlphaFor(view : enemiesButton)
+        toggleAlphaFor(view : enemiesButtonView)
+        performSegue(withIdentifier: "itemsListSegue", sender: enemiesButtonView)
     }
     
     @IBAction func toggleSoulsCalculator(_ sender: UIButton) {
@@ -163,6 +165,15 @@ class SoulsCalculatorViewController: UIViewController {
         case "itemsListSegue":
             let itemsListController = segue.destination as! ItemsViewController
             itemsListController.gameSeries = SoulsGameSingleton.getGlobalGame()
+            guard let button = sender as? UIStackView else { return }
+            switch button {
+            case objectsButtonView:
+                itemsListController.itemsType = .Objects
+            case enemiesButtonView:
+                itemsListController.itemsType = .Enemies
+            default :
+                itemsListController.itemsType = .Objects
+            }
         default:
             return
         }
@@ -186,18 +197,18 @@ extension SoulsCalculatorViewController {
     func showOptionsButtons () {
         
         self.soulLevel.frame = self.solaireMenu.frame
-        self.enemiesButton.frame = self.solaireMenu.frame
-        self.objectsButton.frame = self.solaireMenu.frame
+        self.enemiesButtonView.frame = self.solaireMenu.frame
+        self.objectsButtonView.frame = self.solaireMenu.frame
         
         UIView.animate(withDuration: 0.4, animations: {
             
             self.bonfireBackground.alpha = 0.3
             self.soulLevel.alpha = 1
-            self.enemiesButton.alpha = 1
-            self.objectsButton.alpha = 1
+            self.enemiesButtonView.alpha = 1
+            self.objectsButtonView.alpha = 1
             self.soulLevel.frame = self.buttonsOriginalCenters["teleport"]!
-            self.objectsButton.frame = self.buttonsOriginalCenters["slayMonster"]!
-            self.enemiesButton.frame = self.buttonsOriginalCenters["diedInCombat"]!
+            self.objectsButtonView.frame = self.buttonsOriginalCenters["slayMonster"]!
+            self.enemiesButtonView.frame = self.buttonsOriginalCenters["diedInCombat"]!
         })
         
     }
@@ -208,11 +219,11 @@ extension SoulsCalculatorViewController {
             
             self.bonfireBackground.alpha = 0.6
             self.soulLevel.alpha = 0
-            self.enemiesButton.alpha = 0
-            self.objectsButton.alpha = 0
+            self.enemiesButtonView.alpha = 0
+            self.objectsButtonView.alpha = 0
             self.soulLevel.frame = self.solaireMenu.frame
-            self.enemiesButton.frame = self.solaireMenu.frame
-            self.objectsButton.frame = self.solaireMenu.frame
+            self.enemiesButtonView.frame = self.solaireMenu.frame
+            self.objectsButtonView.frame = self.solaireMenu.frame
             if self.soulsCalculatorView.alpha == 1 {
                 self.soulsCalculatorView.alpha = 0
             }

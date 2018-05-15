@@ -10,20 +10,34 @@ import UIKit
 
 class ItemsListViewController: UIViewController {
 
-    var itemsType : GameElementType = .Weapons
+    //MARK: - Class variables
+    var objectsType : GameObjects?
+    var enemiesType : GameCharacter?
+    var listType : ListType?
     
+    //MARK: - Outlet variables
     @IBOutlet weak var listTitleLabel: UILabel!
+    @IBOutlet weak var gameTitleLabel: UILabel!
     
     //MARK: - View lifecycle methods
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
     }
 
     //MARK: - UI methods
-    
     private func configureUI () {
-        listTitleLabel.text = itemsType.rawValue
+        
+        gameTitleLabel.text = SoulsGameSingleton.getGlobalGame().rawValue
+        
+        guard let listType = listType else { return }
+        switch listType {
+        case .Objects:
+            guard let objectsTypeTitle = objectsType?.rawValue else { return }
+            listTitleLabel.text = objectsTypeTitle
+        case .Enemies:
+            guard let enemiesTypeTitle = enemiesType?.rawValue else { return }
+            listTitleLabel.text = enemiesTypeTitle
+        }
     }
 }

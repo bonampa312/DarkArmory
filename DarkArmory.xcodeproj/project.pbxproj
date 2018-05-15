@@ -13,7 +13,7 @@
 		3C4E150E208F95C800875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
 		3C4E150F208F95C800875272 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C4E1512208FA85300875272 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1511208FA85300875272 /* ItemsListViewController.swift */; };
-		3C4E1517208FB7EA00875272 /* GameElementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1516208FB7EA00875272 /* GameElementType.swift */; };
+		3C4E1517208FB7EA00875272 /* GameObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1516208FB7EA00875272 /* GameObjects.swift */; };
 		3C4EB67420A4DABC00385BFA /* GameCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67320A4DABC00385BFA /* GameCharacter.swift */; };
 		3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */; };
 		3C4EB67820A4E13F00385BFA /* SoulsGameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */; };
@@ -69,7 +69,7 @@
 		3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = SOURCE_ROOT; };
 		3C4E1505208E8FF600875272 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		3C4E1511208FA85300875272 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
-		3C4E1516208FB7EA00875272 /* GameElementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElementType.swift; sourceTree = "<group>"; };
+		3C4E1516208FB7EA00875272 /* GameObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObjects.swift; sourceTree = "<group>"; };
 		3C4EB67320A4DABC00385BFA /* GameCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCharacter.swift; sourceTree = "<group>"; };
 		3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseLocator.swift; sourceTree = "<group>"; };
 		3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsGameSingleton.swift; sourceTree = "<group>"; };
@@ -190,7 +190,7 @@
 			children = (
 				3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */,
 				3C84F3F420816F24001F3C32 /* CustomInteger.swift */,
-				3C4E1516208FB7EA00875272 /* GameElementType.swift */,
+				3C4E1516208FB7EA00875272 /* GameObjects.swift */,
 				3C4EB67320A4DABC00385BFA /* GameCharacter.swift */,
 				3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */,
 			);
@@ -378,7 +378,7 @@
 			files = (
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
-				3C4E1517208FB7EA00875272 /* GameElementType.swift in Sources */,
+				3C4E1517208FB7EA00875272 /* GameObjects.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
 				3C7B856F2088FB6B00A3AC65 /* UICustomViewController.swift in Sources */,
 				3C75F02020744C5800278A74 /* UICustomView.swift in Sources */,

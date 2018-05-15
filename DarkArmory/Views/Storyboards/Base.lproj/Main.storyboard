@@ -52,106 +52,6 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0O4-5J-ZlS">
-                                <rect key="frame" x="24" y="224.5" width="327" height="238"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-JU-pAc" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="327" height="38"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="shotItemsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sa8-Nm-Utt"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ey-YD-uj5" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="327" height="38"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="shotItemsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPN-WW-eWk"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qk4-qp-rjp" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="100" width="327" height="38"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="shotItemsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9X5-A9-19l"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bY9-3z-Vpc" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="150" width="327" height="38"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="shotItemsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jLB-3M-yAf"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Uq-98-NVx" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="200" width="327" height="38"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="24"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="12"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                <real key="value" value="1"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="shotItemsList:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rN7-OE-Bsi"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="iqC-nQ-Shx">
                                 <rect key="frame" x="16" y="42" width="343" height="44"/>
                                 <subviews>
@@ -179,14 +79,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9B-KC-yBa" secondAttribute="trailing" id="1Yb-eU-OMp"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0O4-5J-ZlS" secondAttribute="trailing" constant="24" id="2do-6h-DtD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gif-OX-DIu" secondAttribute="bottom" id="AY7-YK-Bkh"/>
                             <constraint firstItem="gif-OX-DIu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NPE-rI-oLr"/>
                             <constraint firstItem="gif-OX-DIu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="Oip-4F-Beg"/>
                             <constraint firstItem="H9B-KC-yBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QMv-Al-4tU"/>
                             <constraint firstItem="H9B-KC-yBa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="QVL-qg-KSX"/>
-                            <constraint firstItem="0O4-5J-ZlS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="XeW-t2-z9k"/>
-                            <constraint firstItem="0O4-5J-ZlS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="ZMw-10-2Jf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="H9B-KC-yBa" secondAttribute="bottom" id="bAO-7L-BPh"/>
                             <constraint firstItem="iqC-nQ-Shx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="22" id="j59-u3-6tx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iqC-nQ-Shx" secondAttribute="trailing" constant="16" id="oZ3-ZH-2lv"/>
@@ -198,15 +95,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="armorsButton" destination="3ey-YD-uj5" id="wjK-5f-480"/>
                         <outlet property="backgroundFaraam" destination="H9B-KC-yBa" id="Jao-tQ-TOh"/>
                         <outlet property="backgroundFilter" destination="gif-OX-DIu" id="Z27-7A-vGZ"/>
                         <outlet property="currentGameTitle" destination="Y0B-XY-90D" id="WF6-cL-ucg"/>
                         <outlet property="fireButton" destination="ZxC-9b-ULm" id="bS5-eq-koR"/>
-                        <outlet property="miscButton" destination="4Uq-98-NVx" id="K2M-kr-Vja"/>
-                        <outlet property="ringsButton" destination="Qk4-qp-rjp" id="5XG-RL-nEJ"/>
-                        <outlet property="spellsButton" destination="bY9-3z-Vpc" id="9K1-3U-4UB"/>
-                        <outlet property="weaponsButton" destination="WZM-JU-pAc" id="ywg-5u-eEn"/>
                         <segue destination="7XP-Am-3YM" kind="show" identifier="itemsListSegue" id="mHa-KW-eHJ"/>
                     </connections>
                 </viewController>
@@ -289,7 +181,6 @@
                                         <state key="normal" image="sword"/>
                                         <connections>
                                             <action selector="objectsButtonTapped:" destination="Ptp-EX-ooQ" eventType="touchUpInside" id="br7-kR-kgu"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" identifier="itemsListSegue" id="zlN-4x-1lf"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -552,9 +443,9 @@
                         <outlet property="calculateButton" destination="5oA-Tj-R5Y" id="bsZ-dW-T2w"/>
                         <outlet property="currentGameNameLabel" destination="m5Z-TK-j7c" id="Hea-tF-UFB"/>
                         <outlet property="currentLevelLabel" destination="817-Gq-6U8" id="9ye-9a-5dE"/>
-                        <outlet property="enemiesButton" destination="9BX-SH-QYI" id="yCB-ca-JYr"/>
+                        <outlet property="enemiesButtonView" destination="9BX-SH-QYI" id="yCB-ca-JYr"/>
                         <outlet property="messageTitle" destination="tIR-CB-uIP" id="TMg-51-3fX"/>
-                        <outlet property="objectsButton" destination="Pwy-OO-Keb" id="VD1-ys-nmI"/>
+                        <outlet property="objectsButtonView" destination="Pwy-OO-Keb" id="VD1-ys-nmI"/>
                         <outlet property="searchAgainButton" destination="d8O-SL-Jom" id="0c7-iN-Frt"/>
                         <outlet property="solaireMenu" destination="TdQ-8k-FX5" id="8zE-CL-5vN"/>
                         <outlet property="soulLevel" destination="599-A8-ka5" id="8LX-zu-Nbg"/>
@@ -562,11 +453,12 @@
                         <outlet property="soulsAmountStack" destination="uFg-AU-K6e" id="MP7-VA-6e1"/>
                         <outlet property="soulsCalculatorView" destination="ZO8-uq-iJJ" id="vvi-81-8vf"/>
                         <outlet property="targetLevelLabel" destination="VbH-1e-CQd" id="ngz-Wl-7an"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="itemsListSegue" id="lFT-6H-dMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Guq-uj-sXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166" y="432"/>
+            <point key="canvasLocation" x="-167" y="430"/>
         </scene>
         <!--Items List View Controller-->
         <scene sceneID="la8-jE-KjP">
@@ -591,7 +483,7 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-bz-pGG">
-                                        <rect key="frame" x="68" y="8" width="291" height="44"/>
+                                        <rect key="frame" x="68" y="0.0" width="291" height="50"/>
                                         <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="28"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -602,23 +494,32 @@
                                     <constraint firstAttribute="bottom" secondItem="Y9J-TA-nYL" secondAttribute="bottom" constant="8" id="0zw-Ax-rAu"/>
                                     <constraint firstAttribute="trailing" secondItem="jKm-bz-pGG" secondAttribute="trailing" constant="16" id="9kT-jt-3L1"/>
                                     <constraint firstItem="Y9J-TA-nYL" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="top" constant="8" id="EBr-Gp-iA2"/>
-                                    <constraint firstItem="jKm-bz-pGG" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="top" constant="8" id="bd6-CR-grf"/>
+                                    <constraint firstItem="jKm-bz-pGG" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="top" id="bd6-CR-grf"/>
                                     <constraint firstItem="Y9J-TA-nYL" firstAttribute="leading" secondItem="Tqq-S1-MgR" secondAttribute="leading" constant="8" id="gfw-Jt-9dd"/>
                                     <constraint firstAttribute="height" constant="60" id="goi-38-Vh7"/>
                                     <constraint firstItem="jKm-bz-pGG" firstAttribute="leading" secondItem="Y9J-TA-nYL" secondAttribute="trailing" constant="16" id="oxL-AL-vSu"/>
-                                    <constraint firstAttribute="bottom" secondItem="jKm-bz-pGG" secondAttribute="bottom" constant="8" id="rh2-ps-aS7"/>
+                                    <constraint firstAttribute="bottom" secondItem="jKm-bz-pGG" secondAttribute="bottom" constant="10" id="rh2-ps-aS7"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4q-kx-oef">
+                                <rect key="frame" x="325" y="60" width="41.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rob-ZO-aVk" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="top" id="H0F-gC-Ce4"/>
                             <constraint firstItem="Rob-ZO-aVk" firstAttribute="trailing" secondItem="Tqq-S1-MgR" secondAttribute="trailing" id="aEm-5C-Uen"/>
+                            <constraint firstItem="x4q-kx-oef" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="bottom" constant="-20" id="elL-yf-thf"/>
                             <constraint firstItem="Tqq-S1-MgR" firstAttribute="leading" secondItem="Rob-ZO-aVk" secondAttribute="leading" id="hmQ-ae-MJc"/>
+                            <constraint firstItem="Rob-ZO-aVk" firstAttribute="trailing" secondItem="x4q-kx-oef" secondAttribute="trailing" constant="8" id="yVT-po-33c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Rob-ZO-aVk"/>
                     </view>
                     <connections>
+                        <outlet property="gameTitleLabel" destination="x4q-kx-oef" id="5Hn-4G-aQG"/>
                         <outlet property="listTitleLabel" destination="jKm-bz-pGG" id="uVd-pI-JTm"/>
                     </connections>
                 </viewController>
