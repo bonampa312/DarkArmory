@@ -13,7 +13,7 @@ enum ListType {
     case Enemies
 }
 
-class ItemsViewController: UIViewController {
+class SelectListViewController: UIViewController {
     
     //MARK: - Class variables
     var gameSeries : SoulsSeriesGame = .DarkSouls1
@@ -162,7 +162,7 @@ class ItemsViewController: UIViewController {
 }
 
 //MARK: - Animations methods
-extension ItemsViewController {
+extension SelectListViewController {
     
     func animateBgImage () {
         UIView.animate(withDuration: 0.2, animations: {

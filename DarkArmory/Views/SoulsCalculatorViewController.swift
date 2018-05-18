@@ -163,7 +163,7 @@ class SoulsCalculatorViewController: UIViewController {
         case "selectGameSegue":
             _ = segue.destination as! SelectGameViewController
         case "itemsListSegue":
-            let itemsListController = segue.destination as! ItemsViewController
+            let itemsListController = segue.destination as! SelectListViewController
             itemsListController.gameSeries = SoulsGameSingleton.getGlobalGame()
             guard let button = sender as? UIStackView else { return }
             switch button {

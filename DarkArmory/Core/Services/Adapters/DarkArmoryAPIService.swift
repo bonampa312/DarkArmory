@@ -9,7 +9,8 @@
 import Foundation
 import Alamofire
 
-enum RequestResponse {
+//MARK: Response possible values
+fileprivate enum RequestResponse {
     case failure
     case notConnectedToInternet
     case success(json: Data)
@@ -17,9 +18,31 @@ enum RequestResponse {
 
 class DarkArmoryAPIService : DarkArmoryService {
     
+    //MARK: - Get weapons list
     func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let router : DarkArmoryAPIRouter = .Weapons
-        guard let url = URL(string: router.fullPath) else { return }
+        getListData(urlPath: router.fullPath) {
+            switch $0 {
+            case .success(let jsonData):
+                var allWeapons = [WeaponList]()
+                allWeapons = try! JSONDecoder().decode([WeaponList].self, from: jsonData)
+                for weapon in allWeapons {
+                    print(weapon.name," : ",weapon.weight)
+                }
+                completion(.successWeaponsList(weapons: allWeapons))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+}
+
+//MARK - Retrieve data
+extension DarkArmoryAPIService {
+    fileprivate func getListData(urlPath: String, completion: @escaping (RequestResponse) -> Void) {
+        guard let url = URL(string: urlPath) else { return }
         Alamofire.request(url).responseJSON { response in
             guard let urlResponse = response.response else {
                 if let error = response.result.error as NSError?, error.code == NSURLErrorNotConnectedToInternet {
@@ -31,16 +54,11 @@ class DarkArmoryAPIService : DarkArmoryService {
             }
             switch urlResponse.statusCode {
             case 200:
-                if response.result.value != nil, response.data != nil {
-                    var allWeapons = [WeaponList]()
-                    allWeapons = try! JSONDecoder().decode([WeaponList].self, from: response.data!)
-                    for weapon in allWeapons {
-                        print(weapon.name," : ",weapon.weight)
-                    }
-                    completion(.successWeaponsList(weapons: allWeapons))
-                } else {
+                guard (response.result.value != nil), let data = response.data else {
                     completion(.failure)
+                    return
                 }
+                completion(.success(json: data))
             case NSURLErrorNotConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:

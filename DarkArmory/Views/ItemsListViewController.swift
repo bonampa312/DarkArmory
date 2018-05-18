@@ -11,10 +11,11 @@ import UIKit
 class ItemsListViewController: UIViewController {
 
     //MARK: - Class variables
+    var presenter : ItemsListPresenter!
     var objectsType : GameObjects?
     var enemiesType : GameCharacter?
     var listType : ListType?
-    
+
     //MARK: - Outlet variables
     @IBOutlet weak var listTitleLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
@@ -22,26 +23,38 @@ class ItemsListViewController: UIViewController {
     //MARK: - View lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        presenter = ItemsListPresenter(view: self, listType: listType, objectsType: objectsType, enemiesType: enemiesType)
+        
         self.configureUI()
     }
 
     //MARK: - UI methods
     private func configureUI () {
-        
         gameTitleLabel.text = SoulsGameSingleton.getGlobalGame().rawValue
-        
-        guard let listType = listType else { return }
-        switch listType {
-        case .Objects:
-            guard let objectsTypeTitle = objectsType?.rawValue else { return }
-            listTitleLabel.text = objectsTypeTitle
-            let service : DarkArmoryService = DarkArmoryAPIService() as DarkArmoryService
-            service.retrieveWeaponsList(completion: { data in
-                //TO DO
-            })
-        case .Enemies:
-            guard let enemiesTypeTitle = enemiesType?.rawValue else { return }
-            listTitleLabel.text = enemiesTypeTitle
-        }
     }
+}
+
+extension ItemsListViewController : ItemsListView {
+    func updateList() {
+        //TODO
+    }
+    
+    func updateListTitle() {
+        self.listTitleLabel.text = presenter.listTitle
+    }
+    
+    func updateListSubtitle() {
+        self.gameTitleLabel.text = presenter.globalGame.rawValue
+    }
+    
+    func showConnectionError() {
+        //TODO
+    }
+    
+    func showDataErrror() {
+        //TODO
+    }
+    
+    
 }
