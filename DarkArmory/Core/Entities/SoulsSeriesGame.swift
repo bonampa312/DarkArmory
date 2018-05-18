@@ -14,3 +14,15 @@ enum SoulsSeriesGame : String {
     case DarkSouls3 = "Dark Souls III"
 }
 
+extension SoulsSeriesGame {
+    var shortName : String {
+        switch self {
+        case .DarkSouls1:
+            return "ds1"
+        case .DarkSouls2:
+            return "ds2"
+        case .DarkSouls3:
+            return "ds3"
+        }
+    }
+}

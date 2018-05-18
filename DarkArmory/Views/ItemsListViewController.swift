@@ -35,6 +35,10 @@ class ItemsListViewController: UIViewController {
         case .Objects:
             guard let objectsTypeTitle = objectsType?.rawValue else { return }
             listTitleLabel.text = objectsTypeTitle
+            let service : DarkArmoryService = DarkArmoryAPIService() as DarkArmoryService
+            service.retrieveWeaponsList(completion: { data in
+                //TO DO
+            })
         case .Enemies:
             guard let enemiesTypeTitle = enemiesType?.rawValue else { return }
             listTitleLabel.text = enemiesTypeTitle
