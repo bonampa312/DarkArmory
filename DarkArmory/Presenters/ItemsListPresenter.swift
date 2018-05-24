@@ -10,8 +10,7 @@ import UIKit
 
 protocol ItemsListView : class {
     func updateList()
-    func updateListTitle()
-    func updateListSubtitle()
+    func updateTitles()
     func showConnectionError()
     func showDataErrror()
 }
@@ -22,22 +21,16 @@ final class ItemsListPresenter {
     unowned fileprivate var view : ItemsListView
     
     //MARK: - Class variables
-    var listType : DarkArmoryAPIRouter?
-    var globalGame : SoulsSeriesGame {
-        didSet {
-            self.view.updateListSubtitle()
-        }
-    }
+    var service : DarkArmoryService
+    var listType : DarkArmoryAPIRouter
+    var globalGame : SoulsSeriesGame
     
     //MARK: - View elements variables
-    var listTitle : String {
-        didSet {
-            self.view.updateListTitle()
-        }
-    }
+    var listTitle : String
     
-    init(view : ItemsListView, listType: ListType?, objectsType: GameObjects?, enemiesType: GameCharacter?) {
+    init(view : ItemsListView, service: DarkArmoryService, listType: ListType?, objectsType: GameObjects?, enemiesType: GameCharacter?) {
         self.view = view
+        self.service = service
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         let listToShowType : ListType = (listType != nil) ? listType! : ListType.Objects
         switch listToShowType {
@@ -78,8 +71,28 @@ final class ItemsListPresenter {
                 self.listType = .Bosses
             case .Friendly:
                 self.listType = .FriendlyNPCs
+            case .Merchants:
+                self.listType = .Merchants
             }
         }
+    }
+    
+    func configureUI() {
+        var weapons = [WeaponList]()
+        switch self.listType {
+        case .Weapons:
+            self.service.retrieveWeaponsList { (response) in
+                switch response {
+                case .successWeaponsList(let weaponsResponse):
+                    weapons = weaponsResponse
+                default:
+                    return
+                }
+            }
+        default:
+            return
+        }
+        self.view.updateTitles()
     }
     
 }

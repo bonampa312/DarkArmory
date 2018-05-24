@@ -20,6 +20,7 @@ enum DarkArmoryAPIRouter {
     case RegularEnemies
     case Bosses
     case FriendlyNPCs
+    case Merchants
     
     var fullPath: String {
         let baseGame = SoulsGameSingleton.getGlobalGame().shortName
@@ -40,6 +41,8 @@ enum DarkArmoryAPIRouter {
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/bosses"
         case .FriendlyNPCs:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/friendlyNPCs"
+        case .Merchants:
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/merchants"
         }
     }
 }

@@ -24,14 +24,14 @@ class ItemsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = ItemsListPresenter(view: self, listType: listType, objectsType: objectsType, enemiesType: enemiesType)
+        presenter = ItemsListPresenter(view: self, service: DarkArmoryAPIService(), listType: listType, objectsType: objectsType, enemiesType: enemiesType)
         
         self.configureUI()
     }
 
     //MARK: - UI methods
     private func configureUI () {
-        gameTitleLabel.text = SoulsGameSingleton.getGlobalGame().rawValue
+        self.presenter.configureUI()
     }
 }
 
@@ -40,12 +40,9 @@ extension ItemsListViewController : ItemsListView {
         //TODO
     }
     
-    func updateListTitle() {
-        self.listTitleLabel.text = presenter.listTitle
-    }
-    
-    func updateListSubtitle() {
-        self.gameTitleLabel.text = presenter.globalGame.rawValue
+    func updateTitles() {
+        self.listTitleLabel.text = self.presenter.listTitle
+        self.gameTitleLabel.text = self.presenter.globalGame.rawValue
     }
     
     func showConnectionError() {
