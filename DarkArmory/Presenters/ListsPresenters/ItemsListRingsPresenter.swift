@@ -1,17 +1,17 @@
 //
-//  ItemsListWeaponsPresenter.swift
+//  ItemsListRingsPresenter.swift
 //  DarkArmory
 //
-//  Created by Santiago Romero Restrepo on 5/24/18.
+//  Created by Santiago Romero Restrepo on 5/25/18.
 //  Copyright © 2018 Santiago Romero Restrepo. All rights reserved.
 //
 
 import Foundation
 
-class ItemsListWeaponsPresenter : ItemsListMediator {
+class ItemsListRingsPresenter : ItemsListMediator {
     
-    typealias T = WeaponShort
-    var list: [WeaponShort]
+    typealias T = RingShort
+    var list: [RingShort]
     
     var view: ItemsListView
     var service: DarkArmoryService
@@ -22,19 +22,19 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
         self.view = view
         self.service = service
         self.globalGame = SoulsGameSingleton.getGlobalGame()
-        self.listTitle = GameElement.Weapons.rawValue
-        self.list = [WeaponShort]()
+        self.listTitle = GameElement.Rings.rawValue
+        self.list = [RingShort]()
     }
     
     func configureUI() {
         self.view.updateTitles()
-        self.service.retrieveWeaponsList { [weak self] (response) in
+        self.service.retrieveRingsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
-            case .successWeaponsList(let weaponsResponse):
-                strongSelf.list = weaponsResponse
-                for weapon in strongSelf.list {
-                    print(weapon.name)
+            case .successRingsList(let ringsResponse):
+                strongSelf.list = ringsResponse
+                for ring in strongSelf.list {
+                    print(ring.name)
                 }
             default:
                 return

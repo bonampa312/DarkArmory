@@ -22,7 +22,6 @@ protocol ItemsListBasePresenter {
     
     //MARK: - Class variables
     var service : DarkArmoryService { get }
-    var listType : GameElement { get }
     var globalGame : SoulsSeriesGame { get }
     
     //MARK: - View elements variables

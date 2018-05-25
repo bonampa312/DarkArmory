@@ -28,12 +28,7 @@ class ItemsListViewController: UIViewController {
             configureUI()
             return
         }
-        switch elementsType! {
-        case .Weapons:
-            presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
-        default:
-            presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
-        }
+        presenter = ItemsListPresenterFactory.getItemsListPresenter(type: elementsType!, view: self)
         configureUI()
     }
 

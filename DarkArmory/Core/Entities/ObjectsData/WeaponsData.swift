@@ -8,13 +8,13 @@
 
 import Foundation
 
-public struct WeaponList: Codable {
-    public let id: String
-    public let name: String
-    public let weight: Double
-    public let imageURL: String
-    public let baseDamage: AttackKind
-    public let requeriments: Requeriments
+struct WeaponShort: Codable {
+    let id: String
+    let name: String
+    let weight: Double
+    let imageURL: String
+    let baseDamage: AttackKind
+    let requeriments: Requeriments
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -26,24 +26,24 @@ public struct WeaponList: Codable {
     }
 }
 
-public struct WeaponDetail: Codable {
-    public let id: String
-    public let name: String
-    public let weaponType: String
-    public let weight: Double
-    public let description: String
-    public let imageURL: String
-    public let locations: [String]
-    public let stability: Int
-    public let attackType: String
-    public let critical: Int
-    public let range: Int?
-    public let skill: Skill?
-    public let baseDamage: AttackKind
-    public let aditionalDamage: AditionalDamage?
-    public let requeriments: Requeriments
-    public let bonuses: Bonuses
-    public let defenses: AttackKind
+struct WeaponDetail: Codable {
+    let id: String
+    let name: String
+    let weaponType: String
+    let weight: Double
+    let description: String
+    let imageURL: String
+    let locations: [String]
+    let stability: Int
+    let attackType: String
+    let critical: Int
+    let range: Int?
+    let skill: Skill?
+    let baseDamage: AttackKind
+    let aditionalDamage: AditionalDamage?
+    let requeriments: Requeriments
+    let bonuses: Bonuses
+    let defenses: AttackKind
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -66,10 +66,10 @@ public struct WeaponDetail: Codable {
     }
 }
 
-public struct AditionalDamage: Codable {
-    public let bleed: Int
-    public let poison: Int
-    public let frost: Int
+struct AditionalDamage: Codable {
+    let bleed: Int
+    let poison: Int
+    let frost: Int
     
     enum CodingKeys: String, CodingKey {
         case bleed = "bleed"
@@ -78,55 +78,9 @@ public struct AditionalDamage: Codable {
     }
 }
 
-public struct AttackKind: Codable {
-    public let magicalAdjust: Int?
-    public let physical: Int
-    public let magic: Int
-    public let dark: Int?
-    public let lightning: Int
-    public let fire: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case magicalAdjust = "magical_adjust"
-        case physical = "physical"
-        case magic = "magic"
-        case dark = "dark"
-        case lightning = "lightning"
-        case fire = "fire"
-    }
-}
-
-public struct Bonuses: Codable {
-    public let strength: String
-    public let dexterity: String
-    public let intelligence: String
-    public let faith: String
-    
-    enum CodingKeys: String, CodingKey {
-        case strength = "strength"
-        case dexterity = "dexterity"
-        case intelligence = "intelligence"
-        case faith = "faith"
-    }
-}
-
-public struct Requeriments: Codable {
-    public let strength: Int
-    public let dexterity: Int
-    public let intelligence: Int
-    public let faith: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case strength = "strength"
-        case dexterity = "dexterity"
-        case intelligence = "intelligence"
-        case faith = "faith"
-    }
-}
-
-public struct Skill: Codable {
-    public let name: String
-    public let description: String
+struct Skill: Codable {
+    let name: String
+    let description: String
     
     enum CodingKeys: String, CodingKey {
         case name = "name"

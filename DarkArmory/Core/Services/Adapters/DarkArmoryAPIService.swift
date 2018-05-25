@@ -24,9 +24,25 @@ class DarkArmoryAPIService : DarkArmoryService {
         getListData(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
-                var allWeapons = [WeaponList]()
-                allWeapons = try! JSONDecoder().decode([WeaponList].self, from: jsonData)
+                var allWeapons = [WeaponShort]()
+                allWeapons = try! JSONDecoder().decode([WeaponShort].self, from: jsonData)
                 completion(.successWeaponsList(weapons: allWeapons))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    //MARK: - Get weapons list
+    func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Rings)
+        getListData(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                var allRings = [RingShort]()
+                allRings = try! JSONDecoder().decode([RingShort].self, from: jsonData)
+                completion(.successRingsList(weapons: allRings))
             case .failure:
                 completion(.failure)
             case .notConnectedToInternet:

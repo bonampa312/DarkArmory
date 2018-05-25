@@ -11,10 +11,14 @@ import Foundation
 enum DarkArmoryResponse {
     case failure
     case notConnectedToInternet
-    case successWeaponsList(weapons: [WeaponList])
-    case successWeaponDetail(weapons: WeaponDetail)
+    case successWeaponsList(weapons: [WeaponShort])
+    case successRingsList(weapons: [RingShort])
 }
 
 protocol DarkArmoryService {
+    
     func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void)
+    func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void)
 }
+
+

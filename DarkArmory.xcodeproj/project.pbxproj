@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C0AF30E20B8613300A7B9A3 /* ItemsListRingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AF30D20B8613300A7B9A3 /* ItemsListRingsPresenter.swift */; };
+		3C0AF31020B8624200A7B9A3 /* RingsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AF30F20B8624200A7B9A3 /* RingsData.swift */; };
+		3C0AF31220B8657400A7B9A3 /* CommonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C0AF31120B8657400A7B9A3 /* CommonData.swift */; };
 		3C23812520B7621500D9CB72 /* GameElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C23812420B7621500D9CB72 /* GameElement.swift */; };
 		3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */; };
 		3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */; };
@@ -37,6 +40,7 @@
 		3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABC207EB0C3004D816C /* CalculateSoulsLordran.swift */; };
 		3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0ABE207EB0CE004D816C /* CalculateSoulsDrangleic.swift */; };
 		3C8C0AC7207FA453004D816C /* DarkArmoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */; };
+		3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */; };
 		3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */; };
 		3CE83DB820ADCC2800EBD210 /* DarkArmoryAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE83DB720ADCC2800EBD210 /* DarkArmoryAPIRouter.swift */; };
 		3CE83DBA20ADD18500EBD210 /* DarkArmoryAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE83DB920ADD18500EBD210 /* DarkArmoryAPIService.swift */; };
@@ -70,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C0AF30D20B8613300A7B9A3 /* ItemsListRingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListRingsPresenter.swift; sourceTree = "<group>"; };
+		3C0AF30F20B8624200A7B9A3 /* RingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsData.swift; sourceTree = "<group>"; };
+		3C0AF31120B8657400A7B9A3 /* CommonData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonData.swift; sourceTree = "<group>"; };
 		3C23812420B7621500D9CB72 /* GameElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElement.swift; sourceTree = "<group>"; };
 		3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageWithGif.swift; sourceTree = "<group>"; };
 		3C33E5B820757CAB00CBD689 /* bonfireAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bonfireAnimated.gif; sourceTree = "<group>"; };
@@ -103,6 +110,7 @@
 		3C8C0AC4207FA453004D816C /* DarkArmoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DarkArmoryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8C0AC6207FA453004D816C /* DarkArmoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryTests.swift; sourceTree = "<group>"; };
 		3C8C0AC8207FA454004D816C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListPresenterFactory.swift; sourceTree = "<group>"; };
 		3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLothric.swift; sourceTree = "<group>"; };
 		3CE83DB720ADCC2800EBD210 /* DarkArmoryAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryAPIRouter.swift; sourceTree = "<group>"; };
 		3CE83DB920ADD18500EBD210 /* DarkArmoryAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryAPIService.swift; sourceTree = "<group>"; };
@@ -192,9 +200,10 @@
 		3C84F3EB2080FE8C001F3C32 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				3C896CB420B771AC00981B9B /* ListsPresenters */,
-				3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */,
 				3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */,
+				3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */,
+				3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */,
+				3C896CB420B771AC00981B9B /* ListsPresenters */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -247,8 +256,9 @@
 		3C896CB420B771AC00981B9B /* ListsPresenters */ = {
 			isa = PBXGroup;
 			children = (
-				3C896CB520B771C900981B9B /* ItemsListWeaponsPresenter.swift */,
 				3C896CB720B84FDA00981B9B /* ItemsListMediator.swift */,
+				3C896CB520B771C900981B9B /* ItemsListWeaponsPresenter.swift */,
+				3C0AF30D20B8613300A7B9A3 /* ItemsListRingsPresenter.swift */,
 			);
 			path = ListsPresenters;
 			sourceTree = "<group>";
@@ -315,6 +325,8 @@
 			isa = PBXGroup;
 			children = (
 				3CE83DBD20ADD6D100EBD210 /* WeaponsData.swift */,
+				3C0AF30F20B8624200A7B9A3 /* RingsData.swift */,
+				3C0AF31120B8657400A7B9A3 /* CommonData.swift */,
 			);
 			path = ObjectsData;
 			sourceTree = "<group>";
@@ -427,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
+				3C0AF30E20B8613300A7B9A3 /* ItemsListRingsPresenter.swift in Sources */,
 				3CE83DBE20ADD6D100EBD210 /* WeaponsData.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
@@ -445,12 +458,15 @@
 				3C75F00B2073F7CD00278A74 /* SelectListViewController.swift in Sources */,
 				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
 				3CE83DBC20ADD68300EBD210 /* DarkArmoryService.swift in Sources */,
+				3C0AF31220B8657400A7B9A3 /* CommonData.swift in Sources */,
 				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */,
 				3C896CB820B84FDA00981B9B /* ItemsListMediator.swift in Sources */,
 				3C75F02220744FE300278A74 /* SelectGameViewController.swift in Sources */,
 				3CE83DB820ADCC2800EBD210 /* DarkArmoryAPIRouter.swift in Sources */,
 				3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */,
 				3C84F3F520816F24001F3C32 /* CustomInteger.swift in Sources */,
+				3C0AF31020B8624200A7B9A3 /* RingsData.swift in Sources */,
+				3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */,
 				3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */,
 				3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */,
 			);
