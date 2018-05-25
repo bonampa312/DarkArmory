@@ -170,7 +170,7 @@ class SoulsCalculatorViewController: UIViewController {
             case objectsButtonView:
                 itemsListController.itemsType = .Objects
             case enemiesButtonView:
-                itemsListController.itemsType = .Enemies
+                itemsListController.itemsType = .Characters
             default :
                 itemsListController.itemsType = .Objects
             }

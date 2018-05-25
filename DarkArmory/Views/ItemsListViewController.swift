@@ -11,10 +11,8 @@ import UIKit
 class ItemsListViewController: UIViewController {
 
     //MARK: - Class variables
-    var presenter : ItemsListPresenter!
-    var objectsType : GameObjects?
-    var enemiesType : GameCharacter?
-    var listType : ListType?
+    var presenter : ItemsListBasePresenter?
+    var elementsType : GameElement?
 
     //MARK: - Outlet variables
     @IBOutlet weak var listTitleLabel: UILabel!
@@ -24,14 +22,24 @@ class ItemsListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = ItemsListPresenter(view: self, service: DarkArmoryAPIService(), listType: listType, objectsType: objectsType, enemiesType: enemiesType)
-        
-        self.configureUI()
+        guard elementsType != nil else {
+            elementsType = .Weapons
+            presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
+            configureUI()
+            return
+        }
+        switch elementsType! {
+        case .Weapons:
+            presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
+        default:
+            presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
+        }
+        configureUI()
     }
 
     //MARK: - UI methods
     private func configureUI () {
-        self.presenter.configureUI()
+        self.presenter!.configureUI()
     }
 }
 
@@ -41,8 +49,8 @@ extension ItemsListViewController : ItemsListView {
     }
     
     func updateTitles() {
-        self.listTitleLabel.text = self.presenter.listTitle
-        self.gameTitleLabel.text = self.presenter.globalGame.rawValue
+        self.listTitleLabel.text = self.presenter?.listTitle
+        self.gameTitleLabel.text = self.presenter?.globalGame.rawValue
     }
     
     func showConnectionError() {

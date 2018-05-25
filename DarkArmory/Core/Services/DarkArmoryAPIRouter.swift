@@ -9,22 +9,13 @@
 import Foundation
 import Alamofire
 
-enum DarkArmoryAPIRouter {
+class DarkArmoryAPIRouter {
+    
     private static let baseURL = "https://darkarmory-api.herokuapp.com"
     
-    case Weapons
-    case Rings
-    case Armors
-    case Spells
-    case Misc
-    case RegularEnemies
-    case Bosses
-    case FriendlyNPCs
-    case Merchants
-    
-    var fullPath: String {
+    static func getURL(listType: GameElement) -> String {
         let baseGame = SoulsGameSingleton.getGlobalGame().shortName
-        switch self {
+        switch listType {
         case .Weapons:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/weapons"
         case .Rings:
@@ -35,15 +26,16 @@ enum DarkArmoryAPIRouter {
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/armors"
         case .Misc:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/misc"
-        case .RegularEnemies:
+        case .RegularEnemy:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/regularEnemies"
-        case .Bosses:
+        case .BossEnemy:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/bosses"
-        case .FriendlyNPCs:
+        case .Friendly:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/friendlyNPCs"
         case .Merchants:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/merchants"
         }
     }
+    
 }
 

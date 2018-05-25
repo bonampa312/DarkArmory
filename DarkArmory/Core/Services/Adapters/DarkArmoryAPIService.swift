@@ -20,15 +20,12 @@ class DarkArmoryAPIService : DarkArmoryService {
     
     //MARK: - Get weapons list
     func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void) {
-        let router : DarkArmoryAPIRouter = .Weapons
-        getListData(urlPath: router.fullPath) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Weapons)
+        getListData(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allWeapons = [WeaponList]()
                 allWeapons = try! JSONDecoder().decode([WeaponList].self, from: jsonData)
-                for weapon in allWeapons {
-                    print(weapon.name," : ",weapon.weight)
-                }
                 completion(.successWeaponsList(weapons: allWeapons))
             case .failure:
                 completion(.failure)

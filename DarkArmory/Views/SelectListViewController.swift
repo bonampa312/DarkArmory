@@ -10,7 +10,7 @@ import UIKit
 
 enum ListType {
     case Objects
-    case Enemies
+    case Characters
 }
 
 class SelectListViewController: UIViewController {
@@ -54,12 +54,12 @@ class SelectListViewController: UIViewController {
     private func createButtonsStackView() {
         // Array with buttons
         switch itemsType {
-        case .Enemies:
-            for characterType in GameCharacter.allTypes {
+        case .Characters:
+            for characterType in GameElement.allCharacters {
                 buttonsList.append(createOptionsButton(title: characterType.rawValue))
             }
         case .Objects:
-            for objectType in GameObjects.allTypes {
+            for objectType in GameElement.allObjects {
                 buttonsList.append(createOptionsButton(title: objectType.rawValue))
             }
         }
@@ -106,35 +106,8 @@ class SelectListViewController: UIViewController {
             let itemList = segue.destination as! ItemsListViewController
             guard let button = sender as? UIButton,
                 let buttonTitle = button.titleLabel?.text else { return }
-            switch buttonTitle {
-            case GameObjects.Weapons.rawValue:
-                itemList.objectsType = .Weapons
-                itemList.listType = .Objects
-            case GameObjects.Armors.rawValue:
-                itemList.objectsType = .Armors
-                itemList.listType = .Objects
-            case GameObjects.Rings.rawValue:
-                itemList.objectsType = .Rings
-                itemList.listType = .Objects
-            case GameObjects.Spells.rawValue:
-                itemList.objectsType = .Spells
-                itemList.listType = .Objects
-            case GameObjects.Misc.rawValue:
-                itemList.objectsType = .Misc
-                itemList.listType = .Objects
-            case GameCharacter.RegularEnemy.rawValue:
-                itemList.enemiesType = .RegularEnemy
-                itemList.listType = .Enemies
-            case GameCharacter.BossEnemy.rawValue:
-                itemList.enemiesType = .BossEnemy
-                itemList.listType = .Enemies
-            case GameCharacter.Friendly.rawValue:
-                itemList.enemiesType = .Friendly
-                itemList.listType = .Enemies
-            default:
-                itemList.objectsType = .Weapons
-                itemList.listType = .Objects
-            }
+            let elementsType : GameElement? = GameElement(rawValue: buttonTitle)
+            itemList.elementsType = elementsType
         case "returnToBonfireSegue":
             _ = segue.destination as! SoulsCalculatorViewController
         case "changeGameSegue":
