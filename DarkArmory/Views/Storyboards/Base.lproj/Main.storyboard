@@ -507,10 +507,47 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="nJR-1x-BFJ">
+                                <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uqN-bV-bb1">
+                                <rect key="frame" x="128" y="307.5" width="120" height="72"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-pB-JXm">
+                                        <rect key="frame" x="39.5" y="0.0" width="41.5" height="32"/>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6o-NF-fhU" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="40" width="120" height="32"/>
+                                        <color key="backgroundColor" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="dCP-WI-zLE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="18"/>
+                                        <state key="normal" title="Try again">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="reloadList:" destination="7XP-Am-3YM" eventType="touchUpInside" id="SYg-bc-lpC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.1224093264" green="0.1224093264" blue="0.1224093264" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="nJR-1x-BFJ" firstAttribute="centerX" secondItem="Rob-ZO-aVk" secondAttribute="centerX" id="Fdj-gX-cMn"/>
                             <constraint firstItem="Rob-ZO-aVk" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="top" id="H0F-gC-Ce4"/>
+                            <constraint firstItem="uqN-bV-bb1" firstAttribute="centerX" secondItem="Rob-ZO-aVk" secondAttribute="centerX" id="PbF-YD-TV5"/>
+                            <constraint firstItem="uqN-bV-bb1" firstAttribute="centerY" secondItem="Rob-ZO-aVk" secondAttribute="centerY" id="Tqt-lh-8vL"/>
+                            <constraint firstItem="nJR-1x-BFJ" firstAttribute="centerY" secondItem="Rob-ZO-aVk" secondAttribute="centerY" id="ZHG-An-lzL"/>
                             <constraint firstItem="Rob-ZO-aVk" firstAttribute="trailing" secondItem="Tqq-S1-MgR" secondAttribute="trailing" id="aEm-5C-Uen"/>
                             <constraint firstItem="x4q-kx-oef" firstAttribute="top" secondItem="Tqq-S1-MgR" secondAttribute="bottom" constant="-20" id="elL-yf-thf"/>
                             <constraint firstItem="Tqq-S1-MgR" firstAttribute="leading" secondItem="Rob-ZO-aVk" secondAttribute="leading" id="hmQ-ae-MJc"/>
@@ -521,6 +558,9 @@
                     <connections>
                         <outlet property="gameTitleLabel" destination="x4q-kx-oef" id="5Hn-4G-aQG"/>
                         <outlet property="listTitleLabel" destination="jKm-bz-pGG" id="uVd-pI-JTm"/>
+                        <outlet property="loadingIndicator" destination="nJR-1x-BFJ" id="59o-m1-gbl"/>
+                        <outlet property="notificationMessage" destination="vhu-pB-JXm" id="Sgr-yQ-o0h"/>
+                        <outlet property="notificationStack" destination="uqN-bV-bb1" id="ShR-sq-Gwd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vXJ-kJ-xee" userLabel="First Responder" sceneMemberID="firstResponder"/>

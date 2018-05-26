@@ -33,4 +33,6 @@ protocol ItemsListBasePresenter {
     
     func configureUI()
     
+    func loadList()
+    
 }

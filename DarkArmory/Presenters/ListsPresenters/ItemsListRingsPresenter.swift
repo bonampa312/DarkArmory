@@ -28,14 +28,19 @@ class ItemsListRingsPresenter : ItemsListMediator {
     
     func configureUI() {
         self.view.updateTitles()
+    }
+    
+    func loadList() {
         self.service.retrieveRingsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successRingsList(let ringsResponse):
                 strongSelf.list = ringsResponse
-                for ring in strongSelf.list {
-                    print(ring.name)
-                }
+                strongSelf.view.updateList()
+            case .failure:
+                strongSelf.view.showDataErrror()
+            case .notConnectedToInternet:
+                strongSelf.view.showConnectionError()
             default:
                 return
             }

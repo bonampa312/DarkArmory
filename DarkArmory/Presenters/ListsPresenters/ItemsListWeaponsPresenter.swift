@@ -28,14 +28,19 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
     
     func configureUI() {
         self.view.updateTitles()
+    }
+    
+    func loadList() {
         self.service.retrieveWeaponsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successWeaponsList(let weaponsResponse):
                 strongSelf.list = weaponsResponse
-                for weapon in strongSelf.list {
-                    print(weapon.name)
-                }
+                strongSelf.view.updateList()
+            case .failure:
+                strongSelf.view.showDataErrror()
+            case .notConnectedToInternet:
+                strongSelf.view.showConnectionError()
             default:
                 return
             }

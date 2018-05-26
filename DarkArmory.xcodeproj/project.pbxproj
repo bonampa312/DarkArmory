@@ -201,8 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */,
-				3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */,
 				3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */,
+				3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */,
 				3C896CB420B771AC00981B9B /* ListsPresenters */,
 			);
 			path = Presenters;

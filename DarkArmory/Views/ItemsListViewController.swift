@@ -17,6 +17,9 @@ class ItemsListViewController: UIViewController {
     //MARK: - Outlet variables
     @IBOutlet weak var listTitleLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var notificationStack: UIStackView!
+    @IBOutlet weak var notificationMessage: UILabel!
     
     //MARK: - View lifecycle methods
     override func viewDidLoad() {
@@ -31,30 +34,54 @@ class ItemsListViewController: UIViewController {
         presenter = ItemsListPresenterFactory.getItemsListPresenter(type: elementsType!, view: self)
         configureUI()
     }
-
+    
+    @IBAction func reloadList(_ sender: UIButton) {
+        self.hideNotificationStack()
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
+        self.presenter?.loadList()
+    }
+    
     //MARK: - UI methods
     private func configureUI () {
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
         self.presenter!.configureUI()
     }
 }
 
+//MARK: - Presenter closure methods
 extension ItemsListViewController : ItemsListView {
     func updateList() {
-        //TODO
+        self.loadingIndicator.isHidden = true
     }
     
     func updateTitles() {
         self.listTitleLabel.text = self.presenter?.listTitle
         self.gameTitleLabel.text = self.presenter?.globalGame.rawValue
+        self.presenter?.loadList()
     }
     
     func showConnectionError() {
-        //TODO
+        self.loadingIndicator.isHidden = true
+        self.notificationMessage.text = "No internet connection"
+        self.showNotificationStack()
     }
     
     func showDataErrror() {
-        //TODO
+        self.loadingIndicator.isHidden = true
+        self.notificationMessage.text = "Error loading data"
+        self.showNotificationStack()
+    }
+}
+
+extension ItemsListViewController {
+    
+    func hideNotificationStack() {
+        self.notificationStack.alpha = 0
     }
     
-    
+    func showNotificationStack(){
+        self.notificationStack.alpha = 1
+    }
 }
