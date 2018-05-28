@@ -9,7 +9,9 @@
 import UIKit
 
 extension ItemsListViewController : UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 }
 
 extension ItemsListViewController : UITableViewDataSource {
@@ -21,9 +23,18 @@ extension ItemsListViewController : UITableViewDataSource {
         guard let cellIdentifier = self.presenter?.cellIdentifier else {
             return UITableViewCell()
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
-        return cell!
+        switch self.elementsType! {
+        case .Weapons:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeaponsTableViewCell
+            cell.configure(weapon: self.presenter?.elementsList[indexPath.row] as! WeaponShort)
+            return cell
+        case .Rings:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RingsTableViewCell
+            cell.configure(ring: self.presenter?.elementsList[indexPath.row] as! RingShort)
+            return cell
+        default:
+            return UITableViewCell()
+        }
     }
-    
     
 }

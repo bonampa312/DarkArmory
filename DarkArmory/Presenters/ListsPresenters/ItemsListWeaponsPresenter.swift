@@ -25,7 +25,7 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.listTitle = GameElement.Weapons.rawValue
         self.list = [WeaponShort]()
-        self.cellIdentifier = "TO DO"
+        self.cellIdentifier = WeaponsTableViewCell.reuseIdentifier
     }
     
     func configureUI() {

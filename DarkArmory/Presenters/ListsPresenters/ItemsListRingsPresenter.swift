@@ -25,7 +25,7 @@ class ItemsListRingsPresenter : ItemsListMediator {
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.listTitle = GameElement.Rings.rawValue
         self.list = [RingShort]()
-        self.cellIdentifier = "TO DO"
+        self.cellIdentifier = RingsTableViewCell.reuseIdentifier
     }
     
     func configureUI() {

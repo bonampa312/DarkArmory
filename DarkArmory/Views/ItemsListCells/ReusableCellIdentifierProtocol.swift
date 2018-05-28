@@ -15,5 +15,3 @@ extension ReusableCellIdentifierProtocol where Self: UIView {
         return String(describing: self)
     }
 }
-git add .
-git commit -m "DA_Items_lists_0"

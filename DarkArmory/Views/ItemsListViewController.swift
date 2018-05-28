@@ -20,11 +20,15 @@ class ItemsListViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var notificationStack: UIStackView!
     @IBOutlet weak var notificationMessage: UILabel!
+    @IBOutlet weak var itemsTable: UITableView!
     
     //MARK: - View lifecycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        itemsTable.isHidden = true
+        itemsTable.rowHeight = UITableViewAutomaticDimension
+        itemsTable.estimatedRowHeight = 85
         guard elementsType != nil else {
             elementsType = .Weapons
             presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
@@ -54,6 +58,8 @@ class ItemsListViewController: UIViewController {
 extension ItemsListViewController : ItemsListView {
     func updateList() {
         self.loadingIndicator.isHidden = true
+        self.itemsTable.reloadData()
+        self.itemsTable.isHidden = false
     }
     
     func updateTitles() {
