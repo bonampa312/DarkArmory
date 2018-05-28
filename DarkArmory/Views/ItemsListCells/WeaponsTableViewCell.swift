@@ -45,16 +45,5 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         intelligenceReq.text = String(weapon.requeriments.intelligence)
         faithReq.text = String(weapon.requeriments.faith)
     }
-
-    override func layoutSubviews() {
-        let newCellSubViewsFrame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
-        let newCellViewFrame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
-        
-        self.contentView.frame = newCellSubViewsFrame
-
-        self.frame = newCellViewFrame
-        
-        super.layoutSubviews()
-    }
     
 }

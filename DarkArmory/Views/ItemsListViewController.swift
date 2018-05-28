@@ -27,8 +27,7 @@ class ItemsListViewController: UIViewController {
         super.viewDidLoad()
         
         itemsTable.isHidden = true
-        itemsTable.rowHeight = UITableViewAutomaticDimension
-        itemsTable.estimatedRowHeight = 85
+        
         guard elementsType != nil else {
             elementsType = .Weapons
             presenter = ItemsListWeaponsPresenter(view: self, service: DarkArmoryAPIService())
