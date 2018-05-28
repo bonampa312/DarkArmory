@@ -13,6 +13,7 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     @IBOutlet weak var ringImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var weight: UILabel!
+    @IBOutlet weak var weightStack: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,6 +26,11 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
     func configure(ring: RingShort) {
         self.name.text = ring.name
-        self.weight.text = String(ring.weight)
+        if ring.weight > 0 {
+            self.weight.text = String(ring.weight)
+        } else {
+            weightStack.isHidden = true
+        }
     }
+    
 }

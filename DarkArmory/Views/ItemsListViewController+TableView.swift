@@ -8,13 +8,12 @@
 
 import UIKit
 
-extension ItemsListViewController : UITableViewDelegate {
+extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-}
-
-extension ItemsListViewController : UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.presenter?.listSize())!
     }

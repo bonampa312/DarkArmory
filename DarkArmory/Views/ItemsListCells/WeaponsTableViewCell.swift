@@ -22,6 +22,8 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     @IBOutlet weak var dexterityReq: UILabel!
     @IBOutlet weak var intelligenceReq: UILabel!
     @IBOutlet weak var faithReq: UILabel!
+    @IBOutlet weak var darkDamageStack: UIStackView!
+    @IBOutlet weak var emptyStackView: UIStackView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,12 +40,15 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         magicDmg.text = String(weapon.baseDamage.magic)
         fireDmg.text = String(weapon.baseDamage.fire)
         lightningDmg.text = String(weapon.baseDamage.lightning)
-        let darkDamage = (weapon.baseDamage.dark != nil) ? String(weapon.baseDamage.dark!) : "-"
-        darkDmg.text = darkDamage
+        if (weapon.baseDamage.dark != nil) {
+            darkDmg.text = String(weapon.baseDamage.dark!)
+        } else {
+            darkDamageStack.isHidden = true
+            emptyStackView.isHidden = true
+        }
         strengthReq.text = String(weapon.requeriments.strength)
         dexterityReq.text = String(weapon.requeriments.dexterity)
         intelligenceReq.text = String(weapon.requeriments.intelligence)
         faithReq.text = String(weapon.requeriments.faith)
     }
-    
 }
