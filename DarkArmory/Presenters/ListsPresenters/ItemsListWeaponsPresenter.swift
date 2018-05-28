@@ -10,6 +10,7 @@ import Foundation
 
 class ItemsListWeaponsPresenter : ItemsListMediator {
     
+    var cellIdentifier: String
     typealias T = WeaponShort
     var list: [WeaponShort]
     
@@ -24,6 +25,7 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.listTitle = GameElement.Weapons.rawValue
         self.list = [WeaponShort]()
+        self.cellIdentifier = "TO DO"
     }
     
     func configureUI() {
@@ -45,5 +47,9 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
                 return
             }
         }
+    }
+    
+    func listSize() -> Int {
+        return list.count
     }
 }

@@ -26,7 +26,7 @@ protocol ItemsListBasePresenter {
     
     //MARK: - View elements variables
     var listTitle : String { get }
-    
+    var cellIdentifier : String { get }
     var elementsList: [Any] { get }
     
     init(view : ItemsListView, service: DarkArmoryService)
@@ -34,5 +34,7 @@ protocol ItemsListBasePresenter {
     func configureUI()
     
     func loadList()
+    
+    func listSize()->Int
     
 }
