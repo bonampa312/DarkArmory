@@ -25,7 +25,7 @@ class DarkArmoryAPIRouter {
         case .Armors:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/armors"
         case .Misc:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/misc"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/miscs"
         case .RegularEnemy:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/regularEnemies"
         case .BossEnemy:

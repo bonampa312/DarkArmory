@@ -42,7 +42,24 @@ class DarkArmoryAPIService : DarkArmoryService {
             case .success(let jsonData):
                 var allRings = [RingShort]()
                 allRings = try! JSONDecoder().decode([RingShort].self, from: jsonData)
-                completion(.successRingsList(weapons: allRings))
+                completion(.successRingsList(rings: allRings))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    //MARK: - Get miscs list
+    func retrieveMiscList(completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Misc)
+        getListData(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                var allMisc = [MiscShort]()
+                allMisc = try! JSONDecoder().decode([MiscShort].self, from: jsonData)
+                completion(.successMiscList(miscs: allMisc))
             case .failure:
                 completion(.failure)
             case .notConnectedToInternet:

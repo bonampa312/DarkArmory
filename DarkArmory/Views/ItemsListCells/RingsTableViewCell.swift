@@ -37,7 +37,7 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         if (imageURL != nil) {
             ringImage.af_setImage(withURL: imageURL!)
         }  else {
-            ringImage.image = UIImage(named: "sunlight")
+            ringImage.image = UIImage(named: "ring_of_sacrifice")
         }
     }
     
