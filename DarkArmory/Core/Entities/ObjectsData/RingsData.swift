@@ -12,7 +12,7 @@ public struct RingShort: Codable {
     public let id: String
     public let name: String
     public let imageURL: String
-    public let weight: Int
+    public let weight: Double
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -27,7 +27,7 @@ public struct RingDetail: Codable {
     public let name: String
     public let imageURL: String
     public let locations: [String]
-    public let weight: Int
+    public let weight: Double
     public let description: String
     public let effects: [String]
     

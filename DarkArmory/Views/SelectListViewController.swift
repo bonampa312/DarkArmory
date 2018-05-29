@@ -138,7 +138,7 @@ class SelectListViewController: UIViewController {
 extension SelectListViewController {
     
     func animateBgImage () {
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.15, animations: {
             self.backgroundFaraam.alpha = 1
         }) { (true) in
             self.animateBgFilter()
@@ -146,8 +146,8 @@ extension SelectListViewController {
     }
     
     func animateBgFilter () {
-        UIView.animate(withDuration: 0.4, animations: {
-            self.backgroundFilter.alpha = 0.45
+        UIView.animate(withDuration: 0.3, animations: {
+            self.backgroundFilter.alpha = 0.3
         }, completion: { (true) in
             self.animateItemsTypeButton()
             self.animateReturnButton()
