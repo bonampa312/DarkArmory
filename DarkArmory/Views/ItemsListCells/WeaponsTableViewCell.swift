@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
@@ -50,5 +51,12 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         dexterityReq.text = String(weapon.requeriments.dexterity)
         intelligenceReq.text = String(weapon.requeriments.intelligence)
         faithReq.text = String(weapon.requeriments.faith)
+        
+        let imageURL = URL(string: weapon.imageURL)
+        if (imageURL != nil) {
+            weaponImage.af_setImage(withURL: imageURL!)
+        }  else {
+            weaponImage.image = UIImage(named: "sword")
+        }
     }
 }

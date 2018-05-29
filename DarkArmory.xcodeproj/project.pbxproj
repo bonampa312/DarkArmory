@@ -18,12 +18,11 @@
 		3C489E4320BC739200FD855F /* RingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C489E4220BC739200FD855F /* RingsTableViewCell.swift */; };
 		3C489E4520BC79FC00FD855F /* ReusableCellIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C489E4420BC79FC00FD855F /* ReusableCellIdentifierProtocol.swift */; };
 		3C4E1506208E8FF600875272 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */; };
-		3C4E150E208F95C800875272 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; };
-		3C4E150F208F95C800875272 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3C4E1505208E8FF600875272 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3C4E1512208FA85300875272 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1511208FA85300875272 /* ItemsListViewController.swift */; };
 		3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */; };
 		3C4EB67820A4E13F00385BFA /* SoulsGameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */; };
 		3C4EB67A20A4E9F100385BFA /* UseCaseImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67920A4E9F100385BFA /* UseCaseImplementation.swift */; };
+		3C57683220BCCD2400234C61 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C57683120BCCD2400234C61 /* AlamofireImage.framework */; };
 		3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F0082073F7CD00278A74 /* AppDelegate.swift */; };
 		3C75F00B2073F7CD00278A74 /* SelectListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F00A2073F7CD00278A74 /* SelectListViewController.swift */; };
 		3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C75F00C2073F7CD00278A74 /* Main.storyboard */; };
@@ -63,20 +62,6 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		3C4E1510208F95C800875272 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				3C4E150F208F95C800875272 /* Alamofire.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		3C0AF30D20B8613300A7B9A3 /* ItemsListRingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListRingsPresenter.swift; sourceTree = "<group>"; };
 		3C0AF30F20B8624200A7B9A3 /* RingsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsData.swift; sourceTree = "<group>"; };
@@ -94,6 +79,7 @@
 		3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseLocator.swift; sourceTree = "<group>"; };
 		3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsGameSingleton.swift; sourceTree = "<group>"; };
 		3C4EB67920A4E9F100385BFA /* UseCaseImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseImplementation.swift; sourceTree = "<group>"; };
+		3C57683120BCCD2400234C61 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 		3C75F0052073F7CD00278A74 /* DarkArmory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DarkArmory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C75F0082073F7CD00278A74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C75F00A2073F7CD00278A74 /* SelectListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectListViewController.swift; sourceTree = "<group>"; };
@@ -132,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C4E150E208F95C800875272 /* Alamofire.framework in Frameworks */,
+				3C57683220BCCD2400234C61 /* AlamofireImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,12 +151,21 @@
 			path = AlamofireFramework;
 			sourceTree = "<group>";
 		};
+		3C57683020BCCD2300234C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C57683120BCCD2400234C61 /* AlamofireImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3C75EFFC2073F7CD00278A74 = {
 			isa = PBXGroup;
 			children = (
 				3C75F0072073F7CD00278A74 /* DarkArmory */,
 				3C8C0AC5207FA453004D816C /* DarkArmoryTests */,
 				3C75F0062073F7CD00278A74 /* Products */,
+				3C57683020BCCD2300234C61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -361,7 +356,7 @@
 				3C75F0012073F7CD00278A74 /* Sources */,
 				3C75F0022073F7CD00278A74 /* Frameworks */,
 				3C75F0032073F7CD00278A74 /* Resources */,
-				3C4E1510208F95C800875272 /* Embed Frameworks */,
+				3C57682F20BCCC8300234C61 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -452,6 +447,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3C57682F20BCCC8300234C61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3C75F0012073F7CD00278A74 /* Sources */ = {

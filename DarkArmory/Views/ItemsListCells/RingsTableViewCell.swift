@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     
@@ -30,6 +31,13 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
             self.weight.text = String(ring.weight)
         } else {
             weightStack.isHidden = true
+        }
+        
+        let imageURL = URL(string: ring.imageURL)
+        if (imageURL != nil) {
+            ringImage.af_setImage(withURL: imageURL!)
+        }  else {
+            ringImage.image = UIImage(named: "sunlight")
         }
     }
     
