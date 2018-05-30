@@ -34,7 +34,7 @@ class DarkArmoryAPIService : DarkArmoryService {
             }
         }
     }
-    //MARK: - Get weapons list
+    //MARK: - Get rings list
     func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Rings)
         getListData(urlPath: route) {
@@ -60,6 +60,23 @@ class DarkArmoryAPIService : DarkArmoryService {
                 var allMisc = [MiscShort]()
                 allMisc = try! JSONDecoder().decode([MiscShort].self, from: jsonData)
                 completion(.successMiscList(miscs: allMisc))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    //MARK: - Get spells list
+    func retrieveSpellsList(completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Spells)
+        getListData(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                var allSpells = [SpellsShort]()
+                allSpells = try! JSONDecoder().decode([SpellsShort].self, from: jsonData)
+                completion(.successSpellsList(spells: allSpells))
             case .failure:
                 completion(.failure)
             case .notConnectedToInternet:

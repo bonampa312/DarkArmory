@@ -14,6 +14,7 @@ enum DarkArmoryResponse {
     case successWeaponsList(weapons: [WeaponShort])
     case successRingsList(rings: [RingShort])
     case successMiscList(miscs: [MiscShort])
+    case successSpellsList(spells: [SpellsShort])
 }
 
 protocol DarkArmoryService {
@@ -21,4 +22,6 @@ protocol DarkArmoryService {
     func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void)
     func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void)
     func retrieveMiscList(completion: @escaping (DarkArmoryResponse) -> Void)
+    func retrieveSpellsList(completion: @escaping (DarkArmoryResponse) -> Void)
+    
 }

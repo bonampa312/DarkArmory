@@ -33,7 +33,7 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
             weightStack.isHidden = true
         }
         
-        let imageURL = URL(string: ring.imageURL)
+        let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: ring.imageURL, size: 140)
         if (imageURL != nil) {
             ringImage.af_setImage(withURL: imageURL!)
         }  else {

@@ -35,6 +35,10 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MiscsTableViewCell
             cell.configure(misc: self.presenter?.elementsList[indexPath.row] as! MiscShort)
             return cell
+        case .Spells:
+            let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SpellsTableViewCell
+            cell.configure(spell: self.presenter?.elementsList[indexPath.row] as! SpellsShort)
+            return cell
         default:
             return UITableViewCell()
         }

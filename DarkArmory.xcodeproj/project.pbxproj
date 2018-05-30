@@ -46,6 +46,9 @@
 		3C94C0F920BDBEA2009F9C1B /* MiscsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C0F820BDBEA1009F9C1B /* MiscsTableViewCell.swift */; };
 		3C94C0FB20BDE36F009F9C1B /* MiscsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C0FA20BDE36F009F9C1B /* MiscsData.swift */; };
 		3C94C0FD20BDE57E009F9C1B /* ItemsListMiscPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C0FC20BDE57E009F9C1B /* ItemsListMiscPresenter.swift */; };
+		3C94C0FF20BF1FD8009F9C1B /* SpellsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C0FE20BF1FD8009F9C1B /* SpellsData.swift */; };
+		3C94C10120BF27A3009F9C1B /* ItemsListSpellsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C10020BF27A3009F9C1B /* ItemsListSpellsPresenter.swift */; };
+		3C94C10320BF2F98009F9C1B /* SpellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */; };
 		3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */; };
 		3CE8333B2085120500C37E3F /* CalculateSoulsLothric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */; };
 		3CE83DB820ADCC2800EBD210 /* DarkArmoryAPIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE83DB720ADCC2800EBD210 /* DarkArmoryAPIRouter.swift */; };
@@ -110,6 +113,9 @@
 		3C94C0F820BDBEA1009F9C1B /* MiscsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscsTableViewCell.swift; sourceTree = "<group>"; };
 		3C94C0FA20BDE36F009F9C1B /* MiscsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscsData.swift; sourceTree = "<group>"; };
 		3C94C0FC20BDE57E009F9C1B /* ItemsListMiscPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListMiscPresenter.swift; sourceTree = "<group>"; };
+		3C94C0FE20BF1FD8009F9C1B /* SpellsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsData.swift; sourceTree = "<group>"; };
+		3C94C10020BF27A3009F9C1B /* ItemsListSpellsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListSpellsPresenter.swift; sourceTree = "<group>"; };
+		3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsTableViewCell.swift; sourceTree = "<group>"; };
 		3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListPresenterFactory.swift; sourceTree = "<group>"; };
 		3CE8333A2085120500C37E3F /* CalculateSoulsLothric.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateSoulsLothric.swift; sourceTree = "<group>"; };
 		3CE83DB720ADCC2800EBD210 /* DarkArmoryAPIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarkArmoryAPIRouter.swift; sourceTree = "<group>"; };
@@ -145,6 +151,7 @@
 				3C489E4020BC677A00FD855F /* WeaponsTableViewCell.swift */,
 				3C489E4220BC739200FD855F /* RingsTableViewCell.swift */,
 				3C94C0F820BDBEA1009F9C1B /* MiscsTableViewCell.swift */,
+				3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */,
 			);
 			path = ItemsListCells;
 			sourceTree = "<group>";
@@ -282,6 +289,7 @@
 				3C896CB520B771C900981B9B /* ItemsListWeaponsPresenter.swift */,
 				3C0AF30D20B8613300A7B9A3 /* ItemsListRingsPresenter.swift */,
 				3C94C0FC20BDE57E009F9C1B /* ItemsListMiscPresenter.swift */,
+				3C94C10020BF27A3009F9C1B /* ItemsListSpellsPresenter.swift */,
 			);
 			path = ListsPresenters;
 			sourceTree = "<group>";
@@ -351,6 +359,7 @@
 				3CE83DBD20ADD6D100EBD210 /* WeaponsData.swift */,
 				3C0AF30F20B8624200A7B9A3 /* RingsData.swift */,
 				3C94C0FA20BDE36F009F9C1B /* MiscsData.swift */,
+				3C94C0FE20BF1FD8009F9C1B /* SpellsData.swift */,
 			);
 			path = ObjectsData;
 			sourceTree = "<group>";
@@ -481,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
+				3C94C0FF20BF1FD8009F9C1B /* SpellsData.swift in Sources */,
 				3C0AF30E20B8613300A7B9A3 /* ItemsListRingsPresenter.swift in Sources */,
 				3CE83DBE20ADD6D100EBD210 /* WeaponsData.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
@@ -513,10 +523,12 @@
 				3CE83DB820ADCC2800EBD210 /* DarkArmoryAPIRouter.swift in Sources */,
 				3C8C0ABA207EB032004D816C /* CalculateSouls.swift in Sources */,
 				3C84F3F520816F24001F3C32 /* CustomInteger.swift in Sources */,
+				3C94C10120BF27A3009F9C1B /* ItemsListSpellsPresenter.swift in Sources */,
 				3C0AF31020B8624200A7B9A3 /* RingsData.swift in Sources */,
 				3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */,
 				3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */,
 				3C94C0FB20BDE36F009F9C1B /* MiscsData.swift in Sources */,
+				3C94C10320BF2F98009F9C1B /* SpellsTableViewCell.swift in Sources */,
 				3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

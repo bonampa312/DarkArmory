@@ -24,7 +24,7 @@ class MiscsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
     func configure(misc: MiscShort){
         name.text = misc.name
-        let imageURL = URL(string: misc.imageURL)
+        let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: misc.imageURL, size: 140)
         if (imageURL != nil) {
             miscImage.af_setImage(withURL: imageURL!)
         }  else {
