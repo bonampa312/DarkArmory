@@ -13,6 +13,13 @@ class DarkArmoryAPIRouter {
     
     private static let baseURL = "https://darkarmory-api.herokuapp.com"
     
+    private static let imagesResizeBase = "/revision/latest/scale-to-width-down/"
+    
+    static func getImageResizedURL(url: String, size: Int) -> URL? {
+        let url = URL(string: "\(url + imagesResizeBase + String(size))")
+        return url
+    }
+    
     static func getURL(listType: GameElement) -> String {
         let baseGame = SoulsGameSingleton.getGlobalGame().shortName
         switch listType {

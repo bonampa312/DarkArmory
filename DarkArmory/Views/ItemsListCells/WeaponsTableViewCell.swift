@@ -52,7 +52,7 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         intelligenceReq.text = String(weapon.requeriments.intelligence)
         faithReq.text = String(weapon.requeriments.faith)
         
-        let imageURL = URL(string: weapon.imageURL)
+        let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: weapon.imageURL, size: 140)
         if (imageURL != nil) {
             weaponImage.af_setImage(withURL: imageURL!)
         }  else {
