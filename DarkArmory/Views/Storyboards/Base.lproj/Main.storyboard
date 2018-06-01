@@ -19,7 +19,7 @@
         <!--Select List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SelectListViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="BYZ-38-t0r" customClass="SelectListViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,7 +76,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H9B-KC-yBa" secondAttribute="trailing" id="1Yb-eU-OMp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gif-OX-DIu" secondAttribute="bottom" id="AY7-YK-Bkh"/>
@@ -110,7 +110,7 @@
         <!--Souls Calculator View Controller-->
         <scene sceneID="fSx-3a-3sa">
             <objects>
-                <viewController id="Ptp-EX-ooQ" customClass="SoulsCalculatorViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="Ptp-EX-ooQ" customClass="SoulsCalculatorViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XVu-0K-5ay">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -127,7 +127,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-4d-2BK">
+                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jto-4d-2BK">
                                         <rect key="frame" x="0.0" y="18.5" width="70" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="70" id="C4a-WA-JJf"/>
@@ -463,7 +463,7 @@
         <!--Items List View Controller-->
         <scene sceneID="la8-jE-KjP">
             <objects>
-                <viewController id="7XP-Am-3YM" customClass="ItemsListViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" id="7XP-Am-3YM" customClass="ItemsListViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qDZ-aY-Edx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -823,13 +823,13 @@
                                                                                     <rect key="frame" x="69.5" y="0.0" width="65" height="29.5"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faith" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-0P-aVd">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="28.5" height="29.5"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="29.5"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="ARn-0P-aVd" secondAttribute="height" multiplier="1:1" id="1oM-0i-jss"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTw-zU-6Cu">
-                                                                                            <rect key="frame" x="32.5" y="0.0" width="32.5" height="29.5"/>
+                                                                                            <rect key="frame" x="33" y="0.0" width="32" height="29.5"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1638,7 +1638,7 @@
         <!--Select Game View Controller-->
         <scene sceneID="3d0-dN-am0">
             <objects>
-                <viewController id="SKW-aS-Ve9" customClass="SelectGameViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="flipHorizontal" id="SKW-aS-Ve9" customClass="SelectGameViewController" customModule="DarkArmory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kN4-zP-UKD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
