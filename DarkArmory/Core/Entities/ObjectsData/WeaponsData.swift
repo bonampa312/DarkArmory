@@ -40,7 +40,7 @@ struct WeaponDetail: Codable {
     let range: Int?
     let skill: Skill?
     let baseDamage: AttackKind
-    let aditionalDamage: AditionalDamage?
+    let aditionalDamage: Resistances?
     let requirements: Requirements
     let bonuses: Bonuses
     let defenses: AttackKind
@@ -63,18 +63,6 @@ struct WeaponDetail: Codable {
         case requirements = "requirements"
         case bonuses = "bonuses"
         case defenses = "defenses"
-    }
-}
-
-struct AditionalDamage: Codable {
-    let bleed: Int
-    let poison: Int
-    let frost: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case bleed = "bleed"
-        case poison = "poison"
-        case frost = "frost"
     }
 }
 

@@ -20,6 +20,8 @@ struct ItemsListPresenterFactory {
             return ItemsListMiscPresenter(view: view, service: DarkArmoryAPIService())
         case .Spells:
             return ItemsListSpellsPresenter(view: view, service: DarkArmoryAPIService())
+        case .Armors:
+            return ItemsListArmorsPresenter(view: view, service: DarkArmoryAPIService())
         default:
             return ItemsListWeaponsPresenter(view: view, service: DarkArmoryAPIService())
         }

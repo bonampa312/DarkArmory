@@ -53,3 +53,31 @@ struct Requirements: Codable {
         case faith = "faith"
     }
 }
+
+struct PhysicalAttackTypes: Codable {
+    let strike: Double
+    let slash: Double
+    let thrust: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case strike = "strike"
+        case slash = "slash"
+        case thrust = "thrust"
+    }
+}
+
+struct Resistances: Codable {
+    let bleed: Int
+    let poison: Int
+    let curse: Int?
+    let frost: Int?
+    let petrification: Int?
+    
+    enum CodingKeys: String, CodingKey {
+        case bleed = "bleed"
+        case poison = "poison"
+        case curse = "curse"
+        case frost = "frost"
+        case petrification = "petrification"
+    }
+}
