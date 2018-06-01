@@ -1142,13 +1142,13 @@
                                                                                     <rect key="frame" x="69.5" y="0.0" width="65" height="29.5"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faith" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-0P-aVd">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="28.5" height="29.5"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="29.5"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="ARn-0P-aVd" secondAttribute="height" multiplier="1:1" id="1oM-0i-jss"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTw-zU-6Cu">
-                                                                                            <rect key="frame" x="32.5" y="0.0" width="32.5" height="29.5"/>
+                                                                                            <rect key="frame" x="33" y="0.0" width="32" height="29.5"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>

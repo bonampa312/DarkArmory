@@ -37,20 +37,20 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     func configure(weapon: WeaponShort) {
         name.text = weapon.name
         weight.text = String(weapon.weight)
-        physicalDmg.text = String(weapon.baseDamage.physical)
-        magicDmg.text = String(weapon.baseDamage.magic)
-        fireDmg.text = String(weapon.baseDamage.fire)
-        lightningDmg.text = String(weapon.baseDamage.lightning)
+        physicalDmg.text = String(format: "%.0f", weapon.baseDamage.physical)
+        magicDmg.text = String(format: "%.0f", weapon.baseDamage.magic)
+        fireDmg.text = String(format: "%.0f", weapon.baseDamage.fire)
+        lightningDmg.text = String(format: "%.0f", weapon.baseDamage.lightning)
         if (weapon.baseDamage.dark != nil) {
-            darkDmg.text = String(weapon.baseDamage.dark!)
+            darkDmg.text = String(format: "%.0f", weapon.baseDamage.dark!)
         } else {
             darkDamageStack.isHidden = true
             emptyStackView.isHidden = true
         }
-        strengthReq.text = String(weapon.requeriments.strength)
-        dexterityReq.text = String(weapon.requeriments.dexterity)
-        intelligenceReq.text = String(weapon.requeriments.intelligence)
-        faithReq.text = String(weapon.requeriments.faith)
+        strengthReq.text = String(weapon.requirements.strength)
+        dexterityReq.text = String(weapon.requirements.dexterity)
+        intelligenceReq.text = String(weapon.requirements.intelligence)
+        faithReq.text = String(weapon.requirements.faith)
         
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: weapon.imageURL, size: 140)
         if (imageURL != nil) {

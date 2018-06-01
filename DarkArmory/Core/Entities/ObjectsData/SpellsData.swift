@@ -15,7 +15,7 @@ struct SpellsShort: Codable {
     let imageURL: String
     let slots: Int
     let uses: Int?
-    let requeriments: Requeriments
+    let requirements: Requirements
     let focusPoints: Int?
     
     enum CodingKeys: String, CodingKey {
@@ -25,7 +25,7 @@ struct SpellsShort: Codable {
         case imageURL = "image_url"
         case slots = "slots"
         case uses = "uses"
-        case requeriments = "requeriments"
+        case requirements = "requirements"
         case focusPoints = "focus_points"
     }
 }
@@ -39,7 +39,7 @@ struct SpellsDetail: Codable {
     let imageURL: String
     let slots: Int
     let uses: Int?
-    let requeriments: Requeriments
+    let requirements: Requirements
     let game: String
     let focusPoints: Int?
     
@@ -52,7 +52,7 @@ struct SpellsDetail: Codable {
         case imageURL = "image_url"
         case slots = "slots"
         case uses = "uses"
-        case requeriments = "requeriments"
+        case requirements = "requirements"
         case game = "game"
         case focusPoints = "focus_points"
     }

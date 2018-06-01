@@ -33,8 +33,8 @@ class SpellsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     func configure(spell: SpellsShort) {
         name.text = spell.name
         type.text = spell.spellType.name
-        intelligenceRequired.text = String(spell.requeriments.intelligence)
-        faithRequired.text = String(spell.requeriments.faith)
+        intelligenceRequired.text = String(spell.requirements.intelligence)
+        faithRequired.text = String(spell.requirements.faith)
         slots.text = String(spell.slots)
         if (spell.uses != nil) {
             usesOrFP.text = "Uses"

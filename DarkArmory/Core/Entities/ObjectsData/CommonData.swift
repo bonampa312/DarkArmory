@@ -9,12 +9,12 @@
 import Foundation
 
 struct AttackKind: Codable {
-    let magicalAdjust: Int?
-    let physical: Int
-    let magic: Int
-    let dark: Int?
-    let lightning: Int
-    let fire: Int
+    let magicalAdjust: Float?
+    let physical: Float
+    let magic: Float
+    let dark: Float?
+    let lightning: Float
+    let fire: Float
     
     enum CodingKeys: String, CodingKey {
         case magicalAdjust = "magical_adjust"
@@ -40,7 +40,7 @@ struct Bonuses: Codable {
     }
 }
 
-struct Requeriments: Codable {
+struct Requirements: Codable {
     let strength: Int
     let dexterity: Int
     let intelligence: Int

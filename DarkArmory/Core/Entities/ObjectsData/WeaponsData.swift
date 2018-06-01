@@ -11,10 +11,10 @@ import Foundation
 struct WeaponShort: Codable {
     let id: String
     let name: String
-    let weight: Double
+    let weight: Float
     let imageURL: String
     let baseDamage: AttackKind
-    let requeriments: Requeriments
+    let requirements: Requirements
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -22,7 +22,7 @@ struct WeaponShort: Codable {
         case weight = "weight"
         case imageURL = "image_url"
         case baseDamage = "base_damage"
-        case requeriments = "requeriments"
+        case requirements = "requirements"
     }
 }
 
@@ -30,7 +30,7 @@ struct WeaponDetail: Codable {
     let id: String
     let name: String
     let weaponType: String
-    let weight: Double
+    let weight: Float
     let description: String
     let imageURL: String
     let locations: [String]
@@ -41,7 +41,7 @@ struct WeaponDetail: Codable {
     let skill: Skill?
     let baseDamage: AttackKind
     let aditionalDamage: AditionalDamage?
-    let requeriments: Requeriments
+    let requirements: Requirements
     let bonuses: Bonuses
     let defenses: AttackKind
     
@@ -60,7 +60,7 @@ struct WeaponDetail: Codable {
         case skill = "skill"
         case baseDamage = "base_damage"
         case aditionalDamage = "aditional_damage"
-        case requeriments = "requeriments"
+        case requirements = "requirements"
         case bonuses = "bonuses"
         case defenses = "defenses"
     }
