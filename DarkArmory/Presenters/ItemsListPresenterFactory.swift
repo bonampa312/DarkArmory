@@ -13,17 +13,17 @@ struct ItemsListPresenterFactory {
     static func getItemsListPresenter(type: GameElement, view: ItemsListView) -> ItemsListBasePresenter {
         switch type {
         case .Weapons:
-            return ItemsListWeaponsPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListWeaponsPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         case .Rings:
-            return ItemsListRingsPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListRingsPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         case .Misc:
-            return ItemsListMiscPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListMiscPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         case .Spells:
-            return ItemsListSpellsPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListSpellsPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         case .Armors:
-            return ItemsListArmorsPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListArmorsPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         default:
-            return ItemsListWeaponsPresenter(view: view, service: DarkArmoryAPIService())
+            return ItemsListWeaponsPresenter(view: view, locator: UseCaseLocator(service: DarkArmoryAPIService()))
         }
     }
 }

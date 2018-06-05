@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-//MARK: Response possible values
+//MARK: Response possible values generic
 fileprivate enum RequestResponse {
     case failure
     case notConnectedToInternet
@@ -94,7 +94,7 @@ class DarkArmoryAPIService : DarkArmoryService {
             case .success(let jsonData):
                 var allArmors = [ArmorsShort]()
                 allArmors = try! JSONDecoder().decode([ArmorsShort].self, from: jsonData)
-                completion(.successArmorsList(spells: allArmors))
+                completion(.successArmorsList(armors: allArmors))
             case .failure:
                 completion(.failure)
             case .notConnectedToInternet:

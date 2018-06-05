@@ -18,18 +18,18 @@ protocol ItemsListView : class {
 protocol ItemsListBasePresenter {
     
     //MARK: - View that implements presenter
-    var view : ItemsListView { get }
+    var view: ItemsListView { get }
     
     //MARK: - Class variables
-    var service : DarkArmoryService { get }
-    var globalGame : SoulsSeriesGame { get }
+    var locator: UseCaseLocatorProtocol { get }
+    var globalGame: SoulsSeriesGame { get }
     
     //MARK: - View elements variables
-    var listTitle : String { get }
-    var cellIdentifier : String { get }
+    var listTitle: String { get }
+    var cellIdentifier: String { get }
     var elementsList: [Any] { get }
     
-    init(view : ItemsListView, service: DarkArmoryService)
+    init(view: ItemsListView, locator: UseCaseLocatorProtocol)
     
     func configureUI()
     

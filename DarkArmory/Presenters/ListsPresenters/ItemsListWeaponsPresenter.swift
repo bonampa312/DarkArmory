@@ -15,13 +15,13 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
     var list: [WeaponShort]
     
     var view: ItemsListView
-    var service: DarkArmoryService
+    var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
     var listTitle: String
     
-    required init(view: ItemsListView, service: DarkArmoryService) {
+    required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
-        self.service = service
+        self.locator = locator
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.listTitle = GameElement.Weapons.rawValue
         self.list = [WeaponShort]()
@@ -33,7 +33,8 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
     }
     
     func loadList() {
-        self.service.retrieveWeaponsList { [weak self] (response) in
+        guard let listRequester = self.locator.getUseCase(ofType: RequestElementsList.self) else { return }
+        listRequester.retrieveWeaponsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successWeaponsList(let weaponsResponse):

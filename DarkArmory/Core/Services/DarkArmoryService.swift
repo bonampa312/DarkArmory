@@ -15,7 +15,7 @@ enum DarkArmoryResponse {
     case successRingsList(rings: [RingShort])
     case successMiscList(miscs: [MiscShort])
     case successSpellsList(spells: [SpellsShort])
-    case successArmorsList(spells: [ArmorsShort])
+    case successArmorsList(armors: [ArmorsShort])
 }
 
 protocol DarkArmoryService {

@@ -14,19 +14,19 @@ class ItemsListArmorsPresenter : ItemsListMediator {
     var list: [ArmorsShort]
     
     var view: ItemsListView
-    var service: DarkArmoryService
     var globalGame: SoulsSeriesGame
+    var locator: UseCaseLocatorProtocol
     
     var listTitle: String
     var cellIdentifier: String
     
-    required init(view: ItemsListView, service: DarkArmoryService) {
+    required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
-        self.service = service
-        self.globalGame = SoulsGameSingleton.getGlobalGame()
-        self.listTitle = GameElement.Armors.rawValue
-        self.list = [ArmorsShort]()
-        self.cellIdentifier = ArmorsTableViewCell.reuseIdentifier
+        self.locator = locator
+        globalGame = SoulsGameSingleton.getGlobalGame()
+        listTitle = GameElement.Armors.rawValue
+        list = [ArmorsShort]()
+        cellIdentifier = ArmorsTableViewCell.reuseIdentifier
     }
     
     func configureUI() {
@@ -34,7 +34,8 @@ class ItemsListArmorsPresenter : ItemsListMediator {
     }
     
     func loadList() {
-        self.service.retrieveArmorsList { [weak self] (response) in
+        guard let listRequester = self.locator.getUseCase(ofType: RequestElementsList.self) else { return }
+        listRequester.retrieveArmorsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successArmorsList(let armorsResponse):
@@ -53,6 +54,5 @@ class ItemsListArmorsPresenter : ItemsListMediator {
     func listSize() -> Int {
         return list.count
     }
-    
     
 }

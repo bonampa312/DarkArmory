@@ -43,9 +43,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         self.hideKeyboardWhenTappedAround()
         
-        let game = SoulsGameSingleton.getGlobalGame()
-        
-        presenter = SoulsCalculatorPresenter(view: self, game: game, locator: UseCaseLocator())
+        presenter = SoulsCalculatorPresenter(view: self, locator: UseCaseLocator(service: nil))
         
         self.configureUI()
         
@@ -184,7 +182,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         configureUI()
         
-        presenter.gameFromSeries = SoulsGameSingleton.getGlobalGame()
+        presenter.initGameFromSeries()
         
     }
 }

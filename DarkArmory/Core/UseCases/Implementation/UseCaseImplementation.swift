@@ -10,6 +10,6 @@ import Foundation
 
 class UseCaseImplementation {
     
-    required init(){  }
+    required init() {}
     
 }
