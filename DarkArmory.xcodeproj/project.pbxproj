@@ -17,7 +17,6 @@
 		3C489E4120BC677A00FD855F /* WeaponsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C489E4020BC677A00FD855F /* WeaponsTableViewCell.swift */; };
 		3C489E4320BC739200FD855F /* RingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C489E4220BC739200FD855F /* RingsTableViewCell.swift */; };
 		3C489E4520BC79FC00FD855F /* ReusableCellIdentifierProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C489E4420BC79FC00FD855F /* ReusableCellIdentifierProtocol.swift */; };
-		3C4E1506208E8FF600875272 /* Alamofire.framework.dSYM in Resources */ = {isa = PBXBuildFile; fileRef = 3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */; };
 		3C4E1512208FA85300875272 /* ItemsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4E1511208FA85300875272 /* ItemsListViewController.swift */; };
 		3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */; };
 		3C4EB67820A4E13F00385BFA /* SoulsGameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */; };
@@ -85,8 +84,6 @@
 		3C489E4020BC677A00FD855F /* WeaponsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponsTableViewCell.swift; sourceTree = "<group>"; };
 		3C489E4220BC739200FD855F /* RingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingsTableViewCell.swift; sourceTree = "<group>"; };
 		3C489E4420BC79FC00FD855F /* ReusableCellIdentifierProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCellIdentifierProtocol.swift; sourceTree = "<group>"; };
-		3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Alamofire.framework.dSYM; path = Carthage/Build/iOS/Alamofire.framework.dSYM; sourceTree = SOURCE_ROOT; };
-		3C4E1505208E8FF600875272 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = SOURCE_ROOT; };
 		3C4E1511208FA85300875272 /* ItemsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListViewController.swift; sourceTree = "<group>"; };
 		3C4EB67520A4DD2B00385BFA /* UseCaseLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseLocator.swift; sourceTree = "<group>"; };
 		3C4EB67720A4E13F00385BFA /* SoulsGameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsGameSingleton.swift; sourceTree = "<group>"; };
@@ -169,15 +166,6 @@
 			path = ItemsListCells;
 			sourceTree = "<group>";
 		};
-		3C4E1503208E8FD400875272 /* AlamofireFramework */ = {
-			isa = PBXGroup;
-			children = (
-				3C4E1505208E8FF600875272 /* Alamofire.framework */,
-				3C4E1504208E8FF600875272 /* Alamofire.framework.dSYM */,
-			);
-			path = AlamofireFramework;
-			sourceTree = "<group>";
-		};
 		3C57683020BCCD2300234C61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,7 +196,6 @@
 		3C75F0072073F7CD00278A74 /* DarkArmory */ = {
 			isa = PBXGroup;
 			children = (
-				3C4E1503208E8FD400875272 /* AlamofireFramework */,
 				3C8C0AB7207EAF8A004D816C /* Core */,
 				3C84F3EB2080FE8C001F3C32 /* Presenters */,
 				3C84F3F1208110D5001F3C32 /* Views */,
@@ -471,7 +458,6 @@
 				3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */,
 				3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */,
 				3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */,
-				3C4E1506208E8FF600875272 /* Alamofire.framework.dSYM in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

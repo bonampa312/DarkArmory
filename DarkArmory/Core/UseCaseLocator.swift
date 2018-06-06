@@ -14,12 +14,17 @@ protocol UseCaseLocatorProtocol {
 
 class UseCaseLocator: UseCaseLocatorProtocol {
     
-    static let defaultLocator = UseCaseLocator(service: DarkArmoryAPIService())
+    static let noServiceLocator = UseCaseLocator()
+    static let darkArmoryAPILocator = UseCaseLocator(service: DarkArmoryAPIService())
     
     fileprivate let service: DarkArmoryService?
     
     init(service: DarkArmoryService?) {
         self.service = service
+    }
+    
+    init () {
+        self.service = nil
     }
     
     func getUseCase<T>(ofType type: T.Type) -> T? {

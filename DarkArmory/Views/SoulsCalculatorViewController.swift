@@ -43,7 +43,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         self.hideKeyboardWhenTappedAround()
         
-        presenter = SoulsCalculatorPresenter(view: self, locator: UseCaseLocator(service: nil))
+        presenter = SoulsCalculatorPresenter(view: self, locator: UseCaseLocator.noServiceLocator)
         
         self.configureUI()
         

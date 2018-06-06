@@ -30,7 +30,7 @@ class ItemsListViewController: UIViewController {
         
         guard elementsType != nil else {
             elementsType = .Weapons
-            presenter = ItemsListWeaponsPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()))
+            presenter = ItemsListWeaponsPresenter(view: self, locator: UseCaseLocator.darkArmoryAPILocator)
             configureUI()
             return
         }
