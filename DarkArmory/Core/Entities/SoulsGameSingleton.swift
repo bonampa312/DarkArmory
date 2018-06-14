@@ -8,32 +8,19 @@
 
 import Foundation
 
-class SoulsGameSingleton {
+class SoulsGame {
     
-    private var game: SoulsSeriesGame
-    private static var soulsGame : SoulsGameSingleton?
+    public private(set) var game: SoulsSeriesGame
+    
+    public static let shared = SoulsGame()
     
     // Initialization
-    private init(game: SoulsSeriesGame) {
-        self.game = game
+    private init() {
+        game = .DarkSouls1
     }
     
     // MARK: - Setter
-    static func setGame(game gameParam : SoulsSeriesGame){
-        if let gameExists = soulsGame {
-            gameExists.game = gameParam
-        } else {
-            soulsGame = SoulsGameSingleton(game: gameParam)
-        }
-    }
-    
-    // MARK: - Accessor
-    static func getGlobalGame() -> SoulsSeriesGame {
-        if let gameExists = soulsGame {
-            return gameExists.game
-        } else {
-            soulsGame = SoulsGameSingleton(game: .DarkSouls1)
-            return soulsGame!.game
-        }
+    func setGame(game gameParam : SoulsSeriesGame){
+        game = gameParam
     }
 }

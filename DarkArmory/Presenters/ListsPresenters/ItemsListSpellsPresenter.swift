@@ -23,7 +23,7 @@ class ItemsListSpellsPresenter : ItemsListMediator {
     required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
         self.locator = locator
-        globalGame = SoulsGameSingleton.getGlobalGame()
+        globalGame = SoulsGame.shared.game
         listTitle = GameElement.Spells.rawValue
         list = [SpellsShort]()
         cellIdentifier = SpellsTableViewCell.reuseIdentifier

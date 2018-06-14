@@ -33,13 +33,13 @@ final class SoulsCalculatorPresenter {
     init(view : SoulsCalculatorView, locator : UseCaseLocatorProtocol) {
         self.view = view
         self.soulsCalculator = CalculateSoulsLordran()
-        self.gameFromSeries = SoulsGameSingleton.getGlobalGame()
+        self.gameFromSeries = SoulsGame.shared.game
         self.totalSouls = ""
         self.locator = locator
     }
     
     func initGameFromSeries() {
-        self.gameFromSeries = SoulsGameSingleton.getGlobalGame()
+        self.gameFromSeries = SoulsGame.shared.game
     }
     
     func calculateTotalSouls (startLevel : String?, targetLevel : String?) {

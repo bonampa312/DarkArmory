@@ -30,7 +30,7 @@ class UseCaseLocator: UseCaseLocatorProtocol {
     func getUseCase<T>(ofType type: T.Type) -> T? {
         switch String(describing: type) {
         case String(describing: CalculateSouls.self):
-            switch SoulsGameSingleton.getGlobalGame() {
+            switch SoulsGame.shared.game {
             case .DarkSouls1:
                 return buildUseCase(type: CalculateSoulsLordran.self)
             case .DarkSouls2:

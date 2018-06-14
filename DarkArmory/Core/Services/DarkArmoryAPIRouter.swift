@@ -21,7 +21,7 @@ class DarkArmoryAPIRouter {
     }
     
     static func getURL(listType: GameElement) -> String {
-        let baseGame = SoulsGameSingleton.getGlobalGame().shortName
+        let baseGame = SoulsGame.shared.game.shortName
         switch listType {
         case .Weapons:
             return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/weapons"

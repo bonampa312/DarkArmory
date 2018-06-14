@@ -22,7 +22,7 @@ class ItemsListMiscPresenter : ItemsListMediator {
     required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
         self.locator = locator
-        self.globalGame = SoulsGameSingleton.getGlobalGame()
+        self.globalGame = SoulsGame.shared.game
         self.listTitle = GameElement.Misc.rawValue
         self.list = [MiscShort]()
         self.cellIdentifier = MiscsTableViewCell.reuseIdentifier

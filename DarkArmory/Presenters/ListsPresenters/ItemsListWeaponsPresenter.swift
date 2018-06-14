@@ -22,7 +22,7 @@ class ItemsListWeaponsPresenter : ItemsListMediator {
     required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
         self.locator = locator
-        self.globalGame = SoulsGameSingleton.getGlobalGame()
+        self.globalGame = SoulsGame.shared.game
         self.listTitle = GameElement.Weapons.rawValue
         self.list = [WeaponShort]()
         self.cellIdentifier = WeaponsTableViewCell.reuseIdentifier

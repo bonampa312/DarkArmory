@@ -90,7 +90,7 @@ class SoulsCalculatorViewController: UIViewController {
         
         soulsCalculatorView.alpha = 0
         
-        currentGameNameLabel.text = SoulsGameSingleton.getGlobalGame().rawValue
+        currentGameNameLabel.text = SoulsGame.shared.game.rawValue
         
     }
     
@@ -162,7 +162,7 @@ class SoulsCalculatorViewController: UIViewController {
             _ = segue.destination as! SelectGameViewController
         case "itemsListSegue":
             let itemsListController = segue.destination as! SelectListViewController
-            itemsListController.gameSeries = SoulsGameSingleton.getGlobalGame()
+            itemsListController.gameSeries = SoulsGame.shared.game
             guard let button = sender as? UIStackView else { return }
             switch button {
             case objectsButtonView:

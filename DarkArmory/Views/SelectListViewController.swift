@@ -41,7 +41,7 @@ class SelectListViewController: UIViewController {
 
     //MARK: - UI methods
     private func configureUI () {
-        currentGameTitle.text = SoulsGameSingleton.getGlobalGame().rawValue
+        currentGameTitle.text = SoulsGame.shared.game.rawValue
         backgroundFaraam.alpha = 0
         backgroundFilter.alpha = 0
         fireButton.alpha = 0

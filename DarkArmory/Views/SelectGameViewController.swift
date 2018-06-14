@@ -24,7 +24,7 @@ class SelectGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentGameTitle.text = SoulsGameSingleton.getGlobalGame().rawValue
+        currentGameTitle.text = SoulsGame.shared.game.rawValue
     }
     
     //MARK: - Buttons actions functions
@@ -43,11 +43,11 @@ class SelectGameViewController: UIViewController {
         _ = segue.destination as! SoulsCalculatorViewController
         switch segue.identifier! {
         case "ds1FirelinkTravel":
-            SoulsGameSingleton.setGame(game: .DarkSouls1)
+            SoulsGame.shared.setGame(game: .DarkSouls1)
         case "ds2FirelinkTravel":
-            SoulsGameSingleton.setGame(game: .DarkSouls2)
+            SoulsGame.shared.setGame(game: .DarkSouls2)
         case "ds3FirelinkTravel":
-            SoulsGameSingleton.setGame(game: .DarkSouls3)
+            SoulsGame.shared.setGame(game: .DarkSouls3)
         default:
             return
         }

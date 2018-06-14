@@ -22,7 +22,7 @@ class ItemsListRingsPresenter : ItemsListMediator {
     required init(view: ItemsListView, locator: UseCaseLocatorProtocol) {
         self.view = view
         self.locator = locator
-        self.globalGame = SoulsGameSingleton.getGlobalGame()
+        self.globalGame = SoulsGame.shared.game
         self.listTitle = GameElement.Rings.rawValue
         self.list = [RingShort]()
         self.cellIdentifier = RingsTableViewCell.reuseIdentifier
