@@ -10,11 +10,11 @@ import Foundation
 
 final class RequestElementsListImpl : UseCaseWithServiceImplementation, RequestElementsList {
     
-    func retrieveWeaponsList(_ completion: @escaping (DarkArmoryResponse) -> ()) {
+    func retrieveWeaponsList(_ completion: @escaping (DarkArmoryResponse<[WeaponShort]>) -> ()) {
         service.retrieveWeaponsList {
             switch $0 {
-            case .successWeaponsList(let weapons):
-                completion(.successWeaponsList(weapons: weapons))
+            case .success(let weapons):
+                completion(.success(list: weapons))
             case .notConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:
@@ -23,11 +23,11 @@ final class RequestElementsListImpl : UseCaseWithServiceImplementation, RequestE
         }
     }
     
-    func retrieveArmorsList(_ completion: @escaping (DarkArmoryResponse) -> ()) {
+    func retrieveArmorsList(_ completion: @escaping (DarkArmoryResponse<[ArmorsShort]>) -> ()) {
         service.retrieveArmorsList {
             switch $0 {
-            case .successArmorsList(let armors):
-                completion(.successArmorsList(armors: armors))
+            case .success(let armors):
+                completion(.success(list: armors))
             case .notConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:
@@ -36,11 +36,11 @@ final class RequestElementsListImpl : UseCaseWithServiceImplementation, RequestE
         }
     }
     
-    func retrieveRingsList(_ completion: @escaping (DarkArmoryResponse) -> ()) {
+    func retrieveRingsList(_ completion: @escaping (DarkArmoryResponse<[RingShort]>) -> ()) {
         service.retrieveRingsList {
             switch $0 {
-            case .successRingsList(let rings):
-                completion(.successRingsList(rings: rings))
+            case .success(let rings):
+                completion(.success(list: rings))
             case .notConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:
@@ -49,11 +49,11 @@ final class RequestElementsListImpl : UseCaseWithServiceImplementation, RequestE
         }
     }
     
-    func retrieveSpellsList(_ completion: @escaping (DarkArmoryResponse) -> ()) {
+    func retrieveSpellsList(_ completion: @escaping (DarkArmoryResponse<[SpellsShort]>) -> ()) {
         service.retrieveSpellsList {
             switch $0 {
-            case .successSpellsList(let spells):
-                completion(.successSpellsList(spells: spells))
+            case .success(let spells):
+                completion(.success(list: spells))
             case .notConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:
@@ -62,11 +62,11 @@ final class RequestElementsListImpl : UseCaseWithServiceImplementation, RequestE
         }
     }
     
-    func retrieveMiscsList(_ completion: @escaping (DarkArmoryResponse) -> ()) {
+    func retrieveMiscsList(_ completion: @escaping (DarkArmoryResponse<[MiscShort]>) -> ()) {
         service.retrieveMiscList {
             switch $0 {
-            case .successMiscList(let miscs):
-                completion(.successMiscList(miscs: miscs))
+            case .success(let miscs):
+                completion(.success(list: miscs))
             case .notConnectedToInternet:
                 completion(.notConnectedToInternet)
             default:

@@ -8,22 +8,18 @@
 
 import Foundation
 
-enum DarkArmoryResponse {
+enum DarkArmoryResponse<T> {
     case failure
     case notConnectedToInternet
-    case successWeaponsList(weapons: [WeaponShort])
-    case successRingsList(rings: [RingShort])
-    case successMiscList(miscs: [MiscShort])
-    case successSpellsList(spells: [SpellsShort])
-    case successArmorsList(armors: [ArmorsShort])
+    case success(list: T)
 }
 
 protocol DarkArmoryService {
     
-    func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void)
-    func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void)
-    func retrieveMiscList(completion: @escaping (DarkArmoryResponse) -> Void)
-    func retrieveSpellsList(completion: @escaping (DarkArmoryResponse) -> Void)
-    func retrieveArmorsList(completion: @escaping (DarkArmoryResponse) -> Void)
+    func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse<[WeaponShort]>) -> Void)
+    func retrieveRingsList(completion: @escaping (DarkArmoryResponse<[RingShort]>) -> Void)
+    func retrieveMiscList(completion: @escaping (DarkArmoryResponse<[MiscShort]>) -> Void)
+    func retrieveSpellsList(completion: @escaping (DarkArmoryResponse<[SpellsShort]>) -> Void)
+    func retrieveArmorsList(completion: @escaping (DarkArmoryResponse<[ArmorsShort]>) -> Void)
     
 }

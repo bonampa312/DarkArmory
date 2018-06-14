@@ -37,15 +37,13 @@ class ItemsListMiscPresenter : ItemsListMediator {
         listRequester.retrieveMiscsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
-            case .successMiscList(let miscResponse):
+            case .success(let miscResponse):
                 strongSelf.list = miscResponse
                 strongSelf.view.updateList()
             case .failure:
                 strongSelf.view.showDataErrror()
             case .notConnectedToInternet:
                 strongSelf.view.showConnectionError()
-            default:
-                return
             }
         }
     }

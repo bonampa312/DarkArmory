@@ -38,15 +38,13 @@ class ItemsListSpellsPresenter : ItemsListMediator {
         listRequester.retrieveSpellsList { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
-            case .successSpellsList(let spellsResponse):
+            case .success(let spellsResponse):
                 strongSelf.list = spellsResponse
                 strongSelf.view.updateList()
             case .failure:
                 strongSelf.view.showDataErrror()
             case .notConnectedToInternet:
                 strongSelf.view.showConnectionError()
-            default:
-                return
             }
         }
     }
