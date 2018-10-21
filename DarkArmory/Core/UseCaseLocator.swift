@@ -35,6 +35,8 @@ class UseCaseLocator: UseCaseLocatorProtocol {
             }
         case String(describing: RequestElementsList.self):
             return buildUseCaseWithService(type: RequestElementsListImpl.self)
+        case String(describing: RequestElementsDetail.self):
+            return buildUseCaseWithService(type: RequestElementsDetailImpl.self)
         default:
             return nil
         }

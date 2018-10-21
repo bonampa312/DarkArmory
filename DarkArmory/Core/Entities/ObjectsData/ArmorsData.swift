@@ -28,7 +28,7 @@ struct ArmorsShort: Codable {
     }
 }
 
-struct ArmorsDetailElement: Codable {
+struct ArmorDetail: Codable {
     let id: String
     let name: String
     let weight: Float

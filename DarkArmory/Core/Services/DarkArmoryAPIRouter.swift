@@ -20,27 +20,31 @@ class DarkArmoryAPIRouter {
         return url
     }
     
-    static func getURL(listType: GameElement) -> String {
+    static func getURL(listType: GameElement, detailID: String? = nil) -> String {
         let baseGame = SoulsGameSingleton.getGlobalGame().shortName
+        var idRouteAppend : String = ""
+        if (detailID != nil) {
+            idRouteAppend = "/" + detailID!
+        }
         switch listType {
         case .Weapons:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/weapons"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/weapons\(idRouteAppend)"
         case .Rings:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/rings"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/rings\(idRouteAppend)"
         case .Spells:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/spells"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/spells\(idRouteAppend)"
         case .Armors:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/armors"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/armors\(idRouteAppend)"
         case .Misc:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/miscs"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/miscs\(idRouteAppend)"
         case .RegularEnemy:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/regularEnemies"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/regularEnemies\(idRouteAppend)"
         case .BossEnemy:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/bosses"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/bosses\(idRouteAppend)"
         case .Friendly:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/friendlyNPCs"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/friendlyNPCs\(idRouteAppend)"
         case .Merchants:
-            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/merchants"
+            return "\(DarkArmoryAPIRouter.baseURL)/\(baseGame)/merchants\(idRouteAppend)"
         }
     }
     

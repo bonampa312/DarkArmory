@@ -18,10 +18,11 @@ fileprivate enum RequestResponse {
 
 class DarkArmoryAPIService : DarkArmoryService {
     
-    //MARK: - Get weapons list
+    //MARK: - Lists of elements
+    
     func retrieveWeaponsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Weapons)
-        getListData(urlPath: route) {
+        getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allWeapons = [WeaponShort]()
@@ -35,10 +36,9 @@ class DarkArmoryAPIService : DarkArmoryService {
         }
     }
     
-    //MARK: - Get rings list
     func retrieveRingsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Rings)
-        getListData(urlPath: route) {
+        getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allRings = [RingShort]()
@@ -52,10 +52,9 @@ class DarkArmoryAPIService : DarkArmoryService {
         }
     }
     
-    //MARK: - Get miscs list
     func retrieveMiscList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Misc)
-        getListData(urlPath: route) {
+        getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allMisc = [MiscShort]()
@@ -69,10 +68,9 @@ class DarkArmoryAPIService : DarkArmoryService {
         }
     }
     
-    //MARK: - Get spells list
     func retrieveSpellsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Spells)
-        getListData(urlPath: route) {
+        getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allSpells = [SpellsShort]()
@@ -86,10 +84,9 @@ class DarkArmoryAPIService : DarkArmoryService {
         }
     }
     
-    //MARK: - Get spells list
     func retrieveArmorsList(completion: @escaping (DarkArmoryResponse) -> Void) {
         let route = DarkArmoryAPIRouter.getURL(listType: .Armors)
-        getListData(urlPath: route) {
+        getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
                 var allArmors = [ArmorsShort]()
@@ -102,11 +99,88 @@ class DarkArmoryAPIService : DarkArmoryService {
             }
         }
     }
+    
+    //MARK: - Elements details
+    
+    func retrieveWeaponDetail(weaponID: String, completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Weapons, detailID: weaponID)
+        getJSONDataFromURL(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                let weaponData = try! JSONDecoder().decode(WeaponDetail.self, from: jsonData)
+                completion(.successWeaponDetail(weapon: weaponData))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    func retrieveRingDetail(ringID: String, completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Rings, detailID: ringID)
+        getJSONDataFromURL(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                let ringData = try! JSONDecoder().decode(RingDetail.self, from: jsonData)
+                completion(.successRingDetail(ring: ringData))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    func retrieveMiscDetail(miscID: String, completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Misc, detailID: miscID)
+        getJSONDataFromURL(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                let miscData = try! JSONDecoder().decode(MiscDetail.self, from: jsonData)
+                completion(.successMiscDetail(misc: miscData))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    func retrieveSpellDetail(spellID: String, completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Spells, detailID: spellID)
+        getJSONDataFromURL(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                let spellData = try! JSONDecoder().decode(SpellDetail.self, from: jsonData)
+                completion(.successSpellDetail(spell: spellData))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
+    
+    func retrieveArmorDetail(armorID: String, completion: @escaping (DarkArmoryResponse) -> Void) {
+        let route = DarkArmoryAPIRouter.getURL(listType: .Armors, detailID: armorID)
+        getJSONDataFromURL(urlPath: route) {
+            switch $0 {
+            case .success(let jsonData):
+                let armorData = try! JSONDecoder().decode(ArmorDetail.self, from: jsonData)
+                completion(.successArmorDetail(armor: armorData))
+            case .failure:
+                completion(.failure)
+            case .notConnectedToInternet:
+                completion(.notConnectedToInternet)
+            }
+        }
+    }
 }
 
 //MARK - Retrieve data
 extension DarkArmoryAPIService {
-    fileprivate func getListData(urlPath: String, completion: @escaping (RequestResponse) -> Void) {
+    fileprivate func getJSONDataFromURL(urlPath: String, completion: @escaping (RequestResponse) -> Void) {
         guard let url = URL(string: urlPath) else { return }
         Alamofire.request(url).responseJSON { response in
             guard let urlResponse = response.response else {

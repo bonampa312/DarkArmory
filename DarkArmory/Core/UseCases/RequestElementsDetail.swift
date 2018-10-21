@@ -7,3 +7,13 @@
 //
 
 import Foundation
+
+protocol RequestElementsDetail {
+    
+    func retrieveWeaponDetail(weaponID: String, _ completion: @escaping (DarkArmoryResponse) -> ())
+    func retrieveArmorDetail(armorID: String, _ completion: @escaping (DarkArmoryResponse) -> ())
+    func retrieveRingDetail(ringID: String, _ completion: @escaping (DarkArmoryResponse) -> ())
+    func retrieveSpellDetail(spellID: String, _ completion: @escaping (DarkArmoryResponse) -> ())
+    func retrieveMiscDetail(miscID: String, _ completion: @escaping (DarkArmoryResponse) -> ())
+    
+}

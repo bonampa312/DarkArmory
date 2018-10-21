@@ -30,7 +30,7 @@ struct SpellsShort: Codable {
     }
 }
 
-struct SpellsDetail: Codable {
+struct SpellDetail: Codable {
     let id: String
     let name: String
     let spellType: SpellType
