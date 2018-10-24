@@ -62,9 +62,10 @@ class SelectListViewController: UIViewController {
             for objectType in GameElement.allObjects {
                 buttonsList.append(createOptionsButton(title: objectType.rawValue))
             }
+            // TODO - Characters
         }
         
-        //Stack View
+        // Stack View
         let buttonsStackView = UIStackView(arrangedSubviews: buttonsList)
         buttonsStackView.axis = UILayoutConstraintAxis.vertical
         buttonsStackView.distribution = UIStackViewDistribution.fill
@@ -75,7 +76,7 @@ class SelectListViewController: UIViewController {
         
         self.view.addSubview(buttonsStackView)
         
-        //Constraints
+        // Constraints
         let viewSize = self.view.frame.size
         buttonsStackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         buttonsStackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true

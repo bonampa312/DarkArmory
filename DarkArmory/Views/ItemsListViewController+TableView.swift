@@ -26,31 +26,31 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
         case .Weapons:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeaponsTableViewCell
             cell.configure(weapon: self.presenter?.elementsList[indexPath.row] as! WeaponShort)
-            // Remove for Detail
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            // TODO - Remove for Detail
+//            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Rings:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RingsTableViewCell
             cell.configure(ring: self.presenter?.elementsList[indexPath.row] as! RingShort)
-            // Remove for Detail
+            // TODO - Remove for Detail
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Misc:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MiscsTableViewCell
             cell.configure(misc: self.presenter?.elementsList[indexPath.row] as! MiscShort)
-            // Remove for Detail
+            // TODO - Remove for Detail
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Spells:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SpellsTableViewCell
             cell.configure(spell: self.presenter?.elementsList[indexPath.row] as! SpellsShort)
-            // Remove for Detail
+            // TODO - Remove for Detail
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Armors:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArmorsTableViewCell
             cell.configure(armor: self.presenter?.elementsList[indexPath.row] as! ArmorsShort)
-            // Remove for Detail
+            // TODO - Remove for Detail
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         default:

@@ -22,6 +22,16 @@ enum GameElement : String {
 
 }
 
+class ElementBasicData {
+    let elementName : String?
+    let elementID : String?
+    
+    init(name: String, id : String) {
+        elementName = name
+        elementID = id
+    }
+}
+
 //MARK: - Objects
 extension GameElement {
     static var allObjects: [GameElement] {

@@ -64,6 +64,11 @@
 		3CE83DC120AF6F0100EBD210 /* ItemsListBasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */; };
 		3CFB28C9217CC17100FA508D /* RequestElementsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28C8217CC17100FA508D /* RequestElementsDetail.swift */; };
 		3CFB28CB217D3CE300FA508D /* RequestElementsDetailImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28CA217D3CE300FA508D /* RequestElementsDetailImpl.swift */; };
+		3CFB28CD217ECB2800FA508D /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28CC217ECB2800FA508D /* ItemDetailViewController.swift */; };
+		3CFB28CF217ECC2D00FA508D /* ItemDetailBasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28CE217ECC2D00FA508D /* ItemDetailBasePresenter.swift */; };
+		3CFB28D2217ED41C00FA508D /* ItemDetailMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28D1217ED41C00FA508D /* ItemDetailMediator.swift */; };
+		3CFB28D4217ED49800FA508D /* ItemDetailWeaponPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28D3217ED49800FA508D /* ItemDetailWeaponPresenter.swift */; };
+		3CFB28D6217FA57800FA508D /* ItemDetailPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB28D5217FA57800FA508D /* ItemDetailPresenterFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +144,11 @@
 		3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListBasePresenter.swift; sourceTree = "<group>"; };
 		3CFB28C8217CC17100FA508D /* RequestElementsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestElementsDetail.swift; sourceTree = "<group>"; };
 		3CFB28CA217D3CE300FA508D /* RequestElementsDetailImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestElementsDetailImpl.swift; sourceTree = "<group>"; };
+		3CFB28CC217ECB2800FA508D /* ItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
+		3CFB28CE217ECC2D00FA508D /* ItemDetailBasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailBasePresenter.swift; sourceTree = "<group>"; };
+		3CFB28D1217ED41C00FA508D /* ItemDetailMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailMediator.swift; sourceTree = "<group>"; };
+		3CFB28D3217ED49800FA508D /* ItemDetailWeaponPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailWeaponPresenter.swift; sourceTree = "<group>"; };
+		3CFB28D5217FA57800FA508D /* ItemDetailPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailPresenterFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,7 +257,10 @@
 				3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */,
 				3CE83DC020AF6F0100EBD210 /* ItemsListBasePresenter.swift */,
 				3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */,
+				3CFB28CE217ECC2D00FA508D /* ItemDetailBasePresenter.swift */,
+				3CFB28D5217FA57800FA508D /* ItemDetailPresenterFactory.swift */,
 				3C896CB420B771AC00981B9B /* ListsPresenters */,
+				3CFB28D0217ED3FD00FA508D /* DetailPresenters */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -273,6 +286,7 @@
 				3C75F00A2073F7CD00278A74 /* SelectListViewController.swift */,
 				3C4E1511208FA85300875272 /* ItemsListViewController.swift */,
 				3C489E3D20BC595700FD855F /* ItemsListViewController+TableView.swift */,
+				3CFB28CC217ECB2800FA508D /* ItemDetailViewController.swift */,
 				3C84F3F220813A6E001F3C32 /* Assets */,
 				3C84F3F320813CEA001F3C32 /* Storyboards */,
 				3C75F023207521D500278A74 /* CustomUIComponents */,
@@ -386,6 +400,15 @@
 				3CC8AC2A20C1B6DA005718A8 /* ArmorsData.swift */,
 			);
 			path = ObjectsData;
+			sourceTree = "<group>";
+		};
+		3CFB28D0217ED3FD00FA508D /* DetailPresenters */ = {
+			isa = PBXGroup;
+			children = (
+				3CFB28D1217ED41C00FA508D /* ItemDetailMediator.swift */,
+				3CFB28D3217ED49800FA508D /* ItemDetailWeaponPresenter.swift */,
+			);
+			path = DetailPresenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +536,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFB28D2217ED41C00FA508D /* ItemDetailMediator.swift in Sources */,
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
 				3C94C0FF20BF1FD8009F9C1B /* SpellsData.swift in Sources */,
 				3C0AF30E20B8613300A7B9A3 /* ItemsListRingsPresenter.swift in Sources */,
@@ -533,15 +557,18 @@
 				3C4EB67A20A4E9F100385BFA /* UseCaseImplementation.swift in Sources */,
 				3CFB28CB217D3CE300FA508D /* RequestElementsDetailImpl.swift in Sources */,
 				3C23812520B7621500D9CB72 /* GameElement.swift in Sources */,
+				3CFB28CD217ECB2800FA508D /* ItemDetailViewController.swift in Sources */,
 				3C94C0FD20BDE57E009F9C1B /* ItemsListMiscPresenter.swift in Sources */,
 				3C489E3E20BC595700FD855F /* ItemsListViewController+TableView.swift in Sources */,
 				3CE83DBA20ADD18500EBD210 /* DarkArmoryAPIService.swift in Sources */,
 				3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */,
 				3CC8AC2D20C1C707005718A8 /* ItemsListArmorsPresenter.swift in Sources */,
 				3CE83DC120AF6F0100EBD210 /* ItemsListBasePresenter.swift in Sources */,
+				3CFB28D6217FA57800FA508D /* ItemDetailPresenterFactory.swift in Sources */,
 				3C4EB67820A4E13F00385BFA /* SoulsGameSingleton.swift in Sources */,
 				3C75F00B2073F7CD00278A74 /* SelectListViewController.swift in Sources */,
 				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
+				3CFB28CF217ECC2D00FA508D /* ItemDetailBasePresenter.swift in Sources */,
 				3CE83DBC20ADD68300EBD210 /* DarkArmoryService.swift in Sources */,
 				3CC8AC2B20C1B6DB005718A8 /* ArmorsData.swift in Sources */,
 				3C0AF31220B8657400A7B9A3 /* CommonData.swift in Sources */,
@@ -559,6 +586,7 @@
 				3C4EB67620A4DD2B00385BFA /* UseCaseLocator.swift in Sources */,
 				3C5B87E120C6F2B30067FDAD /* RequestElementsListImpl.swift in Sources */,
 				3C94C0FB20BDE36F009F9C1B /* MiscsData.swift in Sources */,
+				3CFB28D4217ED49800FA508D /* ItemDetailWeaponPresenter.swift in Sources */,
 				3C94C10320BF2F98009F9C1B /* SpellsTableViewCell.swift in Sources */,
 				3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */,
 				3CFB28C9217CC17100FA508D /* RequestElementsDetail.swift in Sources */,

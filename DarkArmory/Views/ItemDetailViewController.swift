@@ -1,75 +1,67 @@
 //
-//  ItemsListViewController.swift
+//  ItemDetailViewController.swift
 //  DarkArmory
 //
-//  Created by Santiago Romero Restrepo on 4/24/18.
+//  Created by Santiago Romero Restrepo on 10/22/18.
 //  Copyright © 2018 Santiago Romero Restrepo. All rights reserved.
 //
 
 import UIKit
 
-class ItemsListViewController: UIViewController {
+class ItemDetailViewController: UIViewController {
 
     //MARK: - Class variables
-    var presenter : ItemsListBasePresenter?
+    var presenter : ItemDetailBasePresenter?
     var elementsType : GameElement?
-
-    //MARK: - Outlet variables
-    @IBOutlet weak var listTitleLabel: UILabel!
+    var elementBasicData : ElementBasicData?
+    
+    @IBOutlet weak var itemDetailTitleLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var notificationStack: UIStackView!
     @IBOutlet weak var notificationMessage: UILabel!
-    @IBOutlet weak var itemsTable: UITableView!
+    @IBOutlet weak var detailContentView: UIScrollView!
     
-    //MARK: - View lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        itemsTable.isHidden = true
+        detailContentView.isHidden = true
         
-        guard elementsType != nil else {
-            elementsType = .Weapons
-            presenter = ItemsListWeaponsPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()))
+        guard elementsType != nil, elementBasicData != nil else {
+            presenter = ItemDetailWeaponPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()), gameBasics: ElementBasicData(name: "Claymore", id: "5aef98705c050400144181e8"))
             configureUI()
             return
         }
-        presenter = ItemsListPresenterFactory.getItemsListPresenter(type: elementsType!, view: self)
+        presenter = ItemDetailPresenterFactory.getItemDetailPresenter(type: elementsType!, view: self, elementBasicData: elementBasicData!)
         configureUI()
     }
-    
-    @IBAction func reloadList(_ sender: UIButton) {
-        self.hideNotificationStack()
-        self.loadingIndicator.isHidden = false
-        self.loadingIndicator.startAnimating()
-        self.presenter?.loadList()
-    }
-    
+
+
     //MARK: - UI methods
     private func configureUI () {
+        self.hideNotificationStack()
         self.loadingIndicator.isHidden = false
         self.loadingIndicator.startAnimating()
         self.presenter!.configureUI()
     }
     
-    //MARK: - Navigation
-    @IBAction func unwindToItemsList(for unwindSegue: UIStoryboardSegue) {
-        configureUI()
-    }
+    
 }
 
-//MARK: - Presenter closure methods
-extension ItemsListViewController : ItemsListView {
-    func updateList() {
+//MARK:  - Presenter closure methods
+extension ItemDetailViewController : ItemDetailView {
+    func updateDetailData() {
         self.loadingIndicator.isHidden = true
-        self.itemsTable.reloadData()
-        self.itemsTable.isHidden = false
+        // TODO - here include stuff to fill detailContentView
+        self.notificationMessage.text = "WORKS"
+        self.showNotificationStack()
     }
     
     func updateTitles() {
-        self.listTitleLabel.text = self.presenter?.listTitle
+        self.itemDetailTitleLabel.text = self.presenter?.elementDetailTitle
         self.gameTitleLabel.text = self.presenter?.globalGame.rawValue
-        self.presenter?.loadList()
+        self.presenter?.loadElement()
     }
     
     func showConnectionError() {
@@ -83,9 +75,10 @@ extension ItemsListViewController : ItemsListView {
         self.notificationMessage.text = "Error loading data"
         self.showNotificationStack()
     }
+    
 }
 
-extension ItemsListViewController {
+extension ItemDetailViewController {
     
     func hideNotificationStack() {
         self.notificationStack.alpha = 0
