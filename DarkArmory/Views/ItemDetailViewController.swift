@@ -46,7 +46,21 @@ class ItemDetailViewController: UIViewController {
         self.presenter!.configureUI()
     }
     
+    //MARK: - Navigation
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "returnToItemsList":
+            let itemsList = segue.destination as! ItemsListViewController
+            itemsList.elementsType = self.elementsType
+        default:
+            return
+        }
+    }
+    
+    @IBAction func returnToItemsList(_ sender: Any) {
+        performSegue(withIdentifier: "returnToItemsList", sender: self)
+    }
 }
 
 //MARK:  - Presenter closure methods

@@ -26,8 +26,6 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
         case .Weapons:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeaponsTableViewCell
             cell.configure(weapon: self.presenter?.elementsList[indexPath.row] as! WeaponShort)
-            // TODO - Remove for Detail
-//            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Rings:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RingsTableViewCell
@@ -58,4 +56,19 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let elementBasicData : ElementBasicData?
+        switch self.elementsType! {
+        case .Weapons:
+            let weaponData = self.presenter?.elementsList[indexPath.row] as! WeaponShort
+            elementBasicData = ElementBasicData(name: weaponData.name, id: weaponData.id)
+//        case .Rings:
+//        case .Misc:
+//        case .Spells:
+//        case .Armors:
+        default:
+            elementBasicData = ElementBasicData(name: "Claymore", id: "5aef98705c050400144181e8")
+        }
+        performSegue(withIdentifier: "itemDetailSegue", sender: elementBasicData)
+    }
 }

@@ -53,6 +53,19 @@ class ItemsListViewController: UIViewController {
     }
     
     //MARK: - Navigation
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "itemDetailSegue":
+            let itemDetail = segue.destination as! ItemDetailViewController
+            guard let itemData = sender as? ElementBasicData else { return }
+            itemDetail.elementsType = self.elementsType
+            itemDetail.elementBasicData = itemData
+        default:
+            return
+        }
+    }
+    
     @IBAction func unwindToItemsList(for unwindSegue: UIStoryboardSegue) {
         configureUI()
     }
