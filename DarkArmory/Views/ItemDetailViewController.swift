@@ -37,7 +37,14 @@ class ItemDetailViewController: UIViewController {
         configureUI()
     }
 
-
+    
+    @IBAction func reloadDetail(_ sender: UIButton) {
+        self.hideNotificationStack()
+        self.loadingIndicator.isHidden = false
+        self.loadingIndicator.startAnimating()
+        self.presenter?.loadElement()
+    }
+    
     //MARK: - UI methods
     private func configureUI () {
         self.hideNotificationStack()
@@ -68,7 +75,8 @@ extension ItemDetailViewController : ItemDetailView {
     func updateDetailData() {
         self.loadingIndicator.isHidden = true
         // TODO - here include stuff to fill detailContentView
-        self.notificationMessage.text = "WORKS"
+        print("Here, weapon: \(self.presenter?.elementDetail ?? "FAIL")")
+        self.notificationMessage.text = "\(self.elementBasicData?.elementName ?? "ClaymoreBad") :\(self.elementBasicData?.elementID ?? "123")"
         self.showNotificationStack()
     }
     

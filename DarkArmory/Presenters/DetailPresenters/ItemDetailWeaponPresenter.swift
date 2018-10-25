@@ -34,6 +34,21 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
     }
     
     func loadElement() {
+        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
+        elementRequester.retrieveWeaponDetail(weaponID: self.gameBasics.elementID!) { [weak self] (response) in
+            guard let strongSelf = self else { return }
+            switch response {
+            case .successWeaponDetail(let weaponResponse):
+                strongSelf.element = weaponResponse
+                strongSelf.view.updateDetailData()
+            case .failure:
+                strongSelf.view.showDataErrror()
+            case .notConnectedToInternet:
+                strongSelf.view.showConnectionError()
+            default:
+                return
+            }
+        }
         self.view.updateDetailData()
     }
     
