@@ -30,7 +30,7 @@ class SpellsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(spell: SpellsShort) {
+    func configure(spell: SpellShort) {
         name.text = spell.name
         type.text = spell.spellType.name
         intelligenceRequired.text = String(spell.requirements.intelligence)

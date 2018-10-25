@@ -16,7 +16,7 @@ enum DarkArmoryResponse {
     case successWeaponsList(weapons: [WeaponShort])
     case successRingsList(rings: [RingShort])
     case successMiscList(miscs: [MiscShort])
-    case successSpellsList(spells: [SpellsShort])
+    case successSpellsList(spells: [SpellShort])
     case successArmorsList(armors: [ArmorsShort])
     //MARK: - Completions for details
     case successWeaponDetail(weapon: WeaponDetail)

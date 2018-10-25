@@ -10,8 +10,8 @@ import Foundation
 
 class ItemsListSpellsPresenter : ItemsListMediator {
     
-    typealias T = SpellsShort
-    var list: [SpellsShort]
+    typealias T = SpellShort
+    var list: [SpellShort]
     
     var view: ItemsListView
     var locator: UseCaseLocatorProtocol
@@ -25,7 +25,7 @@ class ItemsListSpellsPresenter : ItemsListMediator {
         self.locator = locator
         globalGame = SoulsGameSingleton.getGlobalGame()
         listTitle = GameElement.Spells.rawValue
-        list = [SpellsShort]()
+        list = [SpellShort]()
         cellIdentifier = SpellsTableViewCell.reuseIdentifier
     }
     

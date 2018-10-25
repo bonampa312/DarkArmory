@@ -73,8 +73,8 @@ class DarkArmoryAPIService : DarkArmoryService {
         getJSONDataFromURL(urlPath: route) {
             switch $0 {
             case .success(let jsonData):
-                var allSpells = [SpellsShort]()
-                allSpells = try! JSONDecoder().decode([SpellsShort].self, from: jsonData)
+                var allSpells = [SpellShort]()
+                allSpells = try! JSONDecoder().decode([SpellShort].self, from: jsonData)
                 completion(.successSpellsList(spells: allSpells))
             case .failure:
                 completion(.failure)

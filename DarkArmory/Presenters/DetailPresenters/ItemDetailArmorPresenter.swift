@@ -1,17 +1,17 @@
 //
-//  ItemDetailWeaponPresenter.swift
+//  ItemDetailArmorPresenter.swift
 //  DarkArmory
 //
-//  Created by Santiago Romero Restrepo on 10/22/18.
+//  Created by Santiago Romero Restrepo on 10/25/18.
 //  Copyright © 2018 Santiago Romero Restrepo. All rights reserved.
 //
 
 import Foundation
 
-class ItemDetailWeaponPresenter : ItemDetailMediator {
-    
-    typealias T = WeaponDetail
-    var element: WeaponDetail?
+class ItemDetailArmorPresenter : ItemDetailMediator {
+
+    typealias T = ArmorDetail
+    var element: ArmorDetail?
     
     var view: ItemDetailView
     var viewIdentifier: String
@@ -30,6 +30,7 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
         self.element = nil
         // TODO - Replace here
         self.viewIdentifier = "123"
+        
     }
     
     func configureUI() {
@@ -38,11 +39,11 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
     
     func loadElement() {
         guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
-        elementRequester.retrieveWeaponDetail(weaponID: self.gameBasics.elementID!) { [weak self] (response) in
+        elementRequester.retrieveArmorDetail(armorID: self.gameBasics.elementID!) { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
-            case .successWeaponDetail(let weaponResponse):
-                strongSelf.element = weaponResponse
+            case .successArmorDetail(let armorResponse):
+                strongSelf.element = armorResponse
                 strongSelf.view.updateDetailData()
             case .failure:
                 strongSelf.view.showDataErrror()
@@ -53,5 +54,7 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
             }
         }
     }
+    
+
     
 }

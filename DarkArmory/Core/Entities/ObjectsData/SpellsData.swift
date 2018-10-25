@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SpellsShort: Codable {
+struct SpellShort: Codable {
     let id: String
     let name: String
     let spellType: SpellType

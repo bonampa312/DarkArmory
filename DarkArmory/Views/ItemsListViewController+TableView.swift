@@ -30,26 +30,18 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
         case .Rings:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! RingsTableViewCell
             cell.configure(ring: self.presenter?.elementsList[indexPath.row] as! RingShort)
-            // TODO - Remove for Detail
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Misc:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MiscsTableViewCell
             cell.configure(misc: self.presenter?.elementsList[indexPath.row] as! MiscShort)
-            // TODO - Remove for Detail
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         case .Spells:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! SpellsTableViewCell
-            cell.configure(spell: self.presenter?.elementsList[indexPath.row] as! SpellsShort)
-            // TODO - Remove for Detail
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            cell.configure(spell: self.presenter?.elementsList[indexPath.row] as! SpellShort)
             return cell
         case .Armors:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ArmorsTableViewCell
             cell.configure(armor: self.presenter?.elementsList[indexPath.row] as! ArmorsShort)
-            // TODO - Remove for Detail
-            cell.selectionStyle = UITableViewCellSelectionStyle.none
             return cell
         default:
             return UITableViewCell()
@@ -59,13 +51,21 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let elementBasicData : ElementBasicData?
         switch self.elementsType! {
+        case .Armors:
+            let armorData = self.presenter?.elementsList[indexPath.row] as! ArmorsShort
+            elementBasicData = ElementBasicData(name: armorData.name, id: armorData.id)
+        case .Misc:
+            let miscData = self.presenter?.elementsList[indexPath.row] as! MiscShort
+            elementBasicData = ElementBasicData(name: miscData.name, id: miscData.id)
+        case .Rings:
+            let ringData = self.presenter?.elementsList[indexPath.row] as! RingShort
+            elementBasicData = ElementBasicData(name: ringData.name, id: ringData.id)
+        case .Spells:
+            let spellData = self.presenter?.elementsList[indexPath.row] as! SpellShort
+            elementBasicData = ElementBasicData(name: spellData.name, id: spellData.id)
         case .Weapons:
             let weaponData = self.presenter?.elementsList[indexPath.row] as! WeaponShort
             elementBasicData = ElementBasicData(name: weaponData.name, id: weaponData.id)
-//        case .Rings:
-//        case .Misc:
-//        case .Spells:
-//        case .Armors:
         default:
             elementBasicData = ElementBasicData(name: "Claymore", id: "5aef98705c050400144181e8")
         }

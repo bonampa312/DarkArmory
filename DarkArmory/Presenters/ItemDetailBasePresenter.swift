@@ -20,6 +20,9 @@ protocol ItemDetailBasePresenter {
     //MARK: - View that implements presenter
     var view: ItemDetailView { get }
     
+    //MARK: - Identifier for the view asset
+    var viewIdentifier : String { get }
+    
     //MARK: - Class variables
     var locator: UseCaseLocatorProtocol { get }
     var globalGame: SoulsSeriesGame { get }
