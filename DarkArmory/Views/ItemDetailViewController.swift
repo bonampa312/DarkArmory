@@ -20,7 +20,7 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var notificationStack: UIStackView!
     @IBOutlet weak var notificationMessage: UILabel!
-    @IBOutlet weak var detailContentView: UIScrollView!
+    @IBOutlet weak var detailContentView: UIView!
     
     
     override func viewDidLoad() {

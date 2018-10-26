@@ -73,6 +73,8 @@
 		3CFB29032182245A00FA508D /* ItemDetailMiscPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB29022182245A00FA508D /* ItemDetailMiscPresenter.swift */; };
 		3CFB29052182282700FA508D /* ItemDetailRingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB29042182282700FA508D /* ItemDetailRingPresenter.swift */; };
 		3CFB29072182285100FA508D /* ItemDetailSpellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB29062182285100FA508D /* ItemDetailSpellPresenter.swift */; };
+		3CFB2909218255E000FA508D /* WeaponDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB2908218255E000FA508D /* WeaponDetailView.xib */; };
+		3CFB290B21834E0B00FA508D /* ArmorDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +159,8 @@
 		3CFB29022182245A00FA508D /* ItemDetailMiscPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailMiscPresenter.swift; sourceTree = "<group>"; };
 		3CFB29042182282700FA508D /* ItemDetailRingPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailRingPresenter.swift; sourceTree = "<group>"; };
 		3CFB29062182285100FA508D /* ItemDetailSpellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailSpellPresenter.swift; sourceTree = "<group>"; };
+		3CFB2908218255E000FA508D /* WeaponDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponDetailView.xib; sourceTree = "<group>"; };
+		3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArmorDetailView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +292,7 @@
 		3C84F3F1208110D5001F3C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3CFB290C2183D4C500FA508D /* ItemsDetailViewControllers */,
 				3C489E3F20BC675900FD855F /* ItemsListCells */,
 				3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */,
 				3C75F02120744FE300278A74 /* SelectGameViewController.swift */,
@@ -317,6 +322,8 @@
 			children = (
 				3C75F00C2073F7CD00278A74 /* Main.storyboard */,
 				3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */,
+				3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */,
+				3CFB2908218255E000FA508D /* WeaponDetailView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -423,6 +430,13 @@
 			path = DetailPresenters;
 			sourceTree = "<group>";
 		};
+		3CFB290C2183D4C500FA508D /* ItemsDetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ItemsDetailViewControllers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -507,8 +521,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFB2909218255E000FA508D /* WeaponDetailView.xib in Resources */,
 				3C75F01C2073FC6800278A74 /* OptimusPrinceps.ttf in Resources */,
 				3C75F0132073F7CD00278A74 /* LaunchScreen.storyboard in Resources */,
+				3CFB290B21834E0B00FA508D /* ArmorDetailView.xib in Resources */,
 				3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */,
 				3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */,
 				3C33E5B920757CAD00CBD689 /* bonfireAnimated.gif in Resources */,
