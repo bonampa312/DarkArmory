@@ -42,7 +42,7 @@ struct ArmorDetail: Codable {
     let resistances: Resistances
     let game: String
     let effects: [String]?
-    let requirements: Requirements?
+    let requirements: Requirements
     
     enum CodingKeys: String, CodingKey {
         case id = "_id"

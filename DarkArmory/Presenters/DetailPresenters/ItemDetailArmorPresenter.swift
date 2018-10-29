@@ -6,7 +6,7 @@
 //  Copyright © 2018 Santiago Romero Restrepo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class ItemDetailArmorPresenter : ItemDetailMediator {
 
@@ -14,7 +14,7 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
     var element: ArmorDetail?
     
     var view: ItemDetailView
-    var viewIdentifier: String
+    var detailView: UIView?
     
     var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
@@ -27,10 +27,6 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.gameBasics = gameBasics
         self.elementDetailTitle = gameBasics.elementName!
-        self.element = nil
-        // TODO - Replace here
-        self.viewIdentifier = "123"
-        
     }
     
     func configureUI() {
@@ -55,6 +51,8 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
         }
     }
     
-
+    func getDetailView() -> UIView {
+        return ArmorDetailView()
+    }
     
 }

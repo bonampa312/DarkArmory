@@ -15,6 +15,8 @@ class ItemDetailViewController: UIViewController {
     var elementsType : GameElement?
     var elementBasicData : ElementBasicData?
     
+    var itemDetailContentView : UIView?
+    
     @IBOutlet weak var itemDetailTitleLabel: UILabel!
     @IBOutlet weak var gameTitleLabel: UILabel!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -74,10 +76,12 @@ class ItemDetailViewController: UIViewController {
 extension ItemDetailViewController : ItemDetailView {
     func updateDetailData() {
         self.loadingIndicator.isHidden = true
-        // TODO - here include stuff to fill detailContentView
-        print("Here, weapon: \(self.presenter?.elementDetail ?? "FAIL")")
-        self.notificationMessage.text = "\(self.elementBasicData?.elementName ?? "ClaymoreBad") :\(self.elementBasicData?.elementID ?? "123")"
-        self.showNotificationStack()
+        self.loadDetailViewContent()
+        guard let innerView = itemDetailContentView else {
+            return
+        }
+        detailContentView.addSubview(innerView)
+        detailContentView.isHidden = false
     }
     
     func updateTitles() {

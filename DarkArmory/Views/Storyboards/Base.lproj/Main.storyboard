@@ -860,7 +860,7 @@
                                                                                             <rect key="frame" x="0.0" y="0.0" width="30.5" height="29.5"/>
                                                                                             <subviews>
                                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEj-Kc-sCA">
-                                                                                                    <rect key="frame" x="-1.5" y="7" width="32" height="15"/>
+                                                                                                    <rect key="frame" x="-1" y="7" width="32" height="15"/>
                                                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                     <nil key="highlightedColor"/>

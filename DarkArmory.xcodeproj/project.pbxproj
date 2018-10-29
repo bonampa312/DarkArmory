@@ -53,6 +53,7 @@
 		3C94C10120BF27A3009F9C1B /* ItemsListSpellsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C10020BF27A3009F9C1B /* ItemsListSpellsPresenter.swift */; };
 		3C94C10320BF2F98009F9C1B /* SpellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */; };
 		3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */; };
+		3CBD3E972186887F00D491F1 /* ItemDetailViewController+DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD3E962186887F00D491F1 /* ItemDetailViewController+DetailView.swift */; };
 		3CC8AC2B20C1B6DB005718A8 /* ArmorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2A20C1B6DA005718A8 /* ArmorsData.swift */; };
 		3CC8AC2D20C1C707005718A8 /* ItemsListArmorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2C20C1C707005718A8 /* ItemsListArmorsPresenter.swift */; };
 		3CC8AC2F20C1CA24005718A8 /* ArmorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2E20C1CA24005718A8 /* ArmorsTableViewCell.swift */; };
@@ -75,6 +76,8 @@
 		3CFB29072182285100FA508D /* ItemDetailSpellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB29062182285100FA508D /* ItemDetailSpellPresenter.swift */; };
 		3CFB2909218255E000FA508D /* WeaponDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB2908218255E000FA508D /* WeaponDetailView.xib */; };
 		3CFB290B21834E0B00FA508D /* ArmorDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */; };
+		3CFB290E2183D71400FA508D /* ArmorDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB290D2183D71400FA508D /* ArmorDetailView.swift */; };
+		3CFB29102183D7F700FA508D /* WeaponDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CFB290F2183D7F700FA508D /* WeaponDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +142,7 @@
 		3C94C10020BF27A3009F9C1B /* ItemsListSpellsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListSpellsPresenter.swift; sourceTree = "<group>"; };
 		3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsTableViewCell.swift; sourceTree = "<group>"; };
 		3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListPresenterFactory.swift; sourceTree = "<group>"; };
+		3CBD3E962186887F00D491F1 /* ItemDetailViewController+DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetailViewController+DetailView.swift"; sourceTree = "<group>"; };
 		3CC8AC2A20C1B6DA005718A8 /* ArmorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorsData.swift; sourceTree = "<group>"; };
 		3CC8AC2C20C1C707005718A8 /* ItemsListArmorsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListArmorsPresenter.swift; sourceTree = "<group>"; };
 		3CC8AC2E20C1CA24005718A8 /* ArmorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorsTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 		3CFB29062182285100FA508D /* ItemDetailSpellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailSpellPresenter.swift; sourceTree = "<group>"; };
 		3CFB2908218255E000FA508D /* WeaponDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeaponDetailView.xib; sourceTree = "<group>"; };
 		3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArmorDetailView.xib; sourceTree = "<group>"; };
+		3CFB290D2183D71400FA508D /* ArmorDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorDetailView.swift; sourceTree = "<group>"; };
+		3CFB290F2183D7F700FA508D /* WeaponDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeaponDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -292,7 +298,7 @@
 		3C84F3F1208110D5001F3C32 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3CFB290C2183D4C500FA508D /* ItemsDetailViewControllers */,
+				3CFB290C2183D4C500FA508D /* ItemsDetailViews */,
 				3C489E3F20BC675900FD855F /* ItemsListCells */,
 				3C75F01D207421D500278A74 /* SoulsCalculatorViewController.swift */,
 				3C75F02120744FE300278A74 /* SelectGameViewController.swift */,
@@ -300,6 +306,7 @@
 				3C4E1511208FA85300875272 /* ItemsListViewController.swift */,
 				3C489E3D20BC595700FD855F /* ItemsListViewController+TableView.swift */,
 				3CFB28CC217ECB2800FA508D /* ItemDetailViewController.swift */,
+				3CBD3E962186887F00D491F1 /* ItemDetailViewController+DetailView.swift */,
 				3C84F3F220813A6E001F3C32 /* Assets */,
 				3C84F3F320813CEA001F3C32 /* Storyboards */,
 				3C75F023207521D500278A74 /* CustomUIComponents */,
@@ -430,11 +437,13 @@
 			path = DetailPresenters;
 			sourceTree = "<group>";
 		};
-		3CFB290C2183D4C500FA508D /* ItemsDetailViewControllers */ = {
+		3CFB290C2183D4C500FA508D /* ItemsDetailViews */ = {
 			isa = PBXGroup;
 			children = (
+				3CFB290D2183D71400FA508D /* ArmorDetailView.swift */,
+				3CFB290F2183D7F700FA508D /* WeaponDetailView.swift */,
 			);
-			path = ItemsDetailViewControllers;
+			path = ItemsDetailViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -572,6 +581,8 @@
 				3CFB29052182282700FA508D /* ItemDetailRingPresenter.swift in Sources */,
 				3CE83DBE20ADD6D100EBD210 /* WeaponsData.swift in Sources */,
 				3C5B87E520C6F92C0067FDAD /* UseCaseWithServiceImplementation.swift in Sources */,
+				3CFB290E2183D71400FA508D /* ArmorDetailView.swift in Sources */,
+				3CFB29102183D7F700FA508D /* WeaponDetailView.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
 				3C94C0F920BDBEA2009F9C1B /* MiscsTableViewCell.swift in Sources */,
@@ -601,6 +612,7 @@
 				3C75F0092073F7CD00278A74 /* AppDelegate.swift in Sources */,
 				3CFB28CF217ECC2D00FA508D /* ItemDetailBasePresenter.swift in Sources */,
 				3CE83DBC20ADD68300EBD210 /* DarkArmoryService.swift in Sources */,
+				3CBD3E972186887F00D491F1 /* ItemDetailViewController+DetailView.swift in Sources */,
 				3CC8AC2B20C1B6DB005718A8 /* ArmorsData.swift in Sources */,
 				3C0AF31220B8657400A7B9A3 /* CommonData.swift in Sources */,
 				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */,

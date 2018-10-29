@@ -16,23 +16,55 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArmorDetailView" customModule="DarkArmory" customModuleProvider="target">
+            <connections>
+                <outlet property="armorDetailContentView" destination="iN0-l3-epB" id="DAl-kx-VHh"/>
+                <outlet property="bleedResLabel" destination="aYC-jn-Lgg" id="5DZ-tu-7R0"/>
+                <outlet property="curseResLabel" destination="2kX-Y0-yDW" id="XC2-If-md1"/>
+                <outlet property="darkDefLabel" destination="Ccp-G1-xr5" id="7Zw-Hb-PsZ"/>
+                <outlet property="descriptionLabel" destination="h7P-nA-byZ" id="5Ft-RI-Juc"/>
+                <outlet property="dexterityLabel" destination="OBc-bJ-4eB" id="vO6-sE-zab"/>
+                <outlet property="effectsLabel" destination="aN7-gb-gNY" id="hED-Zx-9SZ"/>
+                <outlet property="effectsStack" destination="oa4-hU-jyq" id="qwi-0d-Raz"/>
+                <outlet property="faithLabel" destination="Ox5-Fd-0Ey" id="Ge9-n7-650"/>
+                <outlet property="fireDefLabel" destination="Ger-JT-mzG" id="6u9-df-mGT"/>
+                <outlet property="intelligenceLabel" destination="220-CX-gTE" id="x21-1M-cSd"/>
+                <outlet property="itemImageView" destination="Ifs-lH-yih" id="nim-Nh-0gX"/>
+                <outlet property="lightningDefLabel" destination="Pn6-nX-S6I" id="cbM-Lp-AGA"/>
+                <outlet property="locationsLabel" destination="GHp-HU-eae" id="uyi-gR-Aub"/>
+                <outlet property="magicDefLabel" destination="3JT-ZV-cLY" id="AA6-Xg-JzS"/>
+                <outlet property="nameLabel" destination="ts3-My-Wxs" id="QTd-Fr-UiE"/>
+                <outlet property="optionalElemDefStack" destination="WHj-6g-oMT" id="bsA-S2-2z3"/>
+                <outlet property="optionalResLabel" destination="1jC-5J-18G" id="cw6-dk-vOo"/>
+                <outlet property="optionalResistanceImage" destination="b4p-ng-Mi5" id="Ptr-ll-Na8"/>
+                <outlet property="optionalResistanceStack" destination="qVW-F0-c6E" id="DhC-pl-5wE"/>
+                <outlet property="physicalDefLabel" destination="8LA-mF-FpM" id="4Ai-A1-hC5"/>
+                <outlet property="poiseLabel" destination="YfX-hX-iEv" id="m6a-D1-jO6"/>
+                <outlet property="poisonResLabel" destination="SLS-iK-Qrb" id="yZv-mK-Pbi"/>
+                <outlet property="slashDefLabel" destination="elr-sx-U0y" id="sWy-MH-ZeM"/>
+                <outlet property="strengthLabel" destination="9g5-IF-ldi" id="ai4-OB-90d"/>
+                <outlet property="strikeDefLabel" destination="BTc-aX-rc1" id="T4E-9V-9Fr"/>
+                <outlet property="thrustDefLabel" destination="pTx-Tj-eVw" id="2PJ-tE-uZ1"/>
+                <outlet property="typeImage" destination="t5S-Ie-I0B" id="57z-YB-3T7"/>
+                <outlet property="weightLabel" destination="mER-mY-TsP" id="2N4-28-sqc"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="834"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ArmorDetailView" customModule="DarkArmory" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="813"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" indicatorStyle="white" translatesAutoresizingMaskIntoConstraints="NO" id="Bdg-Fr-FbL">
-                    <rect key="frame" x="0.0" y="20" width="375" height="814"/>
+                    <rect key="frame" x="0.0" y="20" width="440" height="793"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="00l-xj-l45">
-                            <rect key="frame" x="0.0" y="-0.5" width="375" height="814"/>
+                            <rect key="frame" x="0.0" y="-0.5" width="440" height="793"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrj-ni-nlB">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="440" height="200"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="armor" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-lH-yih">
-                                            <rect key="frame" x="0.0" y="8" width="375" height="184"/>
+                                            <rect key="frame" x="0.0" y="8" width="440" height="184"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="r0h-Aq-qEr"/>
@@ -49,27 +81,27 @@
                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="xqC-4a-nAY"/>
                                     </constraints>
                                 </view>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-Ie-I0B">
-                                    <rect key="frame" x="327" y="8" width="40" height="40"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xBlack" translatesAutoresizingMaskIntoConstraints="NO" id="t5S-Ie-I0B">
+                                    <rect key="frame" x="392" y="8" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="IKd-9s-Vxp"/>
                                         <constraint firstAttribute="width" constant="40" id="bJc-lZ-OwN"/>
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Sju-ZX-hxH">
-                                    <rect key="frame" x="8" y="216" width="359" height="48"/>
+                                    <rect key="frame" x="8" y="216" width="424" height="48"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ts3-My-Wxs">
-                                            <rect key="frame" x="0.0" y="0.0" width="288" height="48"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="48"/>
                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Gg0-JB-krZ">
-                                            <rect key="frame" x="296" y="0.0" width="63" height="48"/>
+                                            <rect key="frame" x="358" y="0.0" width="66" height="48"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="jcc-eB-J0f">
-                                                    <rect key="frame" x="0.0" y="0.0" width="63" height="20"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="66" height="20"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="lgU-A0-TlB">
                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -79,7 +111,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mER-mY-TsP">
-                                                            <rect key="frame" x="24" y="0.0" width="39" height="20"/>
+                                                            <rect key="frame" x="24" y="0.0" width="42" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="MNq-hg-nVS"/>
                                                             </constraints>
@@ -90,7 +122,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="yyM-Pe-hhm">
-                                                    <rect key="frame" x="0.0" y="28" width="63" height="20"/>
+                                                    <rect key="frame" x="0.0" y="28" width="66" height="20"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poise" translatesAutoresizingMaskIntoConstraints="NO" id="0Lh-cR-4II">
                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -100,7 +132,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfX-hX-iEv">
-                                                            <rect key="frame" x="24" y="0.0" width="39" height="20"/>
+                                                            <rect key="frame" x="24" y="0.0" width="42" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="Ocg-YC-y4r"/>
                                                             </constraints>
@@ -115,22 +147,22 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7U8-RN-1SQ">
-                                    <rect key="frame" x="8" y="272" width="359" height="238"/>
+                                    <rect key="frame" x="8" y="272" width="424" height="244"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="jjW-dn-jE0">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="424" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Requeriments" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wl-0b-vxU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3oN-cR-XPC">
-                                                    <rect key="frame" x="0.0" y="23.5" width="359" height="30"/>
+                                                    <rect key="frame" x="0.0" y="25" width="424" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="CDb-Qq-2P7">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strength" translatesAutoresizingMaskIntoConstraints="NO" id="3ZM-DA-DJu">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -140,7 +172,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9g5-IF-ldi">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -148,7 +180,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4HN-l5-38I">
-                                                            <rect key="frame" x="91" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="107" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dexterity" translatesAutoresizingMaskIntoConstraints="NO" id="qQD-HW-dQ2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -157,7 +189,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBc-bJ-4eB">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -165,7 +197,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="dIP-gT-1rr">
-                                                            <rect key="frame" x="181.5" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="214" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intelligence" translatesAutoresizingMaskIntoConstraints="NO" id="Wlv-bU-1Kr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -174,7 +206,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="220-CX-gTE">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -182,7 +214,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tNE-JU-KUa">
-                                                            <rect key="frame" x="272.5" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="321" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faith" translatesAutoresizingMaskIntoConstraints="NO" id="Ck0-CW-PHJ">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -191,7 +223,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox5-Fd-0Ey">
-                                                                    <rect key="frame" x="34" y="0.0" width="52.5" height="30"/>
+                                                                    <rect key="frame" x="34" y="0.0" width="69" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -208,19 +240,19 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="unv-1K-wu9">
-                                            <rect key="frame" x="0.0" y="61.5" width="359" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="63" width="424" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Physical defenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="59U-vB-tgs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="BKH-cd-2Ob">
-                                                    <rect key="frame" x="0.0" y="23.5" width="359" height="30"/>
+                                                    <rect key="frame" x="0.0" y="25" width="424" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="ebP-vg-wTi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="physicalDefense" translatesAutoresizingMaskIntoConstraints="NO" id="EK5-yj-Xbt">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -230,7 +262,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-mF-FpM">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -238,7 +270,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bh3-Ny-2bN">
-                                                            <rect key="frame" x="91" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="107" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="strikeDefense" translatesAutoresizingMaskIntoConstraints="NO" id="mVV-F4-WPk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -247,7 +279,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BTc-aX-rc1">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -255,7 +287,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="s0z-Ut-Qtr">
-                                                            <rect key="frame" x="181.5" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="214" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thrustDefense" translatesAutoresizingMaskIntoConstraints="NO" id="BJT-NV-qco">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -264,7 +296,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-Tj-eVw">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -272,7 +304,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="XHO-A5-IX2">
-                                                            <rect key="frame" x="272.5" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="321" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slashDefense" translatesAutoresizingMaskIntoConstraints="NO" id="Ydc-gs-H6h">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -281,7 +313,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="elr-sx-U0y">
-                                                                    <rect key="frame" x="34" y="0.0" width="52.5" height="30"/>
+                                                                    <rect key="frame" x="34" y="0.0" width="69" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -298,19 +330,19 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vUx-TQ-vsJ">
-                                            <rect key="frame" x="0.0" y="123" width="359" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="126" width="424" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elemental defenses" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLM-aa-aT8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="T1t-Ri-beO">
-                                                    <rect key="frame" x="0.0" y="23.5" width="359" height="30"/>
+                                                    <rect key="frame" x="0.0" y="25" width="424" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="DHc-Ia-UrZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicDefense" translatesAutoresizingMaskIntoConstraints="NO" id="TNn-3b-Z2O">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -320,7 +352,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JT-ZV-cLY">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -328,7 +360,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="tJ8-7R-qqs">
-                                                            <rect key="frame" x="91" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="107" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightningDefense" translatesAutoresizingMaskIntoConstraints="NO" id="4yg-8q-wi7">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -337,7 +369,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pn6-nX-S6I">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -345,7 +377,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="vcD-Em-Fht">
-                                                            <rect key="frame" x="181.5" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="214" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireDefense" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-6C-HLr">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
@@ -354,7 +386,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ger-JT-mzG">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -362,7 +394,7 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="WHj-6g-oMT">
-                                                            <rect key="frame" x="272.5" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="321" y="0.0" width="103" height="30"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkDefense" translatesAutoresizingMaskIntoConstraints="NO" id="ed1-SE-UJn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -371,7 +403,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-G1-xr5">
-                                                                    <rect key="frame" x="34" y="0.0" width="52.5" height="30"/>
+                                                                    <rect key="frame" x="34" y="0.0" width="69" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -388,21 +420,21 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="scH-0w-w4g">
-                                            <rect key="frame" x="0.0" y="184.5" width="359" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="189" width="424" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resistances" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUq-pa-a6e">
-                                                    <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="OX8-s6-x6F">
-                                                    <rect key="frame" x="0.0" y="23.5" width="359" height="30"/>
+                                                    <rect key="frame" x="0.0" y="25" width="424" height="30"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="IlA-4O-bdv">
-                                                            <rect key="frame" x="0.0" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="103" height="30"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicDefense" translatesAutoresizingMaskIntoConstraints="NO" id="UXq-hK-baR">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bleedDefense" translatesAutoresizingMaskIntoConstraints="NO" id="UXq-hK-baR">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="30" id="9Df-3v-Qbq"/>
@@ -410,7 +442,7 @@
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYC-jn-Lgg">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -418,16 +450,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="p8j-zm-chf">
-                                                            <rect key="frame" x="91" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="107" y="0.0" width="103" height="30"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightningDefense" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-eY-hdY">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="poisonDefense" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-eY-hdY">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="ABX-eY-hdY" secondAttribute="height" multiplier="1:1" id="7AD-dQ-BGh"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLS-iK-Qrb">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -435,16 +467,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SHG-9F-ceA">
-                                                            <rect key="frame" x="181.5" y="0.0" width="87" height="30"/>
+                                                            <rect key="frame" x="214" y="0.0" width="103" height="30"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireDefense" translatesAutoresizingMaskIntoConstraints="NO" id="GB4-Mp-aCe">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curseDefense" translatesAutoresizingMaskIntoConstraints="NO" id="GB4-Mp-aCe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="29.5" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="GB4-Mp-aCe" secondAttribute="height" multiplier="1:1" id="NSa-oe-etN"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-Y0-yDW">
-                                                                    <rect key="frame" x="33.5" y="0.0" width="53.5" height="30"/>
+                                                                    <rect key="frame" x="33.5" y="0.0" width="69.5" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -452,16 +484,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="qVW-F0-c6E">
-                                                            <rect key="frame" x="272.5" y="0.0" width="86.5" height="30"/>
+                                                            <rect key="frame" x="321" y="0.0" width="103" height="30"/>
                                                             <subviews>
-                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkDefense" translatesAutoresizingMaskIntoConstraints="NO" id="b4p-ng-Mi5">
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="petrifyDefense" translatesAutoresizingMaskIntoConstraints="NO" id="b4p-ng-Mi5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" secondItem="b4p-ng-Mi5" secondAttribute="height" multiplier="1:1" id="sXY-DT-eDm"/>
                                                                     </constraints>
                                                                 </imageView>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jC-5J-18G">
-                                                                    <rect key="frame" x="34" y="0.0" width="52.5" height="30"/>
+                                                                    <rect key="frame" x="34" y="0.0" width="69" height="30"/>
                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <nil key="highlightedColor"/>
@@ -480,10 +512,10 @@
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wtt-Fk-M1I" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
-                                    <rect key="frame" x="8" y="536" width="359" height="31"/>
+                                    <rect key="frame" x="8" y="542" width="424" height="32.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7P-nA-byZ">
-                                            <rect key="frame" x="8" y="8" width="343" height="15"/>
+                                            <rect key="frame" x="8" y="8" width="408" height="16.5"/>
                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -509,19 +541,19 @@
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-EK-2OF">
-                                    <rect key="frame" x="8" y="583" width="359" height="76.5"/>
+                                    <rect key="frame" x="8" y="590.5" width="424" height="78"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where to find this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZJ-o0-O4y">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="365-yT-4Nh" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="26.5" width="359" height="50"/>
+                                            <rect key="frame" x="0.0" y="28" width="424" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHp-HU-eae">
-                                                    <rect key="frame" x="8" y="8" width="343" height="34"/>
+                                                    <rect key="frame" x="8" y="8" width="408" height="34"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -549,19 +581,19 @@
                                     </subviews>
                                 </stackView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oa4-hU-jyq">
-                                    <rect key="frame" x="8" y="675.5" width="359" height="76.5"/>
+                                    <rect key="frame" x="8" y="684.5" width="424" height="78"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where to find this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-rf-TWH">
-                                            <rect key="frame" x="0.0" y="0.0" width="359" height="18.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Special effects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-rf-TWH">
+                                            <rect key="frame" x="0.0" y="0.0" width="424" height="20"/>
                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCG-M4-ZrN" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="26.5" width="359" height="50"/>
+                                            <rect key="frame" x="0.0" y="28" width="424" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aN7-gb-gNY">
-                                                    <rect key="frame" x="8" y="8" width="343" height="34"/>
+                                                    <rect key="frame" x="8" y="8" width="408" height="34"/>
                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -633,12 +665,15 @@
                 <constraint firstItem="Bdg-Fr-FbL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="iSY-J4-tue"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Bdg-Fr-FbL" secondAttribute="bottom" id="wJU-Ei-eed"/>
             </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="33.5" y="137"/>
+            <point key="canvasLocation" x="103" y="303.5"/>
         </view>
     </objects>
     <resources>
         <image name="armor" width="190" height="254"/>
+        <image name="bleedDefense" width="20" height="20"/>
+        <image name="curseDefense" width="20" height="20"/>
         <image name="darkDefense" width="20" height="20"/>
         <image name="dexterity" width="24" height="24"/>
         <image name="faith" width="24" height="24"/>
@@ -646,12 +681,15 @@
         <image name="intelligence" width="24" height="24"/>
         <image name="lightningDefense" width="20" height="20"/>
         <image name="magicDefense" width="20" height="20"/>
+        <image name="petrifyDefense" width="20" height="20"/>
         <image name="physicalDefense" width="28" height="28"/>
         <image name="poise" width="28" height="28"/>
+        <image name="poisonDefense" width="20" height="20"/>
         <image name="slashDefense" width="41" height="42"/>
         <image name="strength" width="24" height="24"/>
         <image name="strikeDefense" width="41" height="42"/>
         <image name="thrustDefense" width="41" height="42"/>
         <image name="weight" width="26" height="26"/>
+        <image name="xBlack" width="128" height="128"/>
     </resources>
 </document>
