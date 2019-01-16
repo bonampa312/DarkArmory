@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptp-EX-ooQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ptp-EX-ooQ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -118,7 +117,7 @@
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4GO-v4-kIX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-SH-QYI">
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9BX-SH-QYI">
                                 <rect key="frame" x="251.5" y="492.5" width="70" height="88.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NPC's" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4tr-0t-flP">
@@ -140,7 +139,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="599-A8-ka5">
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="599-A8-ka5">
                                 <rect key="frame" x="59.5" y="498.5" width="64" height="82.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leveling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDV-ef-3vd">
@@ -163,8 +162,8 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-OO-Keb">
-                                <rect key="frame" x="155" y="462" width="64" height="82.5"/>
+                            <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Pwy-OO-Keb">
+                                <rect key="frame" x="155.5" y="462.5" width="64" height="82.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objects" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dZc-xS-YzL">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="18.5"/>
@@ -218,7 +217,7 @@
                                     <constraint firstItem="Koy-8K-AUE" firstAttribute="height" secondItem="m5Z-TK-j7c" secondAttribute="height" id="tRy-T8-S9h"/>
                                 </constraints>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO8-uq-iJJ" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO8-uq-iJJ" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
                                 <rect key="frame" x="-62.5" y="191.5" width="500" height="184.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQW-VE-8E1" customClass="UICustomView" customModule="DarkArmory" customModuleProvider="target">
@@ -508,10 +507,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="nJR-1x-BFJ">
-                                <rect key="frame" x="177" y="333.5" width="20" height="20"/>
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uqN-bV-bb1">
-                                <rect key="frame" x="128" y="307.5" width="120" height="72"/>
+                                <rect key="frame" x="127.5" y="307.5" width="120" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhu-pB-JXm">
                                         <rect key="frame" x="39.5" y="0.0" width="41.5" height="32"/>
@@ -580,13 +579,13 @@
                                                                             <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
                                                                             <subviews>
                                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onI-vM-ZsM">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="203.5" height="20"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="203" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="19"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nVe-zI-fVL">
-                                                                                    <rect key="frame" x="207.5" y="0.0" width="65.5" height="20"/>
+                                                                                    <rect key="frame" x="207" y="0.0" width="66" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-xG-Spp">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -596,7 +595,7 @@
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75y-e2-kog">
-                                                                                            <rect key="frame" x="24" y="0.0" width="41.5" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="42" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="o7c-Ok-9iY"/>
                                                                                             </constraints>
@@ -806,13 +805,13 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="65.5" height="29.5"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intelligence" translatesAutoresizingMaskIntoConstraints="NO" id="2pn-hE-oLr">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="29" height="29.5"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="29.5" height="29.5"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="2pn-hE-oLr" secondAttribute="height" multiplier="1:1" id="UEE-zS-jwZ"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-jb-5Mh">
-                                                                                            <rect key="frame" x="33" y="0.0" width="32.5" height="29.5"/>
+                                                                                            <rect key="frame" x="33.5" y="0.0" width="32" height="29.5"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1027,13 +1026,13 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="physicalDamage" translatesAutoresizingMaskIntoConstraints="NO" id="aqn-9X-tad">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="aqn-9X-tad" secondAttribute="height" multiplier="1:1" id="jjJ-Rt-3dd"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItU-IJ-1r9">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1044,13 +1043,13 @@
                                                                                     <rect key="frame" x="55.5" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicDamage" translatesAutoresizingMaskIntoConstraints="NO" id="M0N-7D-DTK">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="M0N-7D-DTK" secondAttribute="height" multiplier="1:1" id="J6u-Uc-bbD"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iue-Tg-G7Y">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1061,13 +1060,13 @@
                                                                                     <rect key="frame" x="111" y="0.0" width="51" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireDamage" translatesAutoresizingMaskIntoConstraints="NO" id="bcW-35-rHm">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="bcW-35-rHm" secondAttribute="height" multiplier="1:1" id="AFZ-m7-BMC"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOa-kS-oW3">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="27.5" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1095,13 +1094,13 @@
                                                                                     <rect key="frame" x="221.5" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkDamage" translatesAutoresizingMaskIntoConstraints="NO" id="D2B-8l-29D">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="D2B-8l-29D" secondAttribute="height" multiplier="1:1" id="ooy-01-RJS"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IR-ta-78s">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1157,13 +1156,13 @@
                                                                                     <rect key="frame" x="111" y="0.0" width="51" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intelligence" translatesAutoresizingMaskIntoConstraints="NO" id="QFS-XY-bbs">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="QFS-XY-bbs" secondAttribute="height" multiplier="1:1" id="9K9-ZR-VQl"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsa-JZ-gh7">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="27.5" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1174,13 +1173,13 @@
                                                                                     <rect key="frame" x="166" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="faith" translatesAutoresizingMaskIntoConstraints="NO" id="Qk2-in-NiH">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="Qk2-in-NiH" secondAttribute="height" multiplier="1:1" id="iLT-vr-VA2"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncA-iP-DOb">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1343,13 +1342,13 @@
                                                                                     <rect key="frame" x="0.0" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="physicalDefense" translatesAutoresizingMaskIntoConstraints="NO" id="5Y1-gz-r0m">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="5Y1-gz-r0m" secondAttribute="height" multiplier="1:1" id="DC6-oS-ufW"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMS-Mz-ZY4">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1360,13 +1359,13 @@
                                                                                     <rect key="frame" x="55.5" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magicDefense" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-QG-NyL">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="dSe-QG-NyL" secondAttribute="height" multiplier="1:1" id="y7I-Y9-ngX"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OFN-7x-MEk">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1377,13 +1376,13 @@
                                                                                     <rect key="frame" x="111" y="0.0" width="51" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fireDefense" translatesAutoresizingMaskIntoConstraints="NO" id="bb1-Nr-vgr">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="bb1-Nr-vgr" secondAttribute="height" multiplier="1:1" id="GCX-bk-Zpo"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTz-Ag-u5x">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="27.5" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1411,13 +1410,13 @@
                                                                                     <rect key="frame" x="221.5" y="0.0" width="51.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkDefense" translatesAutoresizingMaskIntoConstraints="NO" id="abG-tn-53V">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="abG-tn-53V" secondAttribute="height" multiplier="1:1" id="hWc-K8-xxW"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SA0-mB-lM1">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="28" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1473,13 +1472,13 @@
                                                                                     <rect key="frame" x="111" y="0.0" width="51" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slashDefense" translatesAutoresizingMaskIntoConstraints="NO" id="sLv-vH-odu">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="19.5" height="20"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                                                             <constraints>
                                                                                                 <constraint firstAttribute="width" secondItem="sLv-vH-odu" secondAttribute="height" multiplier="1:1" id="Uow-NS-Yxw"/>
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBI-w1-PId">
-                                                                                            <rect key="frame" x="23.5" y="0.0" width="27.5" height="20"/>
+                                                                                            <rect key="frame" x="24" y="0.0" width="27" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="14"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1678,7 +1677,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iH-fZ-GYZ">
-                                <rect key="frame" x="325" y="60" width="41.5" height="19.5"/>
+                                <rect key="frame" x="325.5" y="60" width="41.5" height="19.5"/>
                                 <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="18"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1687,7 +1686,7 @@
                                 <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
                             </activityIndicatorView>
                             <stackView opaque="NO" alpha="0.0" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-E1-YaM">
-                                <rect key="frame" x="127.5" y="307.5" width="120.5" height="72"/>
+                                <rect key="frame" x="127.5" y="307.5" width="120" height="72"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ztd-vM-Thq">
                                         <rect key="frame" x="39.5" y="0.0" width="41.5" height="32"/>
@@ -1696,7 +1695,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cs-zs-VeQ" customClass="UICustomButton" customModule="DarkArmory" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="40" width="120.5" height="32"/>
+                                        <rect key="frame" x="0.0" y="40" width="120" height="32"/>
                                         <color key="backgroundColor" red="0.49019607840000001" green="0.49019607840000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="120" id="OZS-a8-bav"/>
@@ -1716,32 +1715,33 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pai-Ra-GJr">
-                                <rect key="frame" x="8" y="80" width="359" height="579"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ds-FO-Qi4">
+                                <rect key="frame" x="8" y="88" width="359" height="571"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="pai-Ra-GJr" firstAttribute="leading" secondItem="mIA-xt-Z9z" secondAttribute="leading" constant="8" id="2ML-mJ-J13"/>
                             <constraint firstItem="Uch-KC-iIo" firstAttribute="leading" secondItem="mIA-xt-Z9z" secondAttribute="leading" id="7n9-UV-lIK"/>
                             <constraint firstItem="Kwn-be-VFp" firstAttribute="centerY" secondItem="mIA-xt-Z9z" secondAttribute="centerY" id="9cX-l8-cwm"/>
-                            <constraint firstItem="mIA-xt-Z9z" firstAttribute="bottom" secondItem="pai-Ra-GJr" secondAttribute="bottom" constant="8" id="C3A-v1-g9e"/>
+                            <constraint firstItem="2Ds-FO-Qi4" firstAttribute="trailing" secondItem="mIA-xt-Z9z" secondAttribute="trailing" constant="-8" id="E8u-fA-4oB"/>
                             <constraint firstItem="7iH-fZ-GYZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="d5T-uh-Aow" secondAttribute="leading" priority="750" constant="20" symbolic="YES" id="OgO-Ui-vHb"/>
-                            <constraint firstItem="pai-Ra-GJr" firstAttribute="top" secondItem="Uch-KC-iIo" secondAttribute="bottom" id="Oub-Xs-1FN"/>
                             <constraint firstItem="Uch-KC-iIo" firstAttribute="top" secondItem="mIA-xt-Z9z" secondAttribute="top" id="Q6m-vZ-3eV"/>
                             <constraint firstItem="Kwn-be-VFp" firstAttribute="centerX" secondItem="mIA-xt-Z9z" secondAttribute="centerX" id="RXQ-N8-flG"/>
                             <constraint firstItem="t6D-E1-YaM" firstAttribute="centerX" secondItem="mIA-xt-Z9z" secondAttribute="centerX" id="Rj3-Ix-ChQ"/>
                             <constraint firstItem="mIA-xt-Z9z" firstAttribute="trailing" secondItem="7iH-fZ-GYZ" secondAttribute="trailing" constant="8" id="Vpt-TU-qAu"/>
+                            <constraint firstItem="2Ds-FO-Qi4" firstAttribute="bottom" secondItem="mIA-xt-Z9z" secondAttribute="bottom" constant="-8" id="ZtQ-M1-dIZ"/>
+                            <constraint firstItem="mIA-xt-Z9z" firstAttribute="leading" secondItem="2Ds-FO-Qi4" secondAttribute="leading" constant="-8" id="a9d-YY-nhw"/>
                             <constraint firstItem="t6D-E1-YaM" firstAttribute="centerY" secondItem="mIA-xt-Z9z" secondAttribute="centerY" id="dsc-gV-0gT"/>
                             <constraint firstItem="7iH-fZ-GYZ" firstAttribute="top" secondItem="Uch-KC-iIo" secondAttribute="bottom" constant="-20" id="eqd-Ka-LNt"/>
-                            <constraint firstItem="mIA-xt-Z9z" firstAttribute="trailing" secondItem="pai-Ra-GJr" secondAttribute="trailing" constant="8" id="hSa-Xf-rRV"/>
+                            <constraint firstItem="2Ds-FO-Qi4" firstAttribute="top" secondItem="Uch-KC-iIo" secondAttribute="bottom" constant="8" id="fGC-4Y-lbm"/>
                             <constraint firstItem="mIA-xt-Z9z" firstAttribute="trailing" secondItem="Uch-KC-iIo" secondAttribute="trailing" id="ppI-Rd-djV"/>
+                            <constraint firstItem="2Ds-FO-Qi4" firstAttribute="width" secondItem="d5T-uh-Aow" secondAttribute="width" constant="-16" id="qeF-m3-vxW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mIA-xt-Z9z"/>
                     </view>
                     <connections>
-                        <outlet property="detailContentView" destination="pai-Ra-GJr" id="QM0-IM-4mV"/>
+                        <outlet property="detailContentContainerView" destination="2Ds-FO-Qi4" id="B6B-On-k1k"/>
                         <outlet property="gameTitleLabel" destination="7iH-fZ-GYZ" id="5IM-7Z-LWl"/>
                         <outlet property="itemDetailTitleLabel" destination="M3l-sQ-LPY" id="k5Q-Zt-7BN"/>
                         <outlet property="loadingIndicator" destination="Kwn-be-VFp" id="on8-pi-wWm"/>

@@ -22,6 +22,7 @@ class ArmorDetailView: UIView {
     @IBOutlet weak var weightLabel: UILabel!
     @IBOutlet weak var poiseLabel: UILabel!
     // Requeriments
+    @IBOutlet weak var requirementsStack: UIStackView!
     @IBOutlet weak var strengthLabel: UILabel!
     @IBOutlet weak var dexterityLabel: UILabel!
     @IBOutlet weak var intelligenceLabel: UILabel!
@@ -61,10 +62,9 @@ class ArmorDetailView: UIView {
     }
     
     private func commonInit() {
-        Bundle.main.loadNibNamed("ArmorDetailView", owner: self, options: nil)
-        addSubview(armorDetailContentView)
-        armorDetailContentView.frame = self.bounds
-        armorDetailContentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        guard let armorView = Bundle.main.loadNibNamed("ArmorDetailView", owner: self, options: nil)?.first as? ArmorDetailView else { return }
+        self.addSubview(armorView)
+        armorView.addConstraintsToFillSuperview()
     }
     
     func configureUI() {
@@ -75,11 +75,17 @@ class ArmorDetailView: UIView {
         weightLabel.text = String(format: "%.0f", armor.weight)
         poiseLabel.text = String(format: "%.0f", armor.poise)
         
-        strengthLabel.text = String(armor.requirements.strength)
-        dexterityLabel.text = String(armor.requirements.dexterity)
-        intelligenceLabel.text = String(armor.requirements.intelligence)
-        faithLabel.text = String(armor.requirements.faith)
         
+        if (armor.requirements != nil) {
+            requirementsStack.isHidden = false
+            guard let requirements = armor.requirements else { return }
+            strengthLabel.text = String(requirements.strength)
+            dexterityLabel.text = String(requirements.dexterity)
+            intelligenceLabel.text = String(requirements.intelligence)
+            faithLabel.text = String(requirements.faith)
+        } else {
+            requirementsStack.isHidden = true
+        }
         
         physicalDefLabel.text = String(format: "%.0f", armor.defenses.physical)
         slashDefLabel.text = String(format: "%.0f", armor.physicalDefenses.slash)
@@ -120,9 +126,12 @@ class ArmorDetailView: UIView {
         if armor.effects != nil {
             var effectsText = ""
             for effect in armor.effects! {
-                effectsText = effectsText + " - " + effect + "\n"
+                effectsText = effectsText + " - " + effect
             }
             effectsLabel.text = effectsText
+            effectsStack.isHidden = false
+        } else {
+            effectsStack.isHidden = true
         }
         
         typeImage.image = UIImage(named: ArmorType.getArmorType(byId: armor.type))
@@ -132,6 +141,5 @@ class ArmorDetailView: UIView {
         }  else {
             pictureImage.image = UIImage(named: "armor")
         }
-        
     }
 }

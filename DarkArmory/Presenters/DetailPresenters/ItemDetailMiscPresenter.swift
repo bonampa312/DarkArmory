@@ -14,7 +14,6 @@ class ItemDetailMiscPresenter : ItemDetailMediator {
     var element: MiscDetail?
     
     var view: ItemDetailView
-    var detailView: UIView?
     
     var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
@@ -27,9 +26,6 @@ class ItemDetailMiscPresenter : ItemDetailMediator {
         self.globalGame = SoulsGameSingleton.getGlobalGame()
         self.gameBasics = gameBasics
         self.elementDetailTitle = gameBasics.elementName!
-        self.element = nil
-        // TODO - Replace here
-        self.detailView = nil
     }
     
     func configureUI() {
@@ -53,15 +49,4 @@ class ItemDetailMiscPresenter : ItemDetailMediator {
             }
         }
     }
-    
-    func getDetailView() -> UIView {
-        //TODO Change this thing
-//        guard let nibView = WeaponDetailView.instantiateFromNib() else {
-//            return UIView()
-//        }
-//        nibView.element = element
-//        return nibView
-        return UIView()
-    }
-    
 }

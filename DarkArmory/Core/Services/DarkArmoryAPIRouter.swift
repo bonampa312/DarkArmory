@@ -15,8 +15,13 @@ class DarkArmoryAPIRouter {
     
     private static let imagesResizeBase = "/revision/latest/scale-to-width-down/"
     
-    static func getImageResizedURL(url: String, size: Int? = 0) -> URL? {
-        let urlString = "\(url + imagesResizeBase + (size == 0 ? "" : String(size!)))"
+    static func getImageResizedURL(url: String, size: Int = 0) -> URL? {
+        var urlString = ""
+        if (size == 0) {
+            urlString = url
+        } else {
+            urlString = "\(url + imagesResizeBase + String(size))"
+        }
         let url = URL(string: urlString)
         return url
     }

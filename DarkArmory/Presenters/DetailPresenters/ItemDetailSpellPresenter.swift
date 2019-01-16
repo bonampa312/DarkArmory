@@ -14,7 +14,6 @@ class ItemDetailSpellPresenter : ItemDetailMediator {
     var element: SpellDetail?
     
     var view: ItemDetailView
-    var detailView: UIView?
     
     var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
@@ -49,16 +48,6 @@ class ItemDetailSpellPresenter : ItemDetailMediator {
                 return
             }
         }
-    }
-    
-    func getDetailView() -> UIView {
-        //TODO Change this thing
-//        guard let nibView = WeaponDetailView.instantiateFromNib() else {
-//            return UIView()
-//        }
-//        nibView.element = element
-//        return nibView
-        return UIView()
     }
     
 }

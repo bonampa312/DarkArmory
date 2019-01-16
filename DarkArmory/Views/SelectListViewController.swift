@@ -67,9 +67,9 @@ class SelectListViewController: UIViewController {
         
         // Stack View
         let buttonsStackView = UIStackView(arrangedSubviews: buttonsList)
-        buttonsStackView.axis = UILayoutConstraintAxis.vertical
-        buttonsStackView.distribution = UIStackViewDistribution.fill
-        buttonsStackView.alignment = UIStackViewAlignment.fill
+        buttonsStackView.axis = NSLayoutConstraint.Axis.vertical
+        buttonsStackView.distribution = UIStackView.Distribution.fill
+        buttonsStackView.alignment = UIStackView.Alignment.fill
         buttonsStackView.spacing = 12.0
         
         buttonsStackView.translatesAutoresizingMaskIntoConstraints = false

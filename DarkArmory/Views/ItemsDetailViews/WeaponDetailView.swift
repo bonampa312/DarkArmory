@@ -19,10 +19,6 @@ class WeaponDetailView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        //TODO Change here
-        if testTextStr == nil {
-            testTextStr = "This is another test for weapon text"
-        }
         commonInit()
     }
     

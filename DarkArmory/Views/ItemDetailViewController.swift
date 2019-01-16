@@ -14,6 +14,7 @@ class ItemDetailViewController: UIViewController {
     var presenter : ItemDetailBasePresenter?
     var elementsType : GameElement?
     var elementBasicData : ElementBasicData?
+    var loadingScrollView = false
     
     var itemDetailContentView : UIView?
     
@@ -22,13 +23,12 @@ class ItemDetailViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var notificationStack: UIStackView!
     @IBOutlet weak var notificationMessage: UILabel!
-    @IBOutlet weak var detailContentView: UIView!
-    
+    @IBOutlet weak var detailContentContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        detailContentView.isHidden = true
+        detailContentContainerView.isHidden = true
         
         guard elementsType != nil, elementBasicData != nil else {
             presenter = ItemDetailWeaponPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()), gameBasics: ElementBasicData(name: "Claymore", id: "5aef98705c050400144181e8"))
@@ -38,7 +38,6 @@ class ItemDetailViewController: UIViewController {
         presenter = ItemDetailPresenterFactory.getItemDetailPresenter(type: elementsType!, view: self, elementBasicData: elementBasicData!)
         configureUI()
     }
-
     
     @IBAction func reloadDetail(_ sender: UIButton) {
         self.hideNotificationStack()
@@ -76,12 +75,20 @@ class ItemDetailViewController: UIViewController {
 extension ItemDetailViewController : ItemDetailView {
     func updateDetailData() {
         self.loadingIndicator.isHidden = true
+        loadingScrollView = true
+        self.hideNotificationStack()
         self.loadDetailViewContent()
         guard let innerView = itemDetailContentView else {
             return
         }
-        detailContentView.addSubview(innerView)
-        detailContentView.isHidden = false
+    
+        detailContentContainerView.addSubview(innerView)
+        
+        innerView.translatesAutoresizingMaskIntoConstraints = false
+        innerView.addConstraintsToFillSuperview()
+
+        self.itemDetailContentView = innerView
+        detailContentContainerView.isHidden = false
     }
     
     func updateTitles() {

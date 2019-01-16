@@ -14,7 +14,6 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
     var element: ArmorDetail?
     
     var view: ItemDetailView
-    var detailView: UIView?
     
     var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
@@ -49,10 +48,6 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
                 return
             }
         }
-    }
-    
-    func getDetailView() -> UIView {
-        return ArmorDetailView()
     }
     
 }

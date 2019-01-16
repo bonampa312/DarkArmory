@@ -9,17 +9,19 @@
 import UIKit
 
 extension ItemDetailViewController {
+    
     func loadDetailViewContent() {
         guard let type = self.elementsType else {
             return
         }
-        guard let viewToLoad = self.presenter?.getDetailView() else {
-            self.itemDetailContentView = UIView()
-            return
-        }
         switch type {
+        case .Armors:
+            let viewInNeededType = ArmorDetailView()
+            viewInNeededType.element = self.presenter?.elementDetail as? ArmorDetail
+            viewInNeededType.configureUI()
+            self.itemDetailContentView = viewInNeededType
         case .Weapons:
-            let viewInNeededType = viewToLoad as! WeaponDetailView
+            let viewInNeededType = WeaponDetailView()
             viewInNeededType.element = self.presenter?.elementDetail as? WeaponDetail
             viewInNeededType.configureUI()
             self.itemDetailContentView = viewInNeededType

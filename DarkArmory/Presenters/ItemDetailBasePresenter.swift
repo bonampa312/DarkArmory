@@ -19,7 +19,6 @@ protocol ItemDetailBasePresenter {
     
     //MARK: - View that implements presenter
     var view: ItemDetailView { get }
-    var detailView: UIView? { get }
     
     //MARK: - Class variables
     var locator: UseCaseLocatorProtocol { get }
@@ -36,5 +35,4 @@ protocol ItemDetailBasePresenter {
     
     func loadElement()
     
-    func getDetailView() -> UIView
 }

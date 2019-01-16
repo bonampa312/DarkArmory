@@ -14,7 +14,6 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
     var element: WeaponDetail?
     
     var view: ItemDetailView
-    var detailView: UIView?
     
     var locator: UseCaseLocatorProtocol
     var globalGame: SoulsSeriesGame
@@ -49,12 +48,6 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
                 return
             }
         }
-    }
-    
-    func getDetailView() -> UIView {
-        let nibView = WeaponDetailView()
-        nibView.element = element
-        return nibView
     }
     
 }

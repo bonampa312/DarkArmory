@@ -54,6 +54,7 @@
 		3C94C10320BF2F98009F9C1B /* SpellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */; };
 		3CA9D56B20B8999B00A624BF /* ItemsListPresenterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */; };
 		3CBD3E972186887F00D491F1 /* ItemDetailViewController+DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD3E962186887F00D491F1 /* ItemDetailViewController+DetailView.swift */; };
+		3CBD3E992189194D00D491F1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBD3E982189194D00D491F1 /* UIViewExtension.swift */; };
 		3CC8AC2B20C1B6DB005718A8 /* ArmorsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2A20C1B6DA005718A8 /* ArmorsData.swift */; };
 		3CC8AC2D20C1C707005718A8 /* ItemsListArmorsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2C20C1C707005718A8 /* ItemsListArmorsPresenter.swift */; };
 		3CC8AC2F20C1CA24005718A8 /* ArmorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8AC2E20C1CA24005718A8 /* ArmorsTableViewCell.swift */; };
@@ -143,6 +144,7 @@
 		3C94C10220BF2F98009F9C1B /* SpellsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsTableViewCell.swift; sourceTree = "<group>"; };
 		3CA9D56A20B8999B00A624BF /* ItemsListPresenterFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListPresenterFactory.swift; sourceTree = "<group>"; };
 		3CBD3E962186887F00D491F1 /* ItemDetailViewController+DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ItemDetailViewController+DetailView.swift"; sourceTree = "<group>"; };
+		3CBD3E982189194D00D491F1 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		3CC8AC2A20C1B6DA005718A8 /* ArmorsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorsData.swift; sourceTree = "<group>"; };
 		3CC8AC2C20C1C707005718A8 /* ItemsListArmorsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsListArmorsPresenter.swift; sourceTree = "<group>"; };
 		3CC8AC2E20C1CA24005718A8 /* ArmorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmorsTableViewCell.swift; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				3C75F026207522C100278A74 /* UICustomButton.swift */,
 				3C33E5B22075767E00CBD689 /* UIImageWithGif.swift */,
 				3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */,
+				3CBD3E982189194D00D491F1 /* UIViewExtension.swift */,
 			);
 			path = CustomUIComponents;
 			sourceTree = "<group>";
@@ -497,10 +500,12 @@
 				TargetAttributes = {
 					3C75F0042073F7CD00278A74 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					3C8C0AC3207FA453004D816C = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 3C75F0042073F7CD00278A74;
 					};
@@ -585,6 +590,7 @@
 				3CFB29102183D7F700FA508D /* WeaponDetailView.swift in Sources */,
 				3C8C0ABF207EB0CE004D816C /* CalculateSoulsDrangleic.swift in Sources */,
 				3C75F027207522C100278A74 /* UICustomButton.swift in Sources */,
+				3CBD3E992189194D00D491F1 /* UIViewExtension.swift in Sources */,
 				3C94C0F920BDBEA2009F9C1B /* MiscsTableViewCell.swift in Sources */,
 				3C489E4320BC739200FD855F /* RingsTableViewCell.swift in Sources */,
 				3CFB2901218216B000FA508D /* ItemDetailArmorPresenter.swift in Sources */,
@@ -791,6 +797,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -799,7 +806,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -809,6 +816,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -817,7 +825,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -831,7 +839,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarkArmory.app/DarkArmory";
 			};
@@ -846,7 +854,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.globant.DarkArmoryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DarkArmory.app/DarkArmory";
 			};

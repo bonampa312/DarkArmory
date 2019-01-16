@@ -1,7 +1,8 @@
+// swift-tools-version:4.0
 //
-//  AppDelegate.swift
+//  Package@swift-4.swift
 //
-//  Copyright (c) 2015-2018 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,30 +23,19 @@
 //  THE SOFTWARE.
 //
 
-import Foundation
-import UIKit
+import PackageDescription
 
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
-
-    // MARK: - Application State Methods
-
-    func application(
-        _ application: UIApplication,
-        willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
-        -> Bool
-    {
-        window = {
-            let window = UIWindow(frame: UIScreen.main.bounds)
-
-            window.rootViewController = UINavigationController(rootViewController: ImagesViewController())
-            window.backgroundColor = UIColor.white
-            window.makeKeyAndVisible()
-
-            return window
-        }()
-
-        return true
-    }
-}
+let package = Package(
+    name: "Alamofire",
+    products: [
+        .library(
+            name: "Alamofire",
+            targets: ["Alamofire"])
+    ],
+    targets: [
+        .target(
+            name: "Alamofire",
+            path: "Source")
+    ],
+    swiftLanguageVersions: [3, 4]
+)
