@@ -14,7 +14,6 @@ class ItemDetailViewController: UIViewController {
     var presenter : ItemDetailBasePresenter?
     var elementsType : GameElement?
     var elementBasicData : ElementBasicData?
-    var loadingScrollView = false
     
     var itemDetailContentView : UIView?
     
@@ -30,12 +29,12 @@ class ItemDetailViewController: UIViewController {
         
         detailContentContainerView.isHidden = true
         
-        guard elementsType != nil, elementBasicData != nil else {
+        guard let elements = elementsType, let basicData = elementBasicData else {
             presenter = ItemDetailWeaponPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()), gameBasics: ElementBasicData(name: "Claymore", id: "5aef98705c050400144181e8"))
             configureUI()
             return
         }
-        presenter = ItemDetailPresenterFactory.getItemDetailPresenter(type: elementsType!, view: self, elementBasicData: elementBasicData!)
+        presenter = ItemDetailPresenterFactory.getItemDetailPresenter(type: elements, view: self, elementBasicData: basicData)
         configureUI()
     }
     
@@ -75,7 +74,6 @@ class ItemDetailViewController: UIViewController {
 extension ItemDetailViewController : ItemDetailView {
     func updateDetailData() {
         self.loadingIndicator.isHidden = true
-        loadingScrollView = true
         self.hideNotificationStack()
         self.loadDetailViewContent()
         guard let innerView = itemDetailContentView else {

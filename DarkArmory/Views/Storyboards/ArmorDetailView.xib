@@ -27,6 +27,7 @@
                 <outlet property="effectsStack" destination="oa4-hU-jyq" id="qwi-0d-Raz"/>
                 <outlet property="faithLabel" destination="Ox5-Fd-0Ey" id="Ge9-n7-650"/>
                 <outlet property="fireDefLabel" destination="Ger-JT-mzG" id="6u9-df-mGT"/>
+                <outlet property="imageActivityIndicator" destination="7ZR-eC-Nw2" id="NxN-6G-dbA"/>
                 <outlet property="intelligenceLabel" destination="220-CX-gTE" id="x21-1M-cSd"/>
                 <outlet property="lightningDefLabel" destination="Pn6-nX-S6I" id="cbM-Lp-AGA"/>
                 <outlet property="locationsLabel" destination="GHp-HU-eae" id="uyi-gR-Aub"/>
@@ -63,7 +64,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrj-ni-nlB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="armor" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-lH-yih">
+                                        <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="armor" translatesAutoresizingMaskIntoConstraints="NO" id="Ifs-lH-yih">
                                             <rect key="frame" x="0.0" y="8" width="375" height="184"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
@@ -78,6 +79,9 @@
                                                 <constraint firstAttribute="width" constant="40" id="bJc-lZ-OwN"/>
                                             </constraints>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7ZR-eC-Nw2">
+                                            <rect key="frame" x="177.5" y="90" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.46587527810000001" alpha="0.70181640785915489" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
@@ -89,6 +93,8 @@
                                         <constraint firstAttribute="trailing" secondItem="t5S-Ie-I0B" secondAttribute="trailing" constant="8" id="SeJ-Ac-CFY"/>
                                         <constraint firstItem="Ifs-lH-yih" firstAttribute="leading" secondItem="nrj-ni-nlB" secondAttribute="leading" id="T4f-7d-R5c"/>
                                         <constraint firstAttribute="trailing" secondItem="Ifs-lH-yih" secondAttribute="trailing" id="Ubh-xH-nCe"/>
+                                        <constraint firstItem="7ZR-eC-Nw2" firstAttribute="centerY" secondItem="nrj-ni-nlB" secondAttribute="centerY" id="YwQ-39-gvT"/>
+                                        <constraint firstItem="7ZR-eC-Nw2" firstAttribute="centerX" secondItem="nrj-ni-nlB" secondAttribute="centerX" id="eML-vx-ZqH"/>
                                         <constraint firstAttribute="bottom" secondItem="t5S-Ie-I0B" secondAttribute="bottom" constant="8" id="gzK-2x-Fke"/>
                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="xqC-4a-nAY"/>
                                     </constraints>

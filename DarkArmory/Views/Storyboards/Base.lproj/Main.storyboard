@@ -578,14 +578,14 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="fQB-MN-str">
                                                                             <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onI-vM-ZsM">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="203" height="20"/>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onI-vM-ZsM">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="201.5" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="19"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
                                                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nVe-zI-fVL">
-                                                                                    <rect key="frame" x="207" y="0.0" width="66" height="20"/>
+                                                                                    <rect key="frame" x="205.5" y="0.0" width="67.5" height="20"/>
                                                                                     <subviews>
                                                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weight" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-xG-Spp">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -595,10 +595,7 @@
                                                                                             </constraints>
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75y-e2-kog">
-                                                                                            <rect key="frame" x="24" y="0.0" width="42" height="20"/>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="o7c-Ok-9iY"/>
-                                                                                            </constraints>
+                                                                                            <rect key="frame" x="24" y="0.0" width="43.5" height="20"/>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="19"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -987,7 +984,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bQ2-Um-NAC">
                                                                             <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-Ih-PBf">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHw-Ih-PBf">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="206" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1005,9 +1002,6 @@
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iPr-6Z-53b">
                                                                                             <rect key="frame" x="24" y="0.0" width="39" height="20"/>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="aCN-iO-sV9"/>
-                                                                                            </constraints>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>
@@ -1306,7 +1300,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="A4a-de-d3f">
                                                                             <rect key="frame" x="0.0" y="0.0" width="273" height="20"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p4-V7-QfA">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8p4-V7-QfA">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="208" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1324,9 +1318,6 @@
                                                                                         </imageView>
                                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysJ-lb-zD1">
                                                                                             <rect key="frame" x="22" y="0.0" width="39" height="20"/>
-                                                                                            <constraints>
-                                                                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="42" id="PKU-8N-trG"/>
-                                                                                            </constraints>
                                                                                             <fontDescription key="fontDescription" name="OptimusPrinceps" family="OptimusPrinceps" pointSize="17"/>
                                                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                             <nil key="highlightedColor"/>

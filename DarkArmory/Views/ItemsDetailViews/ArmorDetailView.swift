@@ -17,6 +17,7 @@ class ArmorDetailView: UIView {
     //MARK: - Armor UI outlets
     // General data
     @IBOutlet weak var pictureImage: UIImageView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var typeImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var weightLabel: UILabel!
@@ -118,8 +119,12 @@ class ArmorDetailView: UIView {
         
         descriptionLabel.text = armor.description
         var locationsText = ""
-        for location in armor.locations {
-            locationsText = locationsText + " - " + location + "\n"
+        for (index, location) in armor.locations.enumerated() {
+            if (index != (armor.locations.count - 1)) {
+                locationsText = locationsText + " - " + location + "\n"
+            } else {
+                locationsText = locationsText + " - " + location
+            }
         }
         locationsLabel.text = locationsText
         
@@ -134,12 +139,22 @@ class ArmorDetailView: UIView {
             effectsStack.isHidden = true
         }
         
+        self.imageActivityIndicator.startAnimating()
+        self.imageActivityIndicator.isHidden = false
+        
         typeImage.image = UIImage(named: ArmorType.getArmorType(byId: armor.type))
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: armor.imageURL)
         if (imageURL != nil) {
-            pictureImage.af_setImage(withURL: imageURL!)
+            guard let armorImageURL = imageURL else { return }
+            pictureImage.af_setImage(withURL: armorImageURL) { response in
+                self.imageActivityIndicator.stopAnimating()
+                self.imageActivityIndicator.isHidden = true
+            }
         }  else {
             pictureImage.image = UIImage(named: "armor")
+            self.imageActivityIndicator.stopAnimating()
+            self.imageActivityIndicator.isHidden = true
         }
+        pictureImage.alpha = 1
     }
 }
