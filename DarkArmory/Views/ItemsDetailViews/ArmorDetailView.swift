@@ -73,44 +73,50 @@ class ArmorDetailView: UIView {
             return
         }
         nameLabel.text = armor.name
-        weightLabel.text = String(format: "%.0f", armor.weight)
-        poiseLabel.text = String(format: "%.0f", armor.poise)
+        weightLabel.text = armor.weight.convertToString()
+        poiseLabel.text = armor.poise.convertToString()
         
         
         if (armor.requirements != nil) {
             requirementsStack.isHidden = false
             guard let requirements = armor.requirements else { return }
-            strengthLabel.text = String(requirements.strength)
-            dexterityLabel.text = String(requirements.dexterity)
-            intelligenceLabel.text = String(requirements.intelligence)
-            faithLabel.text = String(requirements.faith)
+            strengthLabel.text = requirements.strength.convertToString()
+            dexterityLabel.text = requirements.dexterity.convertToString()
+            intelligenceLabel.text = requirements.intelligence.convertToString()
+            faithLabel.text = requirements.faith.convertToString()
+            requirementsStack.isHidden = false
         } else {
             requirementsStack.isHidden = true
         }
         
-        physicalDefLabel.text = String(format: "%.0f", armor.defenses.physical)
-        slashDefLabel.text = String(format: "%.0f", armor.physicalDefenses.slash)
-        strikeDefLabel.text = String(format: "%.0f", armor.physicalDefenses.strike)
-        thrustDefLabel.text = String(format: "%.0f", armor.physicalDefenses.thrust)
+        physicalDefLabel.text = armor.defenses.physical.convertToString()
+        slashDefLabel.text = armor.physicalDefenses.slash.convertToString()
+        strikeDefLabel.text = armor.physicalDefenses.strike.convertToString()
+        thrustDefLabel.text = armor.physicalDefenses.thrust.convertToString()
         
-        magicDefLabel.text = String(format: "%.0f", armor.defenses.magic)
-        fireDefLabel.text = String(format: "%.0f", armor.defenses.fire)
-        lightningDefLabel.text = String(format: "%.0f", armor.defenses.lightning)
+        magicDefLabel.text = armor.defenses.magic.convertToString()
+        fireDefLabel.text = armor.defenses.fire.convertToString()
+        lightningDefLabel.text = armor.defenses.lightning.convertToString()
         if (armor.defenses.dark != nil) {
-            darkDefLabel.text = String(format: "%.0f", armor.defenses.dark!)
+            guard let darkDef = armor.defenses.dark else { return }
+            darkDefLabel.text = darkDef.convertToString()
+            optionalElemDefStack.isHidden = false
         } else {
             optionalElemDefStack.isHidden = true
         }
         
-        bleedResLabel.text = String(armor.resistances.bleed)
-        poisonResLabel.text = String(armor.resistances.poison)
-        curseResLabel.text = String(armor.resistances.curse!)
+        bleedResLabel.text = armor.resistances.bleed.convertToString()
+        poisonResLabel.text = armor.resistances.poison.convertToString()
+        guard let curseResistance = armor.resistances.curse else { return }
+        curseResLabel.text = curseResistance.convertToString()
         if (armor.resistances.frost != nil) {
-            optionalResLabel.text = String(armor.resistances.frost!)
+            guard let frostResistance = armor.resistances.frost else { return }
+            optionalResLabel.text = frostResistance.convertToString()
             optionalResistanceImage.image = UIImage(named: "frostDefense")
             optionalResistanceStack.isHidden = false
         } else if (armor.resistances.petrification != nil) {
-            optionalResLabel.text = String(armor.resistances.petrification!)
+            guard let petrificationResistance = armor.resistances.petrification else { return }
+            optionalResLabel.text = petrificationResistance.convertToString()
             optionalResistanceImage.image = UIImage(named: "petrifyDefense")
             optionalResistanceStack.isHidden = false
         } else {
@@ -130,7 +136,8 @@ class ArmorDetailView: UIView {
         
         if armor.effects != nil {
             var effectsText = ""
-            for effect in armor.effects! {
+            guard let effects = armor.effects else { return }
+            for effect in effects {
                 effectsText = effectsText + " - " + effect
             }
             effectsLabel.text = effectsText

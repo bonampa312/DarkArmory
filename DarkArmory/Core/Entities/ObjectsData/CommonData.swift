@@ -55,9 +55,9 @@ struct Requirements: Codable {
 }
 
 struct PhysicalAttackTypes: Codable {
-    let strike: Double
-    let slash: Double
-    let thrust: Double
+    let strike: Float
+    let slash: Float
+    let thrust: Float
     
     enum CodingKeys: String, CodingKey {
         case strike = "strike"

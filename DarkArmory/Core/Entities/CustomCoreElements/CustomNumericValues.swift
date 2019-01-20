@@ -14,4 +14,14 @@ extension Int {
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
         return numberFormatter.string(from: NSNumber(value:self))!
     }
+    
+    func convertToString() -> String {
+        return String(self)
+    }
+}
+
+extension Float {
+    func convertToString() -> String {
+        return self.truncatingRemainder(dividingBy: 1.0) == 0.0 ? String(Int(self)) : String(self)
+    }
 }

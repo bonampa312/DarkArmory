@@ -12,7 +12,7 @@ class WeaponDetailView: UIView {
     
     var element : WeaponDetail?
 
-    @IBOutlet var weaponDetailContentView: UIView!
+    @IBOutlet weak var weaponDetailContentView: WeaponDetailView!
     
     //MARK: - Weapon UI outlets
     // General data
@@ -88,7 +88,7 @@ class WeaponDetailView: UIView {
         
         if (weapon.range != nil) {
             guard let weaponRange = weapon.range else { return }
-            rangeValueLabel.text = String(format: "%.0f", weaponRange)
+            rangeValueLabel.text = weaponRange.convertToString()
             rangeView.isHidden = false
         } else {
             rangeView.isHidden = true
@@ -98,35 +98,35 @@ class WeaponDetailView: UIView {
         typeLabel.text = weapon.weaponType
         attackTypeLabel.text = weapon.attackType
         
-        weightLabel.text = String(format: "%.0f", weapon.weight)
-        stabilityLabel.text = String(format: "%.0f", weapon.stability)
-        criticalLabel.text = String(format: "%.0f", weapon.critical)
+        weightLabel.text = weapon.weight.convertToString()
+        stabilityLabel.text = weapon.stability.convertToString()
+        criticalLabel.text = weapon.critical.convertToString()
         
         if (weapon.baseDamage.magicalAdjust != nil) {
             guard let magicAdjust = weapon.baseDamage.magicalAdjust else { return }
-            magicAdjustLabel.text = String(format: "%.0f", magicAdjust)
+            magicAdjustLabel.text = magicAdjust.convertToString()
             magicAdjustStack.isHidden = false
         } else {
             magicAdjustStack.isHidden = true
         }
         
-        physicalDmgLabel.text = String(format: "%.0f", weapon.baseDamage.physical)
-        fireDmgLabel.text = String(format: "%.0f", weapon.baseDamage.fire)
-        magicDmgLabel.text = String(format: "%.0f", weapon.baseDamage.magic)
-        lightningDmgLabel.text = String(format: "%.0f", weapon.baseDamage.lightning)
+        physicalDmgLabel.text = weapon.baseDamage.physical.convertToString()
+        fireDmgLabel.text = weapon.baseDamage.fire.convertToString()
+        magicDmgLabel.text = weapon.baseDamage.magic.convertToString()
+        lightningDmgLabel.text = weapon.baseDamage.lightning.convertToString()
         
         if (weapon.baseDamage.dark != nil) {
             guard let darkDmg = weapon.baseDamage.dark else { return }
-            darkDmgLabel.text = String(format: "%.0f", darkDmg)
+            darkDmgLabel.text = darkDmg.convertToString()
             darkDmgStack.isHidden = false
         } else {
             darkDmgStack.isHidden = true
         }
         
-        strengthReqLabel.text = String(format: "%.0f", weapon.requirements.strength)
-        dexterityReqLabel.text = String(format: "%.0f", weapon.requirements.dexterity)
-        intelligenceReqLabel.text = String(format: "%.0f", weapon.requirements.intelligence)
-        faithReqLabel.text = String(format: "%.0f", weapon.requirements.faith)
+        strengthReqLabel.text = weapon.requirements.strength.convertToString()
+        dexterityReqLabel.text = weapon.requirements.dexterity.convertToString()
+        intelligenceReqLabel.text = weapon.requirements.intelligence.convertToString()
+        faithReqLabel.text = weapon.requirements.faith.convertToString()
         
         strengthBonusLabel.text = weapon.bonuses.strength
         dexterityBonusLabel.text = weapon.bonuses.dexterity
@@ -135,23 +135,23 @@ class WeaponDetailView: UIView {
         
         if (weapon.aditionalDamage != nil) {
             guard let aditionalDmg = weapon.aditionalDamage else { return }
-            bleedLabel.text = String(format: "%.0f", aditionalDmg.bleed)
-            poisonLabel.text = String(format: "%.0f", aditionalDmg.poison)
+            bleedLabel.text = aditionalDmg.bleed.convertToString()
+            poisonLabel.text = aditionalDmg.poison.convertToString()
             guard let frostDmg = aditionalDmg.frost else { return }
-            frostLabel.text = String(format: "%.0f", frostDmg)
+            frostLabel.text = frostDmg.convertToString()
             aditionalDmgStack.isHidden = false
         } else {
             aditionalDmgStack.isHidden = true
         }
         
-        physicalDefLabel.text = String(format: "%.0f", weapon.defenses.physical)
-        fireDefLabel.text = String(format: "%.0f", weapon.defenses.fire)
-        magicDefLabel.text = String(format: "%.0f", weapon.defenses.magic)
-        lightningDefLabel.text = String(format: "%.0f", weapon.defenses.lightning)
+        physicalDefLabel.text = weapon.defenses.physical.convertToString()
+        fireDefLabel.text = weapon.defenses.fire.convertToString()
+        magicDefLabel.text = weapon.defenses.magic.convertToString()
+        lightningDefLabel.text = weapon.defenses.lightning.convertToString()
         
         if (weapon.defenses.dark != nil) {
             guard let darkDef = weapon.defenses.dark else { return }
-            darkDefLabel.text = String(format: "%.0f", darkDef)
+            darkDefLabel.text = darkDef.convertToString()
             darkDefStack.isHidden = false
         } else {
             darkDefStack.isHidden = true
