@@ -25,6 +25,21 @@ extension ItemDetailViewController {
             viewInNeededType.element = self.presenter?.elementDetail as? WeaponDetail
             viewInNeededType.configureUI()
             self.itemDetailContentView = viewInNeededType
+        case .Spells:
+            let viewInNeededType = SpellDetailView()
+            viewInNeededType.element = self.presenter?.elementDetail as? SpellDetail
+            viewInNeededType.configureUI()
+            self.itemDetailContentView = viewInNeededType
+        case .Rings:
+            let viewInNeededType = RingDetailView()
+            viewInNeededType.element = self.presenter?.elementDetail as? RingDetail
+            viewInNeededType.configureUI()
+            self.itemDetailContentView = viewInNeededType
+        case .Misc:
+            let viewInNeededType = MiscDetailView()
+            viewInNeededType.element = self.presenter?.elementDetail as? MiscDetail
+            viewInNeededType.configureUI()
+            self.itemDetailContentView = viewInNeededType
         default:
             return
         }

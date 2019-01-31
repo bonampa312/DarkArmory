@@ -153,15 +153,17 @@ class ArmorDetailView: UIView {
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: armor.imageURL)
         if (imageURL != nil) {
             guard let armorImageURL = imageURL else { return }
-            pictureImage.af_setImage(withURL: armorImageURL) { response in
-                self.imageActivityIndicator.stopAnimating()
-                self.imageActivityIndicator.isHidden = true
+            pictureImage.af_setImage(withURL: armorImageURL) { [weak self] (response) in
+                guard let strongSelf = self else { return }
+                strongSelf.imageActivityIndicator.stopAnimating()
+                strongSelf.imageActivityIndicator.isHidden = true
+                strongSelf.pictureImage.alpha = 1
             }
         }  else {
             pictureImage.image = UIImage(named: "armor")
-            self.imageActivityIndicator.stopAnimating()
-            self.imageActivityIndicator.isHidden = true
+            imageActivityIndicator.stopAnimating()
+            imageActivityIndicator.isHidden = true
+            pictureImage.alpha = 1
         }
-        pictureImage.alpha = 1
     }
 }

@@ -37,6 +37,12 @@
 		3C75F02220744FE300278A74 /* SelectGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F02120744FE300278A74 /* SelectGameViewController.swift */; };
 		3C75F027207522C100278A74 /* UICustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C75F026207522C100278A74 /* UICustomButton.swift */; };
 		3C7B856F2088FB6B00A3AC65 /* UICustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */; };
+		3C7CA1C821F56810001B76CB /* SpellDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CA1C721F56810001B76CB /* SpellDetailView.xib */; };
+		3C7CA1CA21FE6F57001B76CB /* SpellDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CA1C921FE6F57001B76CB /* SpellDetailView.swift */; };
+		3C7CA1CC21FF7FE6001B76CB /* RingDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CA1CB21FF7FE5001B76CB /* RingDetailView.xib */; };
+		3C7CA1CE21FF8183001B76CB /* RingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CA1CD21FF8183001B76CB /* RingDetailView.swift */; };
+		3C7CA1D02200D95D001B76CB /* MiscDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3C7CA1CF2200D95D001B76CB /* MiscDetailView.xib */; };
+		3C7CA1D22200DD97001B76CB /* MiscDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7CA1D12200DD97001B76CB /* MiscDetailView.swift */; };
 		3C84F3ED2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */; };
 		3C84F3F02081037F001F3C32 /* SoulsSeriesGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */; };
 		3C84F3F520816F24001F3C32 /* CustomNumericValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C84F3F420816F24001F3C32 /* CustomNumericValues.swift */; };
@@ -125,6 +131,12 @@
 		3C75F02120744FE300278A74 /* SelectGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameViewController.swift; sourceTree = "<group>"; };
 		3C75F026207522C100278A74 /* UICustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomButton.swift; sourceTree = "<group>"; };
 		3C7B856E2088FB6B00A3AC65 /* UICustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICustomViewController.swift; sourceTree = "<group>"; };
+		3C7CA1C721F56810001B76CB /* SpellDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellDetailView.xib; sourceTree = "<group>"; };
+		3C7CA1C921FE6F57001B76CB /* SpellDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailView.swift; sourceTree = "<group>"; };
+		3C7CA1CB21FF7FE5001B76CB /* RingDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RingDetailView.xib; sourceTree = "<group>"; };
+		3C7CA1CD21FF8183001B76CB /* RingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingDetailView.swift; sourceTree = "<group>"; };
+		3C7CA1CF2200D95D001B76CB /* MiscDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MiscDetailView.xib; sourceTree = "<group>"; };
+		3C7CA1D12200DD97001B76CB /* MiscDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscDetailView.swift; sourceTree = "<group>"; };
 		3C84F3EC2080FFD9001F3C32 /* SoulsCalculatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsCalculatorPresenter.swift; sourceTree = "<group>"; };
 		3C84F3EF2081037F001F3C32 /* SoulsSeriesGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoulsSeriesGame.swift; sourceTree = "<group>"; };
 		3C84F3F420816F24001F3C32 /* CustomNumericValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNumericValues.swift; sourceTree = "<group>"; };
@@ -342,6 +354,9 @@
 				3C75F0112073F7CD00278A74 /* LaunchScreen.storyboard */,
 				3CFB290A21834E0B00FA508D /* ArmorDetailView.xib */,
 				3CFB2908218255E000FA508D /* WeaponDetailView.xib */,
+				3C7CA1C721F56810001B76CB /* SpellDetailView.xib */,
+				3C7CA1CB21FF7FE5001B76CB /* RingDetailView.xib */,
+				3C7CA1CF2200D95D001B76CB /* MiscDetailView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -453,6 +468,9 @@
 			children = (
 				3CFB290D2183D71400FA508D /* ArmorDetailView.swift */,
 				3CFB290F2183D7F700FA508D /* WeaponDetailView.swift */,
+				3C7CA1C921FE6F57001B76CB /* SpellDetailView.swift */,
+				3C7CA1CD21FF8183001B76CB /* RingDetailView.swift */,
+				3C7CA1D12200DD97001B76CB /* MiscDetailView.swift */,
 			);
 			path = ItemsDetailViews;
 			sourceTree = "<group>";
@@ -544,8 +562,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CFB2909218255E000FA508D /* WeaponDetailView.xib in Resources */,
+				3C7CA1CC21FF7FE6001B76CB /* RingDetailView.xib in Resources */,
+				3C7CA1C821F56810001B76CB /* SpellDetailView.xib in Resources */,
 				3C75F01C2073FC6800278A74 /* OptimusPrinceps.ttf in Resources */,
 				3C75F0132073F7CD00278A74 /* LaunchScreen.storyboard in Resources */,
+				3C7CA1D02200D95D001B76CB /* MiscDetailView.xib in Resources */,
 				3CFB290B21834E0B00FA508D /* ArmorDetailView.xib in Resources */,
 				3C75F0102073F7CD00278A74 /* Assets.xcassets in Resources */,
 				3C75F00E2073F7CD00278A74 /* Main.storyboard in Resources */,
@@ -590,6 +611,7 @@
 				3C33E5B32075767E00CBD689 /* UIImageWithGif.swift in Sources */,
 				3C94C0FF20BF1FD8009F9C1B /* SpellsData.swift in Sources */,
 				3CFB29072182285100FA508D /* ItemDetailSpellPresenter.swift in Sources */,
+				3C7CA1D22200DD97001B76CB /* MiscDetailView.swift in Sources */,
 				3C0AF30E20B8613300A7B9A3 /* ItemsListRingsPresenter.swift in Sources */,
 				3CFB29052182282700FA508D /* ItemDetailRingPresenter.swift in Sources */,
 				3CE83DBE20ADD6D100EBD210 /* WeaponsData.swift in Sources */,
@@ -613,6 +635,7 @@
 				3C4EB67A20A4E9F100385BFA /* UseCaseImplementation.swift in Sources */,
 				3CFB28CB217D3CE300FA508D /* RequestElementsDetailImpl.swift in Sources */,
 				3C23812520B7621500D9CB72 /* GameElement.swift in Sources */,
+				3C7CA1CA21FE6F57001B76CB /* SpellDetailView.swift in Sources */,
 				3CFB28CD217ECB2800FA508D /* ItemDetailViewController.swift in Sources */,
 				3C94C0FD20BDE57E009F9C1B /* ItemsListMiscPresenter.swift in Sources */,
 				3C489E3E20BC595700FD855F /* ItemsListViewController+TableView.swift in Sources */,
@@ -630,6 +653,7 @@
 				3CC8AC2B20C1B6DB005718A8 /* ArmorsData.swift in Sources */,
 				3C0AF31220B8657400A7B9A3 /* CommonData.swift in Sources */,
 				3C8C0ABD207EB0C3004D816C /* CalculateSoulsLordran.swift in Sources */,
+				3C7CA1CE21FF8183001B76CB /* RingDetailView.swift in Sources */,
 				3CC8AC2F20C1CA24005718A8 /* ArmorsTableViewCell.swift in Sources */,
 				3C5B87E320C6F5280067FDAD /* RequestElementsList.swift in Sources */,
 				3C896CB820B84FDA00981B9B /* ItemsListMediator.swift in Sources */,
