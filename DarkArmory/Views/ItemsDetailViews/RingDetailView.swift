@@ -20,6 +20,7 @@ class RingDetailView: UIView {
     @IBOutlet weak var nameLabel: UILabel!
     // General stats
     @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var weightStack: UIStackView!
     // Specific data
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var locationsLabel: UILabel!
@@ -46,8 +47,13 @@ class RingDetailView: UIView {
         guard let ring = self.element else { return }
         
         nameLabel.text = ring.name
-        weightLabel.text = ring.weight.convertToString()
         descriptionLabel.text = ring.description
+        
+        if ring.weight > 0 {
+            weightLabel.text = ring.weight.convertToString()
+        } else {
+            weightStack.isHidden = true
+        }
         
         var effectsText = ""
         for (index, location) in ring.effects.enumerated() {

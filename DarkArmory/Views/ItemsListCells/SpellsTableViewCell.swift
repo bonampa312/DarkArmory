@@ -12,6 +12,7 @@ import AlamofireImage
 class SpellsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
     @IBOutlet weak var spellImage: UIImageView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var type: UILabel!
     @IBOutlet weak var intelligenceRequired: UILabel!
@@ -33,21 +34,37 @@ class SpellsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     func configure(spell: SpellShort) {
         name.text = spell.name
         type.text = spell.spellType.name
-        intelligenceRequired.text = String(spell.requirements.intelligence)
-        faithRequired.text = String(spell.requirements.faith)
-        slots.text = String(spell.slots)
+        
+        intelligenceRequired.text = spell.requirements.intelligence.convertToString()
+        faithRequired.text = spell.requirements.faith.convertToString()
+        slots.text = spell.slots.convertToString()
+        
         if (spell.uses != nil) {
             usesOrFP.text = "Uses"
-            usesOrFPValue.text = String(spell.uses!)
+            guard let uses = spell.uses else { return }
+            usesOrFPValue.text = uses.convertToString()
         } else {
             usesOrFP.text = "FP"
-            usesOrFPValue.text = String(spell.focusPoints!)
+            guard let focusPoints = spell.focusPoints else { return }
+            usesOrFPValue.text = focusPoints.convertToString()
         }
+        
+        imageActivityIndicator.startAnimating()
+        imageActivityIndicator.isHidden = false
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: spell.imageURL, size: 140)
         if (imageURL != nil) {
-            spellImage.af_setImage(withURL: imageURL!)
+            guard let spellImageURL = imageURL else { return }
+            spellImage.af_setImage(withURL: spellImageURL) { [weak self] (response) in
+                guard let strongSelf = self else { return }
+                strongSelf.imageActivityIndicator.stopAnimating()
+                strongSelf.imageActivityIndicator.isHidden = true
+                strongSelf.spellImage.alpha = 1
+            }
         }  else {
             spellImage.image = UIImage(named: "spell_replenishment")
+            imageActivityIndicator.stopAnimating()
+            imageActivityIndicator.isHidden = true
+            spellImage.alpha = 1
         }
     }
 

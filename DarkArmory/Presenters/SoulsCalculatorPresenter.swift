@@ -43,7 +43,8 @@ final class SoulsCalculatorPresenter {
     }
     
     func calculateTotalSouls (startLevel : String?, targetLevel : String?) {
-        if let current = Int(startLevel!), let target = Int(targetLevel!) {
+        if startLevel != nil, targetLevel != nil {
+            guard let current = Int(startLevel!), let target = Int(targetLevel!) else { return }
             self.totalSouls = self.soulsCalculator.calculateSoulsForRange(current: current, target: target).withCommas()
             if self.totalSouls == "0" && current != target {
                 self.view.showErrorOutOfRangeLevels()

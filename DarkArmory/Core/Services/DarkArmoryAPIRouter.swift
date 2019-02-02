@@ -30,7 +30,8 @@ class DarkArmoryAPIRouter {
         let baseGame = SoulsGameSingleton.getGlobalGame().shortName
         var idRouteAppend : String = ""
         if (detailID != nil) {
-            idRouteAppend = "/" + detailID!
+            guard let imageDetailID = detailID else { return "" }
+            idRouteAppend = "/" + imageDetailID
         }
         switch listType {
         case .Weapons:

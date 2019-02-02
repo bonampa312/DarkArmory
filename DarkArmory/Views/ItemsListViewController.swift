@@ -28,13 +28,13 @@ class ItemsListViewController: UIViewController {
         
         itemsTable.isHidden = true
         
-        guard elementsType != nil else {
+        guard let actualElementsType = elementsType else {
             elementsType = .Weapons
             presenter = ItemsListWeaponsPresenter(view: self, locator: UseCaseLocator(service: DarkArmoryAPIService()))
             configureUI()
             return
         }
-        presenter = ItemsListPresenterFactory.getItemsListPresenter(type: elementsType!, view: self)
+        presenter = ItemsListPresenterFactory.getItemsListPresenter(type: actualElementsType, view: self)
         configureUI()
     }
     
@@ -49,7 +49,8 @@ class ItemsListViewController: UIViewController {
     private func configureUI () {
         self.loadingIndicator.isHidden = false
         self.loadingIndicator.startAnimating()
-        self.presenter!.configureUI()
+        guard let actualPresenter = presenter else { return }
+        actualPresenter.configureUI()
     }
     
     //MARK: - Navigation

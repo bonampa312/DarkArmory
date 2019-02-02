@@ -15,6 +15,7 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var weightStack: UIStackView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,16 +29,27 @@ class RingsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     func configure(ring: RingShort) {
         self.name.text = ring.name
         if ring.weight > 0 {
-            self.weight.text = String(ring.weight)
+            self.weight.text = ring.weight.convertToString()
         } else {
             weightStack.isHidden = true
         }
         
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: ring.imageURL, size: 140)
+        imageActivityIndicator.isHidden = false
+        imageActivityIndicator.startAnimating()
         if (imageURL != nil) {
-            ringImage.af_setImage(withURL: imageURL!)
+            guard let ringImageURL = imageURL else { return }
+            ringImage.af_setImage(withURL: ringImageURL) { [weak self] (response) in
+                guard let strongSelf = self else { return }
+                strongSelf.imageActivityIndicator.stopAnimating()
+                strongSelf.imageActivityIndicator.isHidden = true
+                strongSelf.ringImage.alpha = 1
+            }
         }  else {
             ringImage.image = UIImage(named: "ring_of_sacrifice")
+            imageActivityIndicator.stopAnimating()
+            imageActivityIndicator.isHidden = true
+            ringImage.alpha = 1
         }
     }
     

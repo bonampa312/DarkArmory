@@ -11,6 +11,7 @@ import UIKit
 class ArmorsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
     @IBOutlet weak var armorImage: UIImageView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var physicalDef: UILabel!
@@ -35,27 +36,40 @@ class ArmorsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
 
     func configure(armor: ArmorsShort){
         name.text = armor.name
-        weight.text = String(format: "%.0f", armor.weight)
-        physicalDef.text = String(format: "%.0f", armor.defenses.physical)
-        magicDef.text = String(format: "%.0f", armor.defenses.magic)
-        fireDef.text = String(format: "%.0f", armor.defenses.fire)
-        lightningDef.text = String(format: "%.0f", armor.defenses.lightning)
+        weight.text = armor.weight.convertToString()
+        physicalDef.text = armor.defenses.physical.convertToString()
+        magicDef.text = armor.defenses.magic.convertToString()
+        fireDef.text = armor.defenses.fire.convertToString()
+        lightningDef.text = armor.defenses.lightning.convertToString()
         if (armor.defenses.dark != nil) {
-            darkDef.text = String(format: "%.0f", armor.defenses.dark!)
+            guard let darkDefense = armor.defenses.dark else { return }
+            darkDef.text = darkDefense.convertToString()
         } else {
             darkDefStack.isHidden = true
             emptyStack.isHidden = true
         }
-        strikeDef.text = String(format: "%.0f", armor.physicalDefenses.strike)
-        thrustDef.text = String(format: "%.0f", armor.physicalDefenses.thrust)
-        slashDef.text = String(format: "%.0f", armor.physicalDefenses.slash)
+        
+        strikeDef.text = armor.physicalDefenses.strike.convertToString()
+        thrustDef.text = armor.physicalDefenses.thrust.convertToString()
+        slashDef.text = armor.physicalDefenses.slash.convertToString()
         type.image = UIImage(named: ArmorType.getArmorType(byId: armor.type))
         
+        imageActivityIndicator.startAnimating()
+        imageActivityIndicator.isHidden = false
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: armor.imageURL, size: 140)
         if (imageURL != nil) {
-            armorImage.af_setImage(withURL: imageURL!)
+            guard let armorImageURL = imageURL else { return }
+            armorImage.af_setImage(withURL: armorImageURL) { [weak self] (response) in
+                guard let strongSelf = self else { return }
+                strongSelf.imageActivityIndicator.stopAnimating()
+                strongSelf.imageActivityIndicator.isHidden = true
+                strongSelf.armorImage.alpha = 1
+            }
         }  else {
             armorImage.image = UIImage(named: "sword")
+            imageActivityIndicator.stopAnimating()
+            imageActivityIndicator.isHidden = true
+            armorImage.alpha = 1
         }
     }
 }

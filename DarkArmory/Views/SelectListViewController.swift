@@ -102,7 +102,8 @@ class SelectListViewController: UIViewController {
     
     //MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.identifier! {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
         case "itemsListSegue":
             let itemList = segue.destination as! ItemsListViewController
             guard let button = sender as? UIButton,

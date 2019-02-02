@@ -33,8 +33,8 @@ class ItemDetailArmorPresenter : ItemDetailMediator {
     }
     
     func loadElement() {
-        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
-        elementRequester.retrieveArmorDetail(armorID: self.gameBasics.elementID!) { [weak self] (response) in
+        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self), let elementID = self.gameBasics.elementID else { return }
+        elementRequester.retrieveArmorDetail(armorID: elementID) { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successArmorDetail(let armorResponse):

@@ -17,6 +17,7 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     @IBOutlet weak var lightningDmg: UILabel!
     @IBOutlet weak var darkDmg: UILabel!
     @IBOutlet weak var weaponImage: UIImageView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var strengthReq: UILabel!
@@ -36,27 +37,39 @@ class WeaponsTableViewCell: UITableViewCell, ReusableCellIdentifierProtocol {
     
     func configure(weapon: WeaponShort) {
         name.text = weapon.name
-        weight.text = String(weapon.weight)
-        physicalDmg.text = String(format: "%.0f", weapon.baseDamage.physical)
-        magicDmg.text = String(format: "%.0f", weapon.baseDamage.magic)
-        fireDmg.text = String(format: "%.0f", weapon.baseDamage.fire)
-        lightningDmg.text = String(format: "%.0f", weapon.baseDamage.lightning)
+        weight.text = weapon.weight.convertToString()
+        physicalDmg.text = weapon.baseDamage.physical.convertToString()
+        magicDmg.text = weapon.baseDamage.magic.convertToString()
+        fireDmg.text = weapon.baseDamage.fire.convertToString()
+        lightningDmg.text = weapon.baseDamage.lightning.convertToString()
         if (weapon.baseDamage.dark != nil) {
-            darkDmg.text = String(format: "%.0f", weapon.baseDamage.dark!)
+            guard let darkDmgValue = weapon.baseDamage.dark else { return }
+            darkDmg.text = darkDmgValue.convertToString()
         } else {
             darkDamageStack.isHidden = true
             emptyStackView.isHidden = true
         }
-        strengthReq.text = String(weapon.requirements.strength)
-        dexterityReq.text = String(weapon.requirements.dexterity)
-        intelligenceReq.text = String(weapon.requirements.intelligence)
-        faithReq.text = String(weapon.requirements.faith)
+        strengthReq.text = weapon.requirements.strength.convertToString()
+        dexterityReq.text = weapon.requirements.dexterity.convertToString()
+        intelligenceReq.text = weapon.requirements.intelligence.convertToString()
+        faithReq.text = weapon.requirements.faith.convertToString()
         
+        imageActivityIndicator.startAnimating()
+        imageActivityIndicator.isHidden = false
         let imageURL = DarkArmoryAPIRouter.getImageResizedURL(url: weapon.imageURL, size: 140)
         if (imageURL != nil) {
-            weaponImage.af_setImage(withURL: imageURL!)
+            guard let weaponImageURL = imageURL else { return }
+            weaponImage.af_setImage(withURL: weaponImageURL) { [weak self] (response) in
+                guard let strongSelf = self else { return }
+                strongSelf.imageActivityIndicator.stopAnimating()
+                strongSelf.imageActivityIndicator.isHidden = true
+                strongSelf.weaponImage.alpha = 1
+            }
         }  else {
             weaponImage.image = UIImage(named: "sword")
+            imageActivityIndicator.stopAnimating()
+            imageActivityIndicator.isHidden = true
+            weaponImage.alpha = 1
         }
     }
 }

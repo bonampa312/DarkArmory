@@ -12,7 +12,8 @@ extension Int {
     func withCommas() -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        return numberFormatter.string(from: NSNumber(value:self))!
+        guard let stringFromNum = numberFormatter.string(from: NSNumber(value:self)) else { return "" }
+        return stringFromNum
     }
     
     func convertToString() -> String {

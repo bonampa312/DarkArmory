@@ -15,14 +15,15 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.presenter?.listSize())!
+        guard let listSize = presenter?.listSize() else { return -1 }
+        return listSize
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cellIdentifier = self.presenter?.cellIdentifier else {
+        guard let cellIdentifier = self.presenter?.cellIdentifier, let actualElementsType = elementsType else {
             return UITableViewCell()
         }
-        switch self.elementsType! {
+        switch actualElementsType {
         case .Weapons:
             let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! WeaponsTableViewCell
             cell.configure(weapon: self.presenter?.elementsList[indexPath.row] as! WeaponShort)
@@ -50,7 +51,8 @@ extension ItemsListViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let elementBasicData : ElementBasicData?
-        switch self.elementsType! {
+        guard let actualElementsType = elementsType else { return }
+        switch actualElementsType {
         case .Armors:
             let armorData = self.presenter?.elementsList[indexPath.row] as! ArmorsShort
             elementBasicData = ElementBasicData(name: armorData.name, id: armorData.id)

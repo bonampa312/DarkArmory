@@ -33,8 +33,8 @@ class ItemDetailMiscPresenter : ItemDetailMediator {
     }
     
     func loadElement() {
-        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
-        elementRequester.retrieveMiscDetail(miscID: self.gameBasics.elementID!) { [weak self] (response) in
+        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self), let elementID = self.gameBasics.elementID else { return }
+        elementRequester.retrieveMiscDetail(miscID: elementID) { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successMiscDetail(let miscResponse):

@@ -157,7 +157,8 @@ class SoulsCalculatorViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         self.exitCalculator()
-        switch segue.identifier! {
+        guard let identifier = segue.identifier else { return }
+        switch identifier {
         case "selectGameSegue":
             _ = segue.destination as! SelectGameViewController
         case "itemsListSegue":

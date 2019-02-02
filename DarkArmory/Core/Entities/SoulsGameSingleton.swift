@@ -33,7 +33,8 @@ class SoulsGameSingleton {
             return gameExists.game
         } else {
             soulsGame = SoulsGameSingleton(game: .DarkSouls1)
-            return soulsGame!.game
+            guard let newSoulsGame = soulsGame else { return .DarkSouls1 }
+            return newSoulsGame.game
         }
     }
 }

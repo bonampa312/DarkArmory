@@ -50,7 +50,8 @@ class ItemDetailViewController: UIViewController {
         self.hideNotificationStack()
         self.loadingIndicator.isHidden = false
         self.loadingIndicator.startAnimating()
-        self.presenter!.configureUI()
+        guard let actualPresenter = presenter else { return }
+        actualPresenter.configureUI()
     }
     
     //MARK: - Navigation

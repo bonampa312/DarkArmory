@@ -33,8 +33,8 @@ class ItemDetailWeaponPresenter : ItemDetailMediator {
     }
     
     func loadElement() {
-        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
-        elementRequester.retrieveWeaponDetail(weaponID: self.gameBasics.elementID!) { [weak self] (response) in
+        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self), let elementID = self.gameBasics.elementID else { return }
+        elementRequester.retrieveWeaponDetail(weaponID: elementID) { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successWeaponDetail(let weaponResponse):

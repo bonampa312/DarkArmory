@@ -33,8 +33,8 @@ class ItemDetailSpellPresenter : ItemDetailMediator {
     }
     
     func loadElement() {
-        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self) else { return }
-        elementRequester.retrieveSpellDetail(spellID: self.gameBasics.elementID!) { [weak self] (response) in
+        guard let elementRequester = self.locator.getUseCase(ofType: RequestElementsDetail.self), let elementID = self.gameBasics.elementID else { return }
+        elementRequester.retrieveSpellDetail(spellID: elementID) { [weak self] (response) in
             guard let strongSelf = self else { return }
             switch response {
             case .successSpellDetail(let spellResponse):
